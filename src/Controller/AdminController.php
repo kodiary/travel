@@ -67,6 +67,6 @@ class AdminController extends AppController
     public function logout()
     {
         $this->request->session()->destroy();
-        $this->redirect('/admin')
+        $this->redirect('/admin');
     }
 }

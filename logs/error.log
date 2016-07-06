@@ -4537,3 +4537,83 @@ Stack Trace:
 #1 {main}
 
 
+2016-07-06 14:20:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webroot could not be found.
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/webroot/admin/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-06 14:21:17 Error: Fatal Error (4): syntax error, unexpected '}' in [E:\wamp\www\travel\src\Controller\AdminController.php, line 71]
+Request URL: /travel/admin
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-06 14:21:17 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /travel/admin
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\tra...', 71)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-06 14:21:17 Error: Fatal Error (4): syntax error, unexpected '}' in [E:\wamp\www\travel\src\Controller\AdminController.php, line 71]
+Request URL: /travel/admin
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-06 14:21:18 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /travel/admin
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\tra...', 71)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-06 14:21:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webroot could not be found.
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/webroot/admin/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-06 14:21:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webroot could not be found.
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/webroot/admin/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
