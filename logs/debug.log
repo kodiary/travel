@@ -326,3 +326,789 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 62
 
 
 
+2016-07-07 09:39:41 Notice: Notice (8): Undefined property: Cake\ORM\Query::$password in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 33]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::settings() - APP/Controller\DashboardController.php, line 33
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 09:43:02 Notice: Notice (8): Undefined property: Cake\ORM\Query::$password in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 34]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::settings() - APP/Controller\DashboardController.php, line 34
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 09:43:37 Notice: Notice (8): Undefined property: Cake\ORM\Query::$password in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 34]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::settings() - APP/Controller\DashboardController.php, line 34
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 09:45:51 Notice: Notice (8): Undefined property: Cake\ORM\Query::$password in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 34]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::settings() - APP/Controller\DashboardController.php, line 34
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 09:46:57 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 34]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::settings() - APP/Controller\DashboardController.php, line 34
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 09:48:43 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 33]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::settings() - APP/Controller\DashboardController.php, line 33
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 09:53:53 Notice: Notice (8): Undefined index: ol_password in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 32]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::settings() - APP/Controller\DashboardController.php, line 32
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 10:21:27 Notice: Notice (8): Undefined index: password in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 62]
+Request URL: /travel/dashboard/changeemail
+Referer URL: http://localhost/travel/dashboard/changeemail
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::changeemail() - APP/Controller\DashboardController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 10:27:58 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 65]
+Request URL: /travel/dashboard/changeemail
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::changeemail() - APP/Controller\DashboardController.php, line 65
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:01:47 Notice: Notice (8): Undefined index: password in [D:\wamp\www\travel\src\Controller\AdminController.php, line 57]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:03:43 Notice: Notice (8): Undefined index: password in [D:\wamp\www\travel\src\Controller\AdminController.php, line 57]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:05:27 Notice: Notice (8): Undefined index: username in [D:\wamp\www\travel\src\Controller\AdminController.php, line 56]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 56
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:05:27 Notice: Notice (8): Undefined index: password in [D:\wamp\www\travel\src\Controller\AdminController.php, line 57]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:07:27 Notice: Notice (8): Undefined index: username in [D:\wamp\www\travel\src\Controller\AdminController.php, line 56]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 56
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:07:27 Notice: Notice (8): Undefined index: password in [D:\wamp\www\travel\src\Controller\AdminController.php, line 57]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:17:52 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:17:52 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:18:30 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:18:30 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:19:15 Notice: Notice (8): Undefined variable: {
+    "id": 50,
+    "username": "test",
+    "password": "asd",
+    "email": "asdasdasd@asd.com"
+} in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:19:15 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:28:49 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:28:50 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:28:50 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:28:50 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:28:50 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:28:50 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:29:32 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:29:32 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:29:32 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:29:33 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:29:33 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:29:33 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:47:34 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:47:34 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:48:50 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:48:50 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:48:50 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:48:52 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:48:52 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:48:52 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:49:27 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:49:27 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:49:58 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:49:58 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:51:34 Notice: Notice (8): Undefined index: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 75]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:51:34 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:51:42 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:52:02 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 11:52:31 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:05:59 Notice: Notice (8): Undefined variable: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 77]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:05:59 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 78]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:05:59 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\travel\src\Controller\AdminController.php, line 79]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 79
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:05:59 Notice: Notice (8): Undefined variable: email in [D:\wamp\www\travel\src\Controller\AdminController.php, line 79]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 79
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 14:47:14 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 60]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 14:47:14 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 61]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 14:47:14 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 62]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 15:27:24 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 63]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 15:28:05 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 63]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 15:28:49 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 63]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 15:29:31 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 63]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 15:30:28 Notice: Notice (8): Undefined variable: array in [D:\wamp\www\travel\src\Controller\AdminController.php, line 63]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\AdminController::login() - APP/Controller\AdminController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
