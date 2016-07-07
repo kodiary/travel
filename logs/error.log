@@ -4617,3 +4617,727 @@ Stack Trace:
 #1 {main}
 
 
+2016-07-06 15:19:15 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Statement\SqliteStatement->execute()
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1545): Cake\Database\Query->execute()
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1461): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-07-06 15:27:32 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Statement\SqliteStatement->execute()
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1545): Cake\Database\Query->execute()
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1461): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-07-06 15:42:47 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::settings() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'settings',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/admin/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-06 15:43:43 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::settings() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'settings',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/admin/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-06 15:54:31 Error: [Cake\View\Exception\MissingTemplateException] Template file "Dashboard\settings.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Dashboard\\settings.ctp',
+)
+Request URL: /travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-06 15:55:02 Error: [Cake\View\Exception\MissingTemplateException] Template file "Dashboard\settings.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Dashboard\\settings.ctp',
+)
+Request URL: /travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 09:48:06 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 33]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-07 09:48:06 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'D:\\wamp\\www\\tra...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-07 09:49:17 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 33]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-07 09:49:17 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'D:\\wamp\\www\\tra...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-07 09:50:28 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 33]
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-07 09:50:28 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'D:\\wamp\\www\\tra...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-07 09:53:53 Error: [Cake\View\Exception\MissingElementException] Element\Flash\warning.ctp
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\Helper\FlashHelper.php(89): Cake\View\View->element('Flash/warning', Array)
+#1 D:\wamp\www\travel\src\Template\Layout\admin.ctp(327): Cake\View\Helper\FlashHelper->render()
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(995): include('D:\\wamp\\www\\tra...')
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(955): Cake\View\View->_evaluate('D:\\wamp\\www\\tra...', Array)
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(633): Cake\View\View->_render('D:\\wamp\\www\\tra...')
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(592): Cake\View\View->renderLayout('', 'admin')
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#9 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-07-07 09:54:06 Error: [Cake\View\Exception\MissingElementException] Element\Flash\warning.ctp
+Request URL: /travel/dashboard/settings
+Referer URL: http://localhost/travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\Helper\FlashHelper.php(89): Cake\View\View->element('Flash/warning', Array)
+#1 D:\wamp\www\travel\src\Template\Layout\admin.ctp(327): Cake\View\Helper\FlashHelper->render()
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(995): include('D:\\wamp\\www\\tra...')
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(955): Cake\View\View->_evaluate('D:\\wamp\\www\\tra...', Array)
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(633): Cake\View\View->_render('D:\\wamp\\www\\tra...')
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(592): Cake\View\View->renderLayout('', 'admin')
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#9 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-07-07 10:11:27 Error: [Cake\Controller\Exception\MissingActionException] Action DashboardController::changeemail() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'changeemail',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/changeemail
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-07 11:13:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Logout could not be found.
+Exception Attributes: array (
+  'class' => 'Logout',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/logout
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 11:14:08 Error: Fatal Error (4): syntax error, unexpected ';' in [D:\wamp\www\travel\src\Template\Admin\login.ctp, line 68]
+Request URL: /travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-07 11:14:08 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';'
+Request URL: /travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\tra...', 68)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-07 11:14:25 Error: Fatal Error (4): syntax error, unexpected ';' in [D:\wamp\www\travel\src\Template\Admin\login.ctp, line 68]
+Request URL: /travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-07 11:14:25 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';'
+Request URL: /travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\tra...', 68)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-07 11:19:16 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:19:36 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:28:07 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:28:50 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:28:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:29:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:29:32 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:29:33 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 11:36:40 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::logoin() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'logoin',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/admin/logoin
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-07 11:41:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
+Exception Attributes: array (
+  'class' => 'Login',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/login
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 11:41:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
+Exception Attributes: array (
+  'class' => 'Login',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/login
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 11:46:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
+Exception Attributes: array (
+  'class' => 'Login',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/login
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 11:46:22 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
+Exception Attributes: array (
+  'class' => 'Login',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/login
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 11:47:34 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\forgetpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin\\forgetpassword.ctp',
+)
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#4 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-07-07 12:01:39 Warning: Warning (2): preg_match() expects parameter 2 to be string, object given in [D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php, line 628]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+preg_match - [internal], line ??
+Cake\Mailer\Email::_validateEmail() - CORE\src\Mailer\Email.php, line 628
+Cake\Mailer\Email::_setEmail() - CORE\src\Mailer\Email.php, line 596
+Cake\Mailer\Email::to() - CORE\src\Mailer\Email.php, line 460
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 82
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:01:39 Warning: Warning (4096): Object of class Cake\Mailer\Email could not be converted to string in [D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php, line 631]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+sprintf - [internal], line ??
+Cake\Mailer\Email::_validateEmail() - CORE\src\Mailer\Email.php, line 631
+Cake\Mailer\Email::_setEmail() - CORE\src\Mailer\Email.php, line 596
+Cake\Mailer\Email::to() - CORE\src\Mailer\Email.php, line 460
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 82
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:01:39 Error: [InvalidArgumentException] Invalid email: ""
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php(596): Cake\Mailer\Email->_validateEmail(Object(Cake\Mailer\Email))
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php(460): Cake\Mailer\Email->_setEmail('_to', Object(Cake\Mailer\Email), NULL)
+#2 D:\wamp\www\travel\src\Controller\AdminController.php(82): Cake\Mailer\Email->to(Object(Cake\Mailer\Email))
+#3 [internal function]: App\Controller\AdminController->forgetpassword()
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#7 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-07-07 12:04:52 Warning: Warning (2): preg_match() expects parameter 2 to be string, object given in [D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php, line 628]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+preg_match - [internal], line ??
+Cake\Mailer\Email::_validateEmail() - CORE\src\Mailer\Email.php, line 628
+Cake\Mailer\Email::_setEmail() - CORE\src\Mailer\Email.php, line 596
+Cake\Mailer\Email::to() - CORE\src\Mailer\Email.php, line 460
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 83
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:04:52 Warning: Warning (4096): Object of class Cake\Mailer\Email could not be converted to string in [D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php, line 631]
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+sprintf - [internal], line ??
+Cake\Mailer\Email::_validateEmail() - CORE\src\Mailer\Email.php, line 631
+Cake\Mailer\Email::_setEmail() - CORE\src\Mailer\Email.php, line 596
+Cake\Mailer\Email::to() - CORE\src\Mailer\Email.php, line 460
+App\Controller\AdminController::forgetpassword() - APP/Controller\AdminController.php, line 83
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-07 12:04:52 Error: [InvalidArgumentException] Invalid email: ""
+Request URL: /travel/admin/forgetpassword
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php(596): Cake\Mailer\Email->_validateEmail(Object(Cake\Mailer\Email))
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Mailer\Email.php(460): Cake\Mailer\Email->_setEmail('_to', Object(Cake\Mailer\Email), NULL)
+#2 D:\wamp\www\travel\src\Controller\AdminController.php(83): Cake\Mailer\Email->to(Object(Cake\Mailer\Email))
+#3 [internal function]: App\Controller\AdminController->forgetpassword()
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#7 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-07-07 12:30:30 Error: [Cake\Controller\Exception\MissingActionException] Action DashboardController::logout() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'logout',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/logout
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-07 12:30:39 Error: [Cake\Controller\Exception\MissingActionException] Action DashboardController::logout() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'logout',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/logout
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-07 12:31:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Logout could not be found.
+Exception Attributes: array (
+  'class' => 'Logout',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/logout
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 12:31:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
+Exception Attributes: array (
+  'class' => 'Login',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/login
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 13:14:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/login.html
+Referer URL: http://localhost/travel/dashboard
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 15:03:21 Error: Fatal Error (1): Call to undefined function App\Controller\Is_email() in [D:\wamp\www\travel\src\Controller\AdminController.php, line 60]
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-07 15:03:21 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Controller\Is_email()
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'D:\\wamp\\www\\tra...', 60)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-07 15:27:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emamil' in 'where clause'
+Request URL: /travel/admin/login
+Referer URL: http://localhost/travel/admin/login
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(938): Cake\Database\Query->execute()
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(888): Cake\ORM\Query->_all()
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(395): Cake\ORM\Query->all()
+#9 D:\wamp\www\travel\src\Controller\AdminController.php(64): Cake\ORM\Query->first()
+#10 [internal function]: App\Controller\AdminController->login()
+#11 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#14 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-07-07 15:44:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/login.html
+Referer URL: http://localhost/travel/dashboard
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 16:31:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class .'admin could not be found.
+Exception Attributes: array (
+  'class' => '.\'admin',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/.'admin/logout'
+Referer URL: http://localhost/travel/dashboard
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-07 17:32:06 Error: [Cake\Controller\Exception\MissingActionException] Action DashboardController::settings;() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'settings;',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/settings;
+Referer URL: http://localhost/travel/dashboard
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-07 17:33:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/login.html
+Referer URL: http://localhost/travel/dashboard/settings
+Stack Trace:
+#0 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

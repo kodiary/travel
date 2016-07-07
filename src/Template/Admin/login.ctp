@@ -55,8 +55,26 @@
             </div>
             <div>
               <input type="submit" value="Login" class="btn btn-default submit" name="submit" />
-              
+              <a class="reset_pass" href="#">Lost your password?</a>  
             </div>
+            <div class="clearfix"></div>
+            </form>
+            
+            
+          
+          <!-- form -->
+        </section>
+        <section class="lostpassword" style="display: none;">
+                <form action="<?php echo $this->request->webroot .'admin/forgetpassword'; ?>" method="post">
+                  <h1>Forget Password</h1>
+                <div>
+                  <input type="text" class="form-control" placeholder="Email" required="" name="email" />
+                </div>
+                <div>
+                    <input type="submit" value="Login" class="btn btn-default submit" name="send_email" />
+                </div>
+                </form>
+            </section>
             <div class="clearfix"></div>
             <div class="separator">
 
@@ -64,14 +82,12 @@
               <div>
                 <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Go Nepal</h1>
 
-                <p>©2016 All Rights Reserved. Nepal Travel</p>
+                <p>©2016 All Rights Reserved. Kodiary</p>
               </div>
             </div>
-          </form>
-          <!-- form -->
-        </section>
+        </div>
         <!-- content -->
-      </div>
+            
       <div id="register" class="animate form">
         <section class="login_content">
           <form>
@@ -93,6 +109,7 @@
 
               <p class="change_link">Already a member ?
                 <a href="#tologin" class="to_register"> Log in </a>
+                
               </p>
               <div class="clearfix"></div>
               <br />
@@ -111,5 +128,12 @@
   </div>
 
 </body>
-
+<script>
+$(function(){
+    $('.reset_pass').click(function(){
+        $('.lostpassword').show();
+        $('.login_content').hide();
+    })
+})
+</script>
 </html>

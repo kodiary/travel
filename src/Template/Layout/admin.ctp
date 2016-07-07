@@ -225,7 +225,7 @@
                   <li><a href="<?php echo $this->request->webroot;?>admin_files/javascript:;">  Profile</a>
                   </li>
                   <li>
-                    <a href="<?php echo $this->request->webroot;?>admin_files/javascript:;">
+                    <a href="<?php echo $this->request->webroot;?>dashboard/settings">
                       <span class="badge bg-red pull-right">50%</span>
                       <span>Settings</span>
                     </a>
@@ -233,7 +233,7 @@
                   <li>
                     <a href="<?php echo $this->request->webroot;?>admin_files/javascript:;">Help</a>
                   </li>
-                  <li><a href="<?php echo $this->request->webroot;?>admin_files/login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  <li><a href="<?php echo $this->request->webroot;?>admin/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </li>
                 </ul>
               </li>
@@ -369,7 +369,7 @@ echo $this->fetch('content');
   <!-- sparkline -->
   <script src="<?php echo $this->request->webroot;?>admin_files/js/sparkline/jquery.sparkline.min.js"></script>
 
-  <script src="<?php echo $this->request->webroot;?>admin_files/js/custom.js"></script>
+  
   <!-- skycons -->
   <script src="<?php echo $this->request->webroot;?>admin_files/js/skycons/skycons.min.js"></script>
 

@@ -17,7 +17,8 @@ namespace App\Controller;
 use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
-
+use Cake\ORM\TableRegistry;
+use Cake\Mailer\Email;
 /**
  * Static content controller
  *
@@ -48,18 +49,23 @@ class AdminController extends AppController
         $this->redirect('/admin/login');
     }
     public function login()
-    {
+    {   
+        $user = TableRegistry::get('Admin');
         if($this->request->session()->read('id'))
         $this->redirect('/dashboard');
         if(isset($_POST['submit']))
         {
             $arr['username'] = $_POST['username'];
             $arr['password'] = $_POST['password'];
-            $this->loadModel('Admin');
-            
-            $q = $this->Admin->find()->where($arr)->first();
+            $q = $user->find()
+            ->where(['username' =>$arr['username']])
+            ->orWhere(['email' =>$arr['username']])
+            ->andWhere(['password'=>$arr['password']])
+            ->first();
             if($q)
             $this->request->session()->write('id',$q->id);
+            else
+            $this->Flash->error('login detail invalid');
             $this->redirect('/admin');
             
         }
@@ -69,4 +75,30 @@ class AdminController extends AppController
         $this->request->session()->destroy();
         $this->redirect('/admin');
     }
+    public function forgetpassword()
+    {
+       $user = TableRegistry::get('Admin');
+       $email1 = $_POST['email'];
+       $query = $user->find()->where(['email' => $email1])->first();
+        $password=$query->password;
+        $message="Hello ".$query->username.'<br /> your password is:'.$password; 
+        if($email1==$query->email)
+        {   
+            $email = new Email('default');
+                $email->from(['info@kodiary.com' => 'travel'])
+                ->emailFormat('both')
+                ->to($email1)
+                ->subject('Password recovery')
+                ->send($message);
+            $this->Flash->success('password has been send to ur email');
+           return $this->redirect('/admin/login');
+        } 
+        else{
+            $this->Flash->error('email is not register');
+            return $this->redirect('/admin/login');
+        }
+       
+    }
+    
 }
+?>
