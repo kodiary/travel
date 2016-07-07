@@ -103,20 +103,14 @@ body.nav-sm .profile {
   padding: 4px;
 }
 .profile_info {
-  padding: 25px 10px 10px;
-  width: 65%;
-  float: left;
-}
-.profile_info span {
-  font-size: 13px;
-  line-height: 30px;
-  color: #BAB8B8;
+  padding: 10px;
+  
 }
 .profile_info h2 {
-  font-size: 14px;
-  color: #ECF0F1;
-  margin: 0;
-  font-weight: 300;
+  color: #ecf0f1;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
 }
 .profile.img_2 {
   text-align: center;

@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Gentallela Alela! | </title>
+  <title>Dashboard | Admin</title>
 
   <!-- Bootstrap core CSS -->
 
@@ -50,19 +50,17 @@
         <div class="left_col scroll-view">
 
           <div class="navbar nav_title" style="border: 0;">
-            <a href="<?php echo $this->request->webroot;?>admin_files/index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+            <a href="<?php echo $this->request->webroot;?>admin_files/index.html" class="site_title"><i class="fa fa-paw"></i> <span>Go Nepal!</span></a>
           </div>
           <div class="clearfix"></div>
 
 
           <!-- menu prile quick info -->
           <div class="profile">
-            <div class="profile_pic">
-              <img src="<?php echo $this->request->webroot;?>admin_files/images/img.jpg" alt="..." class="img-circle profile_img">
-            </div>
+            
             <div class="profile_info">
-              <span>Welcome,</span>
-              <h2>John Doe</h2>
+              
+              <h2>Welcome Admin</h2>
             </div>
           </div>
           <!-- /menu prile quick info -->
@@ -73,18 +71,8 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
             <div class="menu_section">
-              <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/index.html">Dashboard</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/index2.html">Dashboard2</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/index3.html">Dashboard3</a>
-                    </li>
-                  </ul>
-                </li>
+                <li><a><i class="fa fa-sticky-note-o"></i> Page Manager</a></li>
                 <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     <li><a href="<?php echo $this->request->webroot;?>admin_files/form.html">General Form</a>

@@ -22,5 +22,14 @@ class DashboardController extends AppController
     {
         
     }
+    public function pages()
+    {
+        $this->loadModel('Admin');
+            
+            $q = $this->Admin->find()->where($arr)->first();
+            if($q)
+            $this->request->session()->write('id',$q->id);
+            $this->redirect('/admin');
+    }
     
 }
