@@ -25,12 +25,13 @@ class DashboardController extends AppController
 
     public function pages()
     {
-        $this->loadModel('Admin');
-            
-            $q = $this->Admin->find()->where($arr)->first();
+        $this->loadModel('Pages');
+        $this->loadModel('PageCategory');
+        $this->set('cat',$this->PageCategory);    
+            $q = $this->Pages->find()->order('cat_id')->all();
             if($q)
-            $this->request->session()->write('id',$q->id);
-            $this->redirect('/admin');
+            $this->set('model', $q);
+            
     }
 
     public function settings()

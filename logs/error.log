@@ -5359,3 +5359,80 @@ Stack Trace:
 
 
 >>>>>>> 147a182b9ac155831eac18e9eed7ca38373027f1
+2016-07-09 16:04:34 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Statement\SqliteStatement->execute()
+#5 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1545): Cake\Database\Query->execute()
+#7 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1461): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#11 E:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-07-09 16:15:53 Error: [BadMethodCallException] Unknown method "orderBy"
+Request URL: /travel/dashboard/pages
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(1094): Cake\ORM\Query->_call('orderBy', Array)
+#1 E:\wamp\www\travel\src\Controller\DashboardController.php(30): Cake\ORM\Query->__call('orderBy', Array)
+#2 E:\wamp\www\travel\src\Controller\DashboardController.php(30): Cake\ORM\Query->orderBy('cat_id')
+#3 [internal function]: App\Controller\DashboardController->pages()
+#4 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#7 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-07-09 16:28:13 Error: [Cake\Controller\Exception\MissingComponentException] Component class PageCategoryComponent could not be found.
+Exception Attributes: array (
+  'class' => 'PageCategoryComponent',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/pages
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\Controller\ComponentRegistry->_throwMissingClassError('PageCategory', NULL)
+#1 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(321): Cake\Core\ObjectRegistry->load('PageCategory', Array)
+#2 E:\wamp\www\travel\src\Controller\DashboardController.php(29): Cake\Controller\Controller->loadComponent('PageCategory')
+#3 [internal function]: App\Controller\DashboardController->pages()
+#4 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#7 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-07-09 16:28:28 Error: Fatal Error (4): syntax error, unexpected '[' in [E:\wamp\www\travel\src\Template\Dashboard\pages.ctp, line 22]
+Request URL: /travel/dashboard/pages
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-09 16:28:29 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '['
+Request URL: /travel/dashboard/pages
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\tra...', 22)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
