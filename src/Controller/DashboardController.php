@@ -33,6 +33,17 @@ class DashboardController extends AppController
             $this->set('model', $q);
             
     }
+    public function editPage($id)
+    {
+        $this->loadModel('Pages');
+        $this->loadModel('PageCategory');
+        $this->set('cat',$this->PageCategory);
+        if($id)    
+        $q = $this->Pages->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            
+    }
 
     public function settings()
     {

@@ -5436,3 +5436,19 @@ Stack Trace:
 #2 {main}
 
 
+2016-07-09 16:53:40 Error: [Cake\View\Exception\MissingTemplateException] Template file "Dashboard\edit_page.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Dashboard\\edit_page.ctp',
+)
+Request URL: /travel/dashboard/editPage/1
+Referer URL: http://localhost/travel/dashboard/pages
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#4 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+

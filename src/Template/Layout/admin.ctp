@@ -25,6 +25,7 @@
 
 
   <script src="<?php echo $this->request->webroot;?>admin_files/js/jquery.min.js"></script>
+  <script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
 
   <!--[if lt IE 9]>
         <script src="<?php echo $this->request->webroot;?>admin_files/../assets/js/ie8-responsive-file-warning.js"></script>

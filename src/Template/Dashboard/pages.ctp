@@ -8,7 +8,7 @@
                     </h3>
                 </div>
                 <div class="col-md-2">
-                    <a href="" class="btn btn-success btn-lg">Add New</a>
+                    <a href="<?php echo $this->request->webroot;?>dashboard/editPage/0" class="btn btn-success btn-lg">Add New</a>
                 </div>
                 
                 <div class="clearfix"></div>
@@ -38,7 +38,7 @@
                         <?php
                     }
                     ?>
-                    <tr><td><?php echo $i;?></td><td><?php echo $m->title;?></td><td><a href="" class="btn btn-primary">Edit</a> <a href="" class="btn btn-danger">Delete</a></td></tr>
+                    <tr><td><?php echo $i;?></td><td><?php echo $m->title;?></td><td><a href="<?php echo $this->request->webroot;?>dashboard/editPage/<?php echo $m->id;?>" class="btn btn-primary">Edit</a> <a href="" class="btn btn-danger">Delete</a></td></tr>
                     
                     <?php
                 }
