@@ -60,7 +60,7 @@
                 <div class="form-group">
                     <label class="col-md-3">Description</label>
                     <div class="col-md-6">
-                        <textarea name="description"></textarea>
+                        <textarea name="description"><?php echo $desc;?></textarea>
                         
                     </div>
                     
