@@ -22,6 +22,7 @@ class DashboardController extends AppController
     {
         $this->redirect('/dashboard/pages');
     }
+    
     /* function related to page manager*/
     public function pages()
     { 
@@ -85,7 +86,7 @@ class DashboardController extends AppController
     }
     /* functions related to page manager ends */
     
-    /* functions related to package manager */
+    /* functions related to package category manager */
     public function packCat()
     {
         
@@ -145,6 +146,69 @@ class DashboardController extends AppController
         $this->redirect('/dashboard/packCat');
     }
     /* functions related to package manager ends*/
+    
+    /* function related to page manager*/
+    public function packages()
+    { 
+        $this->loadModel('Packages');
+        $this->loadModel('PackageCategory');
+        $this->set('cat',$this->PackageCategory);    
+            $q = $this->Packages->find()->order('cat_id')->all();
+            if($q)
+            $this->set('model', $q);
+            
+    }
+    public function editPackage($id)
+    {
+        $this->loadModel('Packages');
+        $this->loadModel('PackageCategory');
+        $this->set('cat',$this->PackageCategory);
+        if($id)   { 
+        $q = $this->Packages->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+            
+    }
+    
+    public function savePackage($id)
+    {
+        $ptable = TableRegistry::get('Packages');
+        if(!$id)
+        $package = $ptable->newEntity();
+        else
+        {
+            $package = $ptable->get($id);
+        }
+        foreach($_POST as $k=>$p)
+        {
+            $package->$k = $p;
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        
+        if ($ptable->save($package)) {
+            $this->Flash->success("Package saved successfully");
+           $this->redirect('/dashboard/packages');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving Package");
+           $this->redirect('/dashboard/editPackage/'.$id);
+        }
+        
+            
+    }
+    
+    public function deletePackage($id)
+    {
+        $this->loadModel('Packages');
+        $entity = $this->Packages->get($id);
+        $result = $this->Packages->delete($entity);
+        $this->Flash->success("Package deleted successfully");
+        $this->redirect('/dashboard/packages');
+    }
+    /* functions related to page manager ends */
     
     public function settings()
     {
