@@ -22,10 +22,14 @@
   <link rel="stylesheet" type="text/css" href="<?php echo $this->request->webroot;?>admin_files/css/maps/jquery-jvectormap-2.0.3.css" />
   <link href="<?php echo $this->request->webroot;?>admin_files/css/icheck/flat/green.css" rel="stylesheet" />
   <link href="<?php echo $this->request->webroot;?>admin_files/css/floatexamples.css" rel="stylesheet" type="text/css" />
-
-
+   
+    
+   
   <script src="<?php echo $this->request->webroot;?>admin_files/js/jquery.min.js"></script>
   <script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
+  <script src="<?php echo $this->request->webroot;?>js/ajaxupload.js"></script>
+  
+  
 
   <!--[if lt IE 9]>
         <script src="<?php echo $this->request->webroot;?>admin_files/../assets/js/ie8-responsive-file-warning.js"></script>
@@ -354,6 +358,9 @@ echo $this->fetch('content');
   
   <!-- skycons -->
   <script src="<?php echo $this->request->webroot;?>admin_files/js/skycons/skycons.min.js"></script>
+  
+  <script src="<?php echo $this->request->webroot;?>admin_files/js/cropping/cropper.min.js"></script>
+  <script src="<?php echo $this->request->webroot;?>admin_files/js/cropping/main2.js"></script>
 
   <!-- flot js -->
   <!--[if lte IE 8]><script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/excanvas.min.js"></script><![endif]-->

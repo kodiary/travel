@@ -200,6 +200,32 @@ class DashboardController extends AppController
             
     }
     
+    public function fileUpload()
+    {
+        $this->loadComponent('ImageTool');
+        if(isset($_FILES['myfile']['name']))
+        {
+            $name = $_FILES['myfile']['name'];
+            if($name)
+            {
+                $arr_name = explode('.',$name);
+                $ext = end($arr_name);
+                $name = 'img'.rand(1,1000).'_'.date('Y_m_d_H_i_s').'.'.$ext;
+                move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/img/package/tmp/'.$name);
+                $status = $this->ImageTool->resize(array(
+                    'input' => APP.'../webroot/img/package/tmp/'.$name,
+                    'output' => APP.'../webroot/img/package/resized/'.$name,
+                    'width' => 800
+                ));
+                die($name);
+            }
+            else
+            {
+                echo "error";die();
+            }
+        }
+    }
+    
     public function deletePackage($id)
     {
         $this->loadModel('Packages');

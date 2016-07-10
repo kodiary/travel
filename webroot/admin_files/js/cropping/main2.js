@@ -30,7 +30,7 @@ $(function () {
         $dataWidth = $('#dataWidth'),
         $dataRotate = $('#dataRotate'),
         options = {
-          aspectRatio: 16 / 9,
+          aspectRatio: 1,
           preview: '.img-preview',
           crop: function (data) {
             $dataX.val(Math.round(data.x));
