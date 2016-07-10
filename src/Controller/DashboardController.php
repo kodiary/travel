@@ -22,9 +22,9 @@ class DashboardController extends AppController
     {
         $this->redirect('/dashboard/pages');
     }
-
+    /* function related to page manager*/
     public function pages()
-    {
+    { 
         $this->loadModel('Pages');
         $this->loadModel('PageCategory');
         $this->set('cat',$this->PageCategory);    
@@ -83,7 +83,69 @@ class DashboardController extends AppController
         $this->Flash->success("Page deleted successfully");
         $this->redirect('/dashboard/pages');
     }
-
+    /* functions related to page manager ends */
+    
+    /* functions related to package manager */
+    public function packCat()
+    {
+        
+        $this->loadModel('PackageCategory');
+           
+            $q = $this->PackageCategory->find()->all();
+            if($q)
+            $this->set('model', $q);
+            
+    }
+    public function editpackCat($id)
+    {
+        $this->loadModel('PackageCategory');
+        if($id)   { 
+        $q = $this->PackageCategory->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+            
+    }
+    
+    public function savepackCat($id)
+    {
+        $ptable = TableRegistry::get('PackageCategory');
+        if(!$id)
+        $pc = $ptable->newEntity();
+        else
+        {
+            $pc = $ptable->get($id);
+        }
+        foreach($_POST as $k=>$p)
+        {
+            $pc->$k = $p;
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        
+        if ($ptable->save($pc)) {
+            $this->Flash->success("Package Category saved successfully");
+           $this->redirect('/dashboard/packCat');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving Package Category");
+           $this->redirect('/dashboard/editpackCat/'.$id);
+        }
+        
+            
+    }
+    
+    public function deletepackCat($id)
+    {
+        $this->loadModel('PackageCategory');
+        $entity = $this->PackageCategory->get($id);
+        $result = $this->PackageCategory->delete($entity);
+        $this->Flash->success("Package Category deleted successfully");
+        $this->redirect('/dashboard/packCat');
+    }
+    /* functions related to package manager ends*/
+    
     public function settings()
     {
       if(isset($_POST['submit']))  

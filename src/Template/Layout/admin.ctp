@@ -76,9 +76,13 @@
                 <li><a href="<?php echo $this->request->webroot;?>dashboard"><i class="fa fa-edit"></i> Page Manager</a></li>
                 <li><a class="parentnav"><i class="fa fa-gift"></i> Package Manager <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form.html">Add Category</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/packCat">List Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form_advanced.html">Add Packages</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/packages">List Packages</a>
+                    </li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editpackCat/0">Add Category</a>
+                    </li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editpackages/0">Add Packages</a>
                     </li>
                   </ul>
                 </li>
@@ -301,7 +305,7 @@
 
 
       <!-- page content -->
-      <div class="right_col" role="main">
+      <div class="right_col" role="main" style="min-height: 630px;">
         <div class="" style="padding-top: 55px;">
 
           <?php
