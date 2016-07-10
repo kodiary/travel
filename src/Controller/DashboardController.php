@@ -20,7 +20,7 @@ class DashboardController extends AppController
     } 
     public function index()
     {
-        
+        $this->redirect('/dashboard/pages');
     }
 
     public function pages()
@@ -38,11 +38,50 @@ class DashboardController extends AppController
         $this->loadModel('Pages');
         $this->loadModel('PageCategory');
         $this->set('cat',$this->PageCategory);
-        if($id)    
+        if($id)   { 
         $q = $this->Pages->find()->where(['id'=>$id])->first();
             if($q)
             $this->set('model', $q);
+            }
             
+    }
+    
+    public function savePage($id)
+    {
+        $ptable = TableRegistry::get('Pages');
+        if(!$id)
+        $page = $ptable->newEntity();
+        else
+        {
+            $page = $ptable->get($id);
+        }
+        foreach($_POST as $k=>$p)
+        {
+            $page->$k = $p;
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        
+        if ($ptable->save($page)) {
+            $this->Flash->success("Page saved successfully");
+           $this->redirect('/dashboard/pages');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving page");
+           $this->redirect('/dashboard/editPage/'.$id);
+        }
+        
+            
+    }
+    
+    public function deletePage($id)
+    {
+        $this->loadModel('Pages');
+        $entity = $this->Pages->get($id);
+        $result = $this->Pages->delete($entity);
+        $this->Flash->success("Page deleted successfully");
+        $this->redirect('/dashboard/pages');
     }
 
     public function settings()

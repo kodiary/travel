@@ -10,7 +10,7 @@
 
   <title>Dashboard | Admin</title>
 
-  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS --> 
 
   <link href="<?php echo $this->request->webroot;?>admin_files/css/bootstrap.min.css" rel="stylesheet">
 
@@ -73,7 +73,7 @@
 
             <div class="menu_section">
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-sticky-note-o"></i> Page Manager</a></li>
+                <li><a href="<?php echo $this->request->webroot;?>dashboard"><i class="fa fa-sticky-note-o"></i> Page Manager</a></li>
                 <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     <li><a href="<?php echo $this->request->webroot;?>admin_files/form.html">General Form</a>
@@ -310,7 +310,7 @@
 
       <!-- page content -->
       <div class="right_col" role="main">
-        <div class="">
+        <div class="" style="padding-top: 55px;">
 
           <?php
 echo $this->Flash->render();

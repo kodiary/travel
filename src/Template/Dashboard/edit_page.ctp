@@ -29,7 +29,7 @@
                 
                 $category = $cat->find()->all();
                 ?>
-                
+                <form action="<?php echo $this->request->webroot;?>dashboard/savePage/<?php if(isset($model->id))echo $model->id;else echo "0";?>" method="post">
                 <div class="form-group">
                     <label class="col-md-3">Page Category</label>
                     <div class="col-md-6">
@@ -59,7 +59,7 @@
                 <hr />
                 <div class="form-group">
                     <label class="col-md-3">Description</label>
-                    <div class="col-md-6">
+                    <div class="col-md-6"> 
                         <textarea name="description"><?php echo $desc;?></textarea>
                         
                     </div>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                
+                </form>
                     
             </div>
         </div>
