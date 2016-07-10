@@ -73,20 +73,12 @@
 
             <div class="menu_section">
               <ul class="nav side-menu">
-                <li><a href="<?php echo $this->request->webroot;?>dashboard"><i class="fa fa-sticky-note-o"></i> Page Manager</a></li>
-                <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                <li><a href="<?php echo $this->request->webroot;?>dashboard"><i class="fa fa-edit"></i> Page Manager</a></li>
+                <li><a class="parentnav"><i class="fa fa-gift"></i> Package Manager <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form.html">General Form</a>
+                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form.html">Add Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form_advanced.html">Advanced Components</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form_validation.html">Form Validation</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form_wizards.html">Form Wizard</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form_upload.html">Form Upload</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form_buttons.html">Form Buttons</a>
+                    <li><a href="<?php echo $this->request->webroot;?>admin_files/form_advanced.html">Add Packages</a>
                     </li>
                   </ul>
                 </li>
@@ -347,14 +339,11 @@ echo $this->fetch('content');
   <script src="<?php echo $this->request->webroot;?>admin_files/js/progressbar/bootstrap-progressbar.min.js"></script>
   <!-- icheck -->
   <script src="<?php echo $this->request->webroot;?>admin_files/js/icheck/icheck.min.js"></script>
-  <!-- gauge js -->
-  <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/gauge/gauge.min.js"></script>
-  <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/gauge/gauge_demo.js"></script>
+  
   <!-- daterangepicker -->
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/moment/moment.min.js"></script>
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/datepicker/daterangepicker.js"></script>
-  <!-- chart js -->
-  <script src="<?php echo $this->request->webroot;?>admin_files/js/chartjs/chart.min.js"></script>
+  
   <!-- sparkline -->
   <script src="<?php echo $this->request->webroot;?>admin_files/js/sparkline/jquery.sparkline.min.js"></script>
 
@@ -364,7 +353,7 @@ echo $this->fetch('content');
 
   <!-- flot js -->
   <!--[if lte IE 8]><script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/excanvas.min.js"></script><![endif]-->
-  <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/jquery.flot.js"></script>
+  <?php /*<script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/jquery.flot.js"></script>
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/jquery.flot.pie.js"></script>
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/jquery.flot.orderBars.js"></script>
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/jquery.flot.time.min.js"></script>
@@ -373,10 +362,11 @@ echo $this->fetch('content');
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/jquery.flot.stack.js"></script>
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/curvedLines.js"></script>
   <script type="text/javascript" src="<?php echo $this->request->webroot;?>admin_files/js/flot/jquery.flot.resize.js"></script>
-  <!-- pace -->
+  <!-- pace -->*/?>
   <script src="<?php echo $this->request->webroot;?>admin_files/js/pace/pace.min.js"></script>
+  <script src="<?php echo $this->request->webroot;?>js/custom.js"></script>
   <!-- flot -->
-
+<?php /*
   <script>
     //random data
     var d1 = [
@@ -650,6 +640,7 @@ echo $this->fetch('content');
     gauge.set(3200); // set actual value
     gauge.setTextField(document.getElementById("gauge-text2"));
   </script>
+  */?>
 </body>
 
 </html>
