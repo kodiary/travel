@@ -5876,3 +5876,204 @@ Stack Trace:
 #2 {main}
 
 
+2016-07-10 14:13:23 Error: Fatal Error (1): Class 'App\Controller\Component\Exception' not found in [E:\wamp\www\travel\src\Controller\Component\SimpleImageComponent.php, line 890]
+Request URL: /travel/dashboard/savePackage/1
+Referer URL: http://localhost/travel/dashboard/editPackage/1
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-10 14:13:24 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Component\Exception' not found
+Request URL: /travel/dashboard/savePackage/1
+Referer URL: http://localhost/travel/dashboard/editPackage/1
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'E:\\wamp\\www\\tra...', 890)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-10 15:48:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 15:50:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 15:59:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:03:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:06:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:07:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:08:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:09:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:10:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:12:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:13:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-07-10 16:14:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/js/cropping/Jcrop.gif
+Referer URL: http://localhost/travel/admin_files/js/cropping/jcrop.css
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

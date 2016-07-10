@@ -60,6 +60,8 @@
                 <div class="form-group">
                     <label class="col-md-3">Image</label>
                     <div class="col-md-9"> 
+                    <div style="height: 5px;background:#000;width:800px;"></div>
+                        <input type="hidden" name="image" id="image" />
                         <div class="imagebody img-preview preview-lg" id="preview">
                         
                         </div>
@@ -70,29 +72,29 @@
                             
                         </div>
                         <div class="clearfix"></div>
-                        <div class="cropbody img-container" style="display: none;float: left;width:800px">
+                        <div class="cropbody img-container" style="display: none;float: left;width:785px">
                         
                         </div>
                         <div class="clearfix"></div>
                         <div class="docs-data">
                       <div class="input-group">
                         <label class="input-group-addon" for="dataX">X</label>
-                        <input class="form-control" id="dataX" type="text" placeholder="x">
+                        <input class="form-control" id="dataX" type="text" placeholder="x" name="x">
                         <span class="input-group-addon">px</span>
                       </div>
                       <div class="input-group">
                         <label class="input-group-addon" for="dataY">Y</label>
-                        <input class="form-control" id="dataY" type="text" placeholder="y">
+                        <input class="form-control" id="dataY" type="text" placeholder="y" name="y">
                         <span class="input-group-addon">px</span>
                       </div>
                       <div class="input-group">
                         <label class="input-group-addon" for="dataWidth">Width</label>
-                        <input class="form-control" id="dataWidth" type="text" placeholder="width">
+                        <input class="form-control" id="dataWidth" type="text" placeholder="width" name="w">
                         <span class="input-group-addon">px</span>
                       </div>
                       <div class="input-group">
                         <label class="input-group-addon" for="dataHeight">Height</label>
-                        <input class="form-control" id="dataHeight" type="text" placeholder="height">
+                        <input class="form-control" id="dataHeight" type="text" placeholder="height" name="h">
                         <span class="input-group-addon">px</span>
                       </div>
                       <div class="input-group">
@@ -146,9 +148,10 @@
             },
             onComplete: function (file, response) {
                 if (response != 'error') {
+                    $('#image').val(response);
                     $('.imagebody').html('<img src="<?php echo $this->request->webroot;?>img/package/resized/'+response+'" style="width:300px;height:300px;" />');
                     $('.cropbody').show();
-                    $('.cropbody').append('<img id="cropbox1" src="<?php echo $this->request->webroot;?>img/package/resized/'+response+'" style="width:700px;" class="tocrop" />');
+                    $('.cropbody').append('<img id="cropbox1" src="<?php echo $this->request->webroot;?>img/package/resized/'+response+'" style="width:785px;" class="tocrop" />');
                     
                     
                     
@@ -205,7 +208,7 @@
                           'built.cropper': function (e) {
                             console.log(e.type);
                           }
-                        }).cropper(options);
+                        }).cropper(options).toDataURL('image/jpeg');
                     
                     
                         // Methods

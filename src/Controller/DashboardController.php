@@ -182,7 +182,21 @@ class DashboardController extends AppController
         }
         foreach($_POST as $k=>$p)
         {
+            if($k=='x' || $k=='y' || $k=='w' || $k=='h')
+            {
+                $dimension[$k] = $p;
+            }
+            else{
             $package->$k = $p;
+            }
+        }
+        //var_dump($dimension);die();
+        if($package->image){
+        $this->loadComponent('SimpleImage');
+        $this->SimpleImage->loader(APP.'../webroot/img/package/resized/'.$package->image);
+        $this->SimpleImage->crop($dimension['x'],$dimension['y'],$dimension['w'],$dimension['h'])->save(APP.'../webroot/img/package/final/'.$package->image);
+        unlink(APP.'../webroot/img/package/tmp/'.$package->image);
+        unlink(APP.'../webroot/img/package/resized/'.$package->image);
         }
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
@@ -213,7 +227,7 @@ class DashboardController extends AppController
                 $name = 'img'.rand(1,1000).'_'.date('Y_m_d_H_i_s').'.'.$ext;
                 move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/img/package/tmp/'.$name);
                 $this->SimpleImage->loader(APP.'../webroot/img/package/tmp/'.$name);
-                $status = $this->SimpleImage->fit_to_width(800)->save(APP.'../webroot/img/package/resized/'.$name);
+                $status = $this->SimpleImage->fit_to_width(785)->save(APP.'../webroot/img/package/resized/'.$name);
                 die($name);
             }
             else

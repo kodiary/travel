@@ -269,17 +269,12 @@ class SimpleImageComponent extends Component
      * @return SimpleImage
      *
      */
-    function crop($x1, $y1, $x2, $y2) {
+    function crop($x1, $y1, $w, $h) {
 
         // Determine crop size
-        if ($x2 < $x1) {
-            list($x1, $x2) = array($x2, $x1);
-        }
-        if ($y2 < $y1) {
-            list($y1, $y2) = array($y2, $y1);
-        }
-        $crop_width = $x2 - $x1;
-        $crop_height = $y2 - $y1;
+        
+        $crop_width = $w;
+        $crop_height = $h;
 
         // Perform crop
         $new = imagecreatetruecolor($crop_width, $crop_height);
