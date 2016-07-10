@@ -145,9 +145,9 @@ class DashboardController extends AppController
         $this->Flash->success("Package Category deleted successfully");
         $this->redirect('/dashboard/packCat');
     }
-    /* functions related to package manager ends*/
+    /* functions related to package caegory manager ends*/
     
-    /* function related to page manager*/
+    /* function related to package manager*/
     public function packages()
     { 
         $this->loadModel('Packages');
@@ -245,7 +245,7 @@ class DashboardController extends AppController
         $this->Flash->success("Package deleted successfully");
         $this->redirect('/dashboard/packages');
     }
-    /* functions related to page manager ends */
+    /* functions related to package manager ends */
     
     public function settings()
     {

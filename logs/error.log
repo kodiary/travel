@@ -6077,3 +6077,18 @@ Stack Trace:
 #1 {main}
 
 
+2016-07-10 16:20:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin_files could not be found.
+Exception Attributes: array (
+  'class' => 'Admin_files',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/admin_files/index.html
+Referer URL: http://localhost/travel/dashboard/editPackage/1
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
