@@ -203,6 +203,7 @@ class DashboardController extends AppController
     public function fileUpload()
     {
         $this->loadComponent('ImageTool');
+        $this->loadComponent('SimpleImage');
         if(isset($_FILES['myfile']['name']))
         {
             $name = $_FILES['myfile']['name'];
@@ -212,11 +213,8 @@ class DashboardController extends AppController
                 $ext = end($arr_name);
                 $name = 'img'.rand(1,1000).'_'.date('Y_m_d_H_i_s').'.'.$ext;
                 move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/img/package/tmp/'.$name);
-                $status = $this->ImageTool->resize(array(
-                    'input' => APP.'../webroot/img/package/tmp/'.$name,
-                    'output' => APP.'../webroot/img/package/resized/'.$name,
-                    'width' => 800
-                ));
+                $this->SimpleImage->loader(APP.'../webroot/img/package/tmp/'.$name);
+                $status = $this->SimpleImage->fit_to_width(800)->save(APP.'../webroot/img/package/resized/'.$name);
                 die($name);
             }
             else
