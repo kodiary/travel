@@ -202,7 +202,6 @@ class DashboardController extends AppController
     
     public function fileUpload()
     {
-        $this->loadComponent('ImageTool');
         $this->loadComponent('SimpleImage');
         if(isset($_FILES['myfile']['name']))
         {
