@@ -524,71 +524,30 @@ echo $this->fetch('content');
           
           <!-- BEGIN SIDEBAR -->
           <div class="sidebar col-md-3 col-sm-4">
-            <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-heading">Travel Services in Nepal</li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Trekking and Hiking</a></li>
-              <li class="list-group-item clearfix dropdown">
-                <a href="shop-product-list.html">
-                  <i class="fa fa-angle-left"></i>
-                  Package Tour
-                  
-                </a>
-                <!--<ul class="dropdown-menu">
-                  <li class="list-group-item dropdown clearfix">
-                    <a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Shoes </a>
-                      <ul class="dropdown-menu">
-                        <li class="list-group-item dropdown clearfix">
-                          <a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Classic </a>
-                          <ul class="dropdown-menu">
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Classic 1</a></li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Classic 2</a></li>
-                          </ul>
-                        </li>
-                        <li class="list-group-item dropdown clearfix">
-                          <a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Sport  </a>
-                          <ul class="dropdown-menu">
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Sport 1</a></li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Sport 2</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                  </li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Trainers</a></li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Jeans</a></li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Chinos</a></li>
-                  <li><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> T-Shirts</a></li>
-                </ul>-->
-              </li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Peak Climbing</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> River Rafting</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Jungle Safari</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Helicoptor Tour</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Electronics</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Home & Garden</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Custom Link</a></li>
-            </ul>
-            <hr />
-            <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-heading">Travel Services out of Nepal</li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Tibet Tour</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Bhutan Tour</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> India Tour</a></li>
-            </ul>
-            <hr />
-            <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-heading">Traveller's Guide</li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Introduction of Nepal</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Trekking Information</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Best Trekking Season</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Visa Information of Nepal</a></li>
-              <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-left"></i> Flora and Fauna in Nepal</a></li>
-            </ul>
-            <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-heading">Find us on Facebook</li>
-              <li class="list-group-item clearfix">
-              <div class="fb-page" data-href="https://www.facebook.com/Kodiary-967626183279118/" data-tabs="timeline" data-width="250" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-              </li>
-            </ul>
+            
+              <?php 
+              $pgcats = TableRegistry::get('PageCategory')->find()->order(['id'=>'desc'])->all();
+              foreach($pgcats as $pgc)
+              {
+               ?>
+               <ul class="list-group margin-bottom-25 sidebar-menu">
+                    <li class="list-heading"><?php echo $pgc->title?></li>
+                    <?php 
+                        $pg = TableRegistry::get('Pages')->find()->where(['cat_id'=>$pgc->id])->order(['id'=>'desc'])->all();
+                        foreach($pg as $pages)
+                        {
+                            ?>
+                            <li class="list-group-item clearfix"><a href="<?php echo $this->request->webroot;?>pages/view/<?php echo $pages->slug;?>"><i class="fa fa-angle-left"></i> <?php echo $pages->title;?></a></li>
+                            <?php
+                        }
+                    ?>
+               </ul>
+               <hr />
+               <?php 
+              }
+              ?> 
+              
+              
           </div>
         </div>
         <!-- END SIDEBAR & CONTENT -->
