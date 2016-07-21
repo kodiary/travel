@@ -62,7 +62,10 @@ class DashboardController extends AppController
         }
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
-        
+        if($id==0)
+        {
+            $page->slug = $this->generateSlug($page->title,'Pages');
+        }
         if ($ptable->save($page)) {
             $this->Flash->success("Page saved successfully");
            $this->redirect('/dashboard/pages');
@@ -123,7 +126,10 @@ class DashboardController extends AppController
         }
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
-        
+        if($id==0)
+        {
+            $pc->slug = $this->generateSlug($pc->title,'PackageCategory');
+        }
         if ($ptable->save($pc)) {
             $this->Flash->success("Package Category saved successfully");
            $this->redirect('/dashboard/packCat');
@@ -268,7 +274,10 @@ class DashboardController extends AppController
         //var_dump($package);die('2222');
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
-        
+        if($id==0)
+        {
+            $package->slug = $this->generateSlug($package->title,'Packages');
+        }
         if ($ptable->save($package)) {
             $this->loadModel('Iteniery');
             $this->Iteniery->deleteAll(['pid'=>$package->id]);
@@ -438,7 +447,10 @@ class DashboardController extends AppController
         }
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
-        
+        if($id==0)
+        {
+            $tc->slug = $this->generateSlug($tc->title,'TourCategory');
+        }
         if ($ttable->save($tc)) {
             $this->Flash->success("Tour Category saved successfully");
            $this->redirect('/dashboard/tourCat');
@@ -521,7 +533,10 @@ class DashboardController extends AppController
         }
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
-        
+        if($id==0)
+        {
+            $tour->slug = $this->generateSlug($tour->title,'Tours');
+        }
         if ($ttable->save($tour)) {
             $this->Flash->success("Tour saved successfully");
            $this->redirect('/dashboard/tours');
@@ -541,6 +556,22 @@ class DashboardController extends AppController
         $result = $this->Tours->delete($entity);
         $this->Flash->success("Package deleted successfully");
         $this->redirect('/dashboard//tours');
+    }
+    
+    public function generateSlug($title,$model)
+    {
+        $this->loadModel($model);
+        $mod = $this->$model->find()->where(['title'=>$title])->first();
+        $slug = $title;
+        $slug = ereg_replace("[^A-Za-z0-9?!]", "-", $slug);
+        $slug = str_replace(' ','-',$slug);
+        $slug = str_replace(array('---','--'),array('-','-'),$slug);
+        if($mod)
+        {
+            $slug = $title.'-'.date('YmdHis');
+        }
+        return $slug;
+        
     }
 
 }

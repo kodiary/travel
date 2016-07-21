@@ -17,6 +17,7 @@ namespace App\Controller;
 use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\ORM\TableRegistry;
 
 /**
  * Static content controller
@@ -37,6 +38,14 @@ class PagesController extends AppController
      */
     public function index()
     {
+        $model = TableRegistry::get('Pages');
+        $q = $model->find()->where(['slug' =>'about-us'])->first();
+        if($q)
+        $this->set('about',$q);
         
+        $packages = TableRegistry::get('Packages');
+        $pmodel = $packages->find()->order(['id' =>'desc'])->all();
+        if($pmodel)
+        $this->set('packages',$pmodel);
     }
 }

@@ -126,20 +126,35 @@
                 <hr />
                 
                  <div class="form-group">
-                    <label class="col-md-3">Iteniery</label>
+                    <label class="col-md-3">Itenerary</label>
                     <div class="col-md-6"> 
                         <div class="field_wrapper"> 
                                 <?php 
                                 if(isset($model1)){
-                                    foreach($model1 as $k){?>
-                                    <div><input name="iteniery[title][]" placeholder="Title" class="form-control" value="<?php echo $k->title; ?>" />
-                                    <textarea name="iteniery[desc][]" placeholder="Description" class="form-control"><?php echo $k-> description; ?></textarea>
-                                    <a href="javascript:void(0);" class="remove_button btn btn-danger" title="Remove field">Remove</a></div>
+                                    $counter=0;
+                                    foreach($model1 as $k){
+                                        $counter++;
+                                        if($counter!=1)
+                                        {
+                                            echo "<hr/>";
+                                        }
+                                        ?>
+                                    <div>
+                                        <input name="iteniery[title][]" placeholder="Title" class="form-control" value="<?php echo $k->title; ?>" /><br/>
+                                        <textarea name="iteniery[desc][]" placeholder="Description" class="form-control"><?php echo $k-> description; ?></textarea><br/>
+                                        <a href="javascript:void(0);" class="remove_button btn btn-danger" title="Remove field">Remove</a>
+                                    </div>
                                     <?php
                                         }
                                     }
                                 else{
-                                    echo '<div><input name="iteniery[title][]" placeholder="Title" class="form-control" required /><textarea name="iteniery[desc][]" placeholder="Description" class="form-control" required></textarea></div>';
+                                    ?>
+                                    <div>
+                                        <input name="iteniery[title][]" placeholder="Title" class="form-control" required />
+                                        <br/>
+                                        <textarea name="iteniery[desc][]" placeholder="Description" class="form-control" required></textarea>
+                                    </div>
+                                    <?php
                                 }
                                 
                             
