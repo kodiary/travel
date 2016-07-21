@@ -8172,3 +8172,22 @@ Stack Trace:
 #1 {main}
 
 
+2016-07-21 13:24:57 Error: Fatal Error (1): Class 'TableRegistry' not found in [E:\wamp\www\travel\src\Template\Layout\default.ctp, line 155]
+Request URL: /travel/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-21 13:24:58 Error: [Cake\Error\FatalErrorException] Class 'TableRegistry' not found
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'TableReg...', 'E:\\wamp\\www\\tra...', 155)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

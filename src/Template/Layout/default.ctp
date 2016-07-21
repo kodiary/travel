@@ -1,3 +1,6 @@
+<?php
+use Cake\ORM\TableRegistry;
+?>
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
@@ -19,7 +22,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <!-- Head BEGIN -->
 <head>
   <meta charset="utf-8">
-  <title>Metronic Shop UI</title>
+  <title>The Appolo Adventure</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -97,7 +100,7 @@ License: You must have a valid license purchased only from themeforest (the abov
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="shop-index.html"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png" alt="Metronic Shop UI"></a>
+        <a class="site-logo" href="shop-index.html"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
@@ -107,7 +110,7 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="header-navigation">
           <ul class="common">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="<?php echo $this->request->webroot;?>">
                 Home 
                 
               </a>
@@ -138,64 +141,53 @@ License: You must have a valid license purchased only from themeforest (the abov
               </ul>
               <!-- END DROPDOWN MENU -->
             </li>
+            <li>
+                <a href="<?php echo $this->request->webroot;?>pages/view/about-us">About</a>
+            </li>
             <li class="dropdown dropdown-megamenu">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                Nepal
+                Packages
                 
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <div class="header-navigation-content">
-                    <div class="row">
-                      <div class="col-md-4 header-navigation-col">
-                        <h4>Trekking</h4>
-                        <ul>
-                          <li><a href="shop-product-list.html">Annapurna base Camp</a></li>
-                          <li><a href="shop-product-list.html">Langtang Base Camp</a></li>
-                          <li><a href="shop-product-list.html">Everest Base Camp</a></li>
-                          <li><a href="shop-product-list.html">Makalu Base Camp</a></li>
-                          <li><a href="shop-product-list.html">Jomsom Muktinath</a></li>
-                          <li><a href="shop-product-list.html">Tilicho Lake</a></li>
-                          <li><a href="shop-product-list.html">Upper Mustang</a></li>
-                          <li><a href="shop-product-list.html">Mardi Himal</a></li>
-                        </ul>
+                  <div class="header-navigation-content" style="width: 325px;">
+                    <div class="row common">
+                      
+                      <?php 
+                      $pcats = TableRegistry::get('PackageCategory')->find()->order(['id'=>'desc'])->all();
+                      foreach($pcats as $pc)
+                      {
+                        ?>
+                        
+                      <div class="col-md-12 header-navigation-col">
+                        
+                        <?php 
+                        $package = TableRegistry::get('Packages')->find()->where(['cat_id'=>$pc->id])->order(['id'=>'desc'])->all();
+                        if($package and count($package))
+                        {
+                            ?>
+                            <h4><?php echo $pc->title;?></h4>
+                            <ul>
+                                <?php
+                                foreach($package as $pack)
+                                {
+                                    ?>
+                                    <li><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack->slug;?>"><?php echo $pack->title;?></a></li>
+                                    <?php
+                                }
+                                ?>
+                            </ul>
+                            <?php
+                        }
+                        ?>
+                        
                       </div>
-                      <div class="col-md-4 header-navigation-col">
-                        <h4>Rafting</h4>
-                        <ul>
-                          <li><a href="shop-product-list.html">Trishuli River</a></li>
-                          <li><a href="shop-product-list.html">Sunkoshi River</a></li>
-                          <li><a href="shop-product-list.html">Gandaki River</a></li>
-                          <li><a href="shop-product-list.html">Kali Gandaki</a></li>
-                          <li><a href="shop-product-list.html">Bhote Koshi</a></li>
-                          
-                        </ul>
-                      </div>
-                      <div class="col-md-4 header-navigation-col">
-                        <h4>Hiking</h4>
-                        <ul>
-                          <li><a href="shop-product-list.html">Kalinchowk Temple</a></li>
-                          <li><a href="shop-product-list.html">Shivapuri Nagarjun</a></li>
-                          <li><a href="shop-product-list.html">Sarankot</a></li>
-                          <li><a href="shop-product-list.html">Dhampus</a></li>
-                        </ul>
-
-                        <h4>Tour</h4>
-                        <ul>
-                          <li><a href="shop-product-list.html">Kathmandu (City of Temples)</a></li>
-                          <li><a href="shop-product-list.html">Pokhara (City of lakes)</a></li>
-                          <li><a href="shop-product-list.html">Chitwan (City of wild)</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-md-12 nav-brands">
-                        <ul>
-                          <li><a href="shop-product-list.html"><img title="esprit" alt="esprit" src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/brands/esprit.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="gap" alt="gap" src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/brands/gap.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="next" alt="next" src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/brands/next.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="puma" alt="puma" src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/brands/puma.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="zara" alt="zara" src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/brands/zara.jpg"></a></li>
-                        </ul>
-                      </div>
+                      <?php
+                      }
+                      
+                      ?>
+                      
                     </div>
                   </div>
                 </li>
@@ -285,7 +277,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             </li>
             <li><a href="index.html" target="_blank">Corporate</a></li>
             <li><a href="onepage-index.html" target="_blank">One Page</a></li>
-            <li><a href="http://keenthemes.com/preview/metronic/theme_rtl/templates/admin&amp;page=ecommerce_index.html" target="_blank">Admin theme</a></li>
+            
 
             <!-- BEGIN TOP SEARCH -->
             <li class="menu-search">

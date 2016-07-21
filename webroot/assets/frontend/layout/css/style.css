@@ -614,7 +614,7 @@ body.page-header-fixed {
 /* navigation content */
 .header-navigation-content {
   padding: 20px 30px;
-  min-width: 600px;
+  text-align: left;
 }
 .header-navigation-content .header-navigation-col {
 	padding: 0;
@@ -3081,3 +3081,5 @@ Styler Panel
 .list-heading{background:#3399FF;color:#FFF;text-align:center;font-weight: bold;padding:5px;font-size:16px;}
 .flright{float:right!important;}
 .product-item{min-height:370px;margin-bottom:10px;}
+.ecommerce .site-logo{padding:10px 0!important;}
+.ecommerce .site-logo img{width:250px;}
