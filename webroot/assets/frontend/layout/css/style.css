@@ -3083,3 +3083,10 @@ Styler Panel
 .product-item{min-height:370px;margin-bottom:10px;}
 .ecommerce .site-logo{padding:10px 0!important;}
 .ecommerce .site-logo img{width:250px;}
+.header-navigation .dropdown-menu > li:first-child {
+    border-top: 2px solid #6197CD!important;
+}
+.ecommerce .header-navigation ul > li.active > .uppermenu, .ecommerce .header-navigation ul > li > .uppermenu:hover, .ecommerce .header-navigation ul > li > .uppermenu:focus, .ecommerce .header-navigation ul > li.open > .uppermenu, .ecommerce .header-navigation ul > li.open > .uppermenu:hover, .ecommerce .header-navigation ul > li.open > .uppermenu:focus {
+    color: #3399FF;
+}
+.header-navigation-col a:hover{color:#FFF!important;}

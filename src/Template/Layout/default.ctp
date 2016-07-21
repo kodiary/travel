@@ -110,7 +110,7 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="header-navigation">
           <ul class="common">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="<?php echo $this->request->webroot;?>">
+              <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="<?php echo $this->request->webroot;?>">
                 Home 
                 
               </a>
@@ -142,10 +142,10 @@ License: You must have a valid license purchased only from themeforest (the abov
               <!-- END DROPDOWN MENU -->
             </li>
             <li>
-                <a href="<?php echo $this->request->webroot;?>pages/view/about-us">About</a>
+                <a href="<?php echo $this->request->webroot;?>pages/view/about-us" class="uppermenu">About</a>
             </li>
             <li class="dropdown dropdown-megamenu">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+              <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 Packages
                 
               </a>
@@ -193,9 +193,9 @@ License: You must have a valid license purchased only from themeforest (the abov
                 </li>
               </ul>
             </li>
-            <li><a href="shop-item.html">Kids</a></li>
+            <li><a href="shop-item.html" class="uppermenu">Kids</a></li>
             <li class="dropdown dropdown100 nav-catalogue">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+              <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 New
                 
               </a>
@@ -249,7 +249,7 @@ License: You must have a valid license purchased only from themeforest (the abov
               </ul>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+              <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 Pages 
                 
               </a>
@@ -275,8 +275,8 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <li><a href="shop-terms-conditions-page.html">Terms &amp; Conditions</a></li>
               </ul>
             </li>
-            <li><a href="index.html" target="_blank">Corporate</a></li>
-            <li><a href="onepage-index.html" target="_blank">One Page</a></li>
+            <li><a href="index.html" class=" uppermenu" target="_blank">Corporate</a></li>
+            <li><a href="onepage-index.html" class=" uppermenu" target="_blank">One Page</a></li>
             
 
             <!-- BEGIN TOP SEARCH -->
