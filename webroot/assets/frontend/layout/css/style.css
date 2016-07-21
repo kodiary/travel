@@ -3090,3 +3090,5 @@ Styler Panel
     color: #3399FF;
 }
 .header-navigation-col a:hover{color:#FFF!important;}
+.breadcrumb{background:#fefefe;padding:5px 10px;border-radius:5px;text-align:left;font-size: 16px!important;color:#555!important;direction:ltr!important;}
+.breadcrumb a{font-weight:bold;}

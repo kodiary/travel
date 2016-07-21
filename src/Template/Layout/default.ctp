@@ -301,7 +301,10 @@ License: You must have a valid license purchased only from themeforest (the abov
       </div>
     </div>
     <!-- Header END -->
-
+    <?php if($this->request->params['controller'] == 'Pages' && $this->request->params['action']=='index')
+    {
+        ?>
+      
     <!-- BEGIN SLIDER -->
     <div class="page-slider margin-bottom-35">
       <!-- LayerSlider start -->
@@ -495,7 +498,9 @@ License: You must have a valid license purchased only from themeforest (the abov
       <!-- LayerSlider end -->
     </div>
     <!-- END SLIDER -->
-
+      <?php
+    }
+    ?>
     <div class="main">
       <div class="container">
         

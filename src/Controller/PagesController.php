@@ -48,4 +48,11 @@ class PagesController extends AppController
         if($pmodel)
         $this->set('packages',$pmodel);
     }
+    public function view($slug)
+    {
+        $model = TableRegistry::get('Pages');
+        $q = $model->find()->where(['slug' =>$slug])->first();
+        if($q)
+        $this->set('page',$q);
+    }
 }
