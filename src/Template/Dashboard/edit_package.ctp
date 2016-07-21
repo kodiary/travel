@@ -6,29 +6,29 @@
                     <h3>
                         Package Manager <span class="small">Add/Edit Package</span>                
                     </h3>
-                </div>
-                <div class="col-md-2">
-                    <a href="<?php echo $this->request->webroot;?>dashboard/editPackage/0" class="btn btn-success btn-lg">Add New</a>
-                </div>
-                
-                <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-                
                 <?php
                 if(isset($model)){
-                $cid = $model->cat_id;
+                 $cid = $model->cat_id;
                 $title = $model->title;
                 $desc = $model->description;
+                $img =  $model->image;
                 }
                 else{
                 $cid = 0;
                 $title = '';
                 $desc = '';
+                $img ='';
                 }
-                
                 $category = $cat->find()->all();
                 ?>
+                </div>
+                <div class="col-md-2">
+                    <a href="<?php echo $this->request->webroot;?>dashboard/editPackage/0" class="btn btn-success btn-lg"  <?php if($cid==0){echo 'style="display: none"';} ?> >Add New</a>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
                 <form action="<?php echo $this->request->webroot;?>dashboard/savePackage/<?php if(isset($model->id))echo $model->id;else echo "0";?>" method="post">
                 <div class="form-group">
                     <label class="col-md-3">Package Category</label>
@@ -60,23 +60,30 @@
                 <div class="form-group">
                     <label class="col-md-3">Image</label>
                     <div class="col-md-9"> 
-                    <div style="height: 5px;background:#000;width:800px;"></div>
                         <input type="hidden" name="image" id="image" />
                         <div class="imagebody img-preview preview-lg" id="preview">
-                        
+                        <?php if($img!=''){
+                          ?>
+                          <img src="<?php echo $this->request->webroot;?>img/package/final/<?php echo $img;?>" />
+                          <?php  
+                         }?> 
                         </div>
                         <div class="imageaction">
                             <a href="javascript:void(0)" class="btn btn-info" id="upload">Browse</a>
                             <br />
-                            <a href="javascript:void(0)" class="btn btn-default">Crop</a>
-                            
+                            <a href="javascript:void(0)" class="btn btn-default" onclick="$('.cropbody').show();$('.crop_value').val('1');
+                            <?php if($img!=''){
+                          ?>
+                            $('.cropbody').html('<img src=\'<?php echo $this->request->webroot.'img/package/resized/'.$img;?>\' />');
+                          <?php  
+                         }?> ">Crop</a>
+                             <input class="crop_value"  type="hidden"  name="crop_value" />
                         </div>
                         <div class="clearfix"></div>
                         <div class="cropbody img-container" style="display: none;float: left;width:785px">
-                        
                         </div>
                         <div class="clearfix"></div>
-                        <div class="docs-data">
+                        <div class="docs-data" >
                       <div class="input-group">
                         <label class="input-group-addon" for="dataX">X</label>
                         <input class="form-control" id="dataX" type="text" placeholder="x" name="x">
@@ -113,12 +120,38 @@
                     <label class="col-md-3">Description</label>
                     <div class="col-md-6"> 
                         <textarea name="description"><?php echo $desc;?></textarea>
-                        
                     </div>
-                    
                     <div class="clearfix"></div>
                 </div>
                 <hr />
+                
+                 <div class="form-group">
+                    <label class="col-md-3">Iteniery</label>
+                    <div class="col-md-6"> 
+                        <div class="field_wrapper"> 
+                                <?php 
+                                if(isset($model1)){
+                                    foreach($model1 as $k){?>
+                                    <div><input name="iteniery[title][]" placeholder="Title" class="form-control" value="<?php echo $k->title; ?>" />
+                                    <textarea name="iteniery[desc][]" placeholder="Description" class="form-control"><?php echo $k-> description; ?></textarea>
+                                    <a href="javascript:void(0);" class="remove_button btn btn-danger" title="Remove field">Remove</a></div>
+                                    <?php
+                                        }
+                                    }
+                                else{
+                                    echo '<div><input name="iteniery[title][]" placeholder="Title" class="form-control" required /><textarea name="iteniery[desc][]" placeholder="Description" class="form-control" required></textarea></div>';
+                                }
+                                
+                            
+                            ?>
+                        </div>
+                        <hr />
+                                <a href="javascript:void(0);" class="add_button btn btn-info" title="Add field">Add More</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                
                 <div class="form-group">
                     <label class="col-md-3"> </label>
                     <div class="col-md-6">
@@ -140,7 +173,7 @@
     function fileUpload(ID) {
         
         var upload = new AjaxUpload("#" + ID, {
-            action: "<?php echo $this->request->webroot;?>dashboard/fileUpload",
+            action: "<?php echo $this->request->webroot;?>dashboard/fileUpload?type=''",
             enctype: 'multipart/form-data',
             name: 'myfile',
             onSubmit: function (file, ext) {
@@ -151,7 +184,7 @@
                     $('#image').val(response);
                     $('.imagebody').html('<img src="<?php echo $this->request->webroot;?>img/package/resized/'+response+'" style="width:300px;height:300px;" />');
                     $('.cropbody').show();
-                    $('.cropbody').append('<img id="cropbox1" src="<?php echo $this->request->webroot;?>img/package/resized/'+response+'" style="width:785px;" class="tocrop" />');
+                    $('.cropbody').html('<img id="cropbox1" src="<?php echo $this->request->webroot;?>img/package/resized/'+response+'" style="width:785px;" class="tocrop" />');
                     
                     
                     
@@ -329,4 +362,24 @@
         });
     }
     
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var maxField = 10; //Input fields increment limitation
+    var addButton = $('.add_button'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+    var fieldHTML = '<div><hr/><input name="iteniery[title][]" placeholder="Title" class="form-control" required /><br/><textarea placeholder="Description" name="iteniery[desc][]" class="form-control" required></textarea><br/><a href="javascript:void(0);" class="remove_button btn btn-danger" title="Remove field">Remove</a></div>'; //New input field html 
+    var x = 1; //Initial field counter is 1
+    $(addButton).click(function(){ //Once add button is clicked
+        if(x < maxField){ //Check maximum number of input fields
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); // Add field html
+        }
+    });
+    $(wrapper).on('click', '.remove_button', function(e){ //Once remove button is clicked
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
 </script>

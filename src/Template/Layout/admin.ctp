@@ -86,31 +86,22 @@
                     </li>
                     <li><a href="<?php echo $this->request->webroot;?>dashboard/editpackCat/0">Add Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editpackages/0">Add Packages</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editPackage/0">Add Packages</a>
                     </li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                <li><a class="parentnav"><i class="fa fa-gift"></i> Tour Manager <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/general_elements.html">General Elements</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/tourCat">List Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/media_gallery.html">Media Gallery</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/tours">List Tour</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/typography.html">Typography</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/edittourCat/0">Add Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/icons.html">Icons</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/glyphicons.html">Glyphicons</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/widgets.html">Widgets</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/invoice.html">Invoice</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/inbox.html">Inbox</a>
-                    </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/calendar.html">Calendar</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/edittours/0">Add Tour</a>
                     </li>
                   </ul>
+                </li>
                 </li>
                 <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">

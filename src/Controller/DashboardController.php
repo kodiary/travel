@@ -86,7 +86,7 @@ class DashboardController extends AppController
     }
     /* functions related to page manager ends */
     
-    /* functions related to package category manager */
+    /* functions related to tour category manager */
     public function packCat()
     {
         
@@ -162,23 +162,32 @@ class DashboardController extends AppController
     {
         $this->loadModel('Packages');
         $this->loadModel('PackageCategory');
+        $this->loadModel('Iteniery');
         $this->set('cat',$this->PackageCategory);
         if($id)   { 
         $q = $this->Packages->find()->where(['id'=>$id])->first();
+        $w = $this->Iteniery->find()->where(['pid'=>$id]);
             if($q)
             $this->set('model', $q);
+            if($w)
+            $this->set('model1', $w);
             }
             
     }
     
     public function savePackage($id)
-    {
+    {   $day=1;
+        $i=0;        
         $ptable = TableRegistry::get('Packages');
+        //$ptable->find()->where(['id'=>$id])->first();
+        //$a=$_POST['field_name'];
+        //var_dump($_POST);die();
         if(!$id)
         $package = $ptable->newEntity();
         else
         {
             $package = $ptable->get($id);
+            $img = $package->image;
         }
         foreach($_POST as $k=>$p)
         {
@@ -186,22 +195,98 @@ class DashboardController extends AppController
             {
                 $dimension[$k] = $p;
             }
+            elseif ($k=='iteniery')
+            {
+                $ite = array();
+                foreach($p as $key=>$v)
+                {
+                        $ite[$k][] = $v; 
+                 
+                }
+               // var_dump($ite);die();
+                $iten[$k]['title'] =$ite[$k][0];
+                //var_dump($iten);die();
+                $iten[$k]['description'] =$ite[$k][1];
+                unset($ite); 
+                $j=0;
+                $l=0;
+                $m=0;
+                foreach($iten as $iten_i)
+                {
+                    foreach($iten_i as $k=>$iteni)
+                    if($k == 'title'){
+                        foreach($iteni as $itenie)
+                        {
+                            if($l==0){
+                                
+                            $l=$j;
+                            }
+                            $ite_final[$l]['day'] = $l+1;
+                            $ite_final[$l]['pid'] = $package->id;
+                            $ite_final[$l]['title'] =$itenie;
+                            $l++;
+                        }
+                    }
+                    else
+                    {
+                        foreach($iteni as $itenie)
+                        {
+                            if($m==0)
+                            $m=$j;
+                            $ite_final[$m]['description'] =$itenie;
+                            $m++;
+                        }
+                    }
+                }
+                
+                
+            }
             else{
             $package->$k = $p;
+            
             }
         }
-        //var_dump($dimension);die();
-        if($package->image){
+        //var_dump($package);die();
+        if((isset($package->image) && $package->image!='') || $_POST['crop_value']=='1' ){
         $this->loadComponent('SimpleImage');
-        $this->SimpleImage->loader(APP.'../webroot/img/package/resized/'.$package->image);
-        $this->SimpleImage->crop($dimension['x'],$dimension['y'],$dimension['w'],$dimension['h'])->save(APP.'../webroot/img/package/final/'.$package->image);
-        unlink(APP.'../webroot/img/package/tmp/'.$package->image);
-        unlink(APP.'../webroot/img/package/resized/'.$package->image);
+        if($id!='0' && $_POST['crop_value']=='1' )
+        {
+            $this->SimpleImage->loader(APP.'../webroot/img/package/resized/'.$img);
+            $this->SimpleImage->crop($dimension['x'],$dimension['y'],$dimension['w'],$dimension['h'])->save(APP.'../webroot/img/package/final/'.$img);
         }
+        else
+        {
+            $this->SimpleImage->loader(APP.'../webroot/img/package/resized/'.$package->image);
+            $this->SimpleImage->crop($dimension['x'],$dimension['y'],$dimension['w'],$dimension['h'])->save(APP.'../webroot/img/package/final/'.$package->image);
+        }
+        @unlink(APP.'../webroot/img/package/tmp/'.$package->image);
+        //unlink(APP.'../webroot/img/package/resized/'.$package->image);
+        }
+        else{
+            unset($package->image);
+        }
+        //var_dump($package);die('2222');
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
         
         if ($ptable->save($package)) {
+            $this->loadModel('Iteniery');
+            $this->Iteniery->deleteAll(['pid'=>$package->id]);
+            //var_dump($ite_final);die();
+            foreach($ite_final as $k=>$days)
+            {
+                $ittable = TableRegistry::get('Iteniery');
+                $iteniery = $ittable->newEntity();
+                $iteniery->pid = $package->id;
+                $iteniery->day = $k+1;
+                $iteniery->title =  $days['title'];
+                $iteniery->description =  $days['description'];                
+                $ittable->save($iteniery);
+                unset($ittable);
+                unset($iteniery);
+                
+            }
+            
             $this->Flash->success("Package saved successfully");
            $this->redirect('/dashboard/packages');
         }
@@ -216,25 +301,51 @@ class DashboardController extends AppController
     
     public function fileUpload()
     {
+        //var_dump($_GET);die();
+        if(isset($_GET['type']))
+        $a=$_GET['type'];
         $this->loadComponent('SimpleImage');
-        if(isset($_FILES['myfile']['name']))
+        if($a=='tour')
         {
-            $name = $_FILES['myfile']['name'];
-            if($name)
+            if(isset($_FILES['myfile']['name']))
             {
-                $arr_name = explode('.',$name);
-                $ext = end($arr_name);
-                $name = 'img'.rand(1,1000).'_'.date('Y_m_d_H_i_s').'.'.$ext;
-                move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/img/package/tmp/'.$name);
-                $this->SimpleImage->loader(APP.'../webroot/img/package/tmp/'.$name);
-                $status = $this->SimpleImage->fit_to_width(785)->save(APP.'../webroot/img/package/resized/'.$name);
-                die($name);
-            }
-            else
-            {
-                echo "error";die();
+                $name = $_FILES['myfile']['name'];
+                if($name)
+                {
+                    $arr_name = explode('.',$name);
+                    $ext = end($arr_name);
+                    $name = 'img'.rand(1,1000).'_'.date('Y_m_d_H_i_s').'.'.$ext;
+                    move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/img/'.$a.'/tmp/'.$name);
+                    $this->SimpleImage->loader(APP.'../webroot/img/'.$a.'/tmp/'.$name);
+                    $status = $this->SimpleImage->fit_to_width(785)->save(APP.'../webroot/img/'.$a.'/resized/'.$name);
+                    die($name);
+                }
+                else
+                {
+                    echo "error";die();
+                }
             }
         }
+        else{
+            if(isset($_FILES['myfile']['name']))
+            {
+                $name = $_FILES['myfile']['name'];
+                if($name)
+                {
+                    $arr_name = explode('.',$name);
+                    $ext = end($arr_name);
+                    $name = 'img'.rand(1,1000).'_'.date('Y_m_d_H_i_s').'.'.$ext;
+                    move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/img/package/tmp/'.$name);
+                    $this->SimpleImage->loader(APP.'../webroot/img/package/tmp/'.$name);
+                    $status = $this->SimpleImage->fit_to_width(785)->save(APP.'../webroot/img/package/resized/'.$name);
+                    die($name);
+                }
+                else
+                {
+                    echo "error";die();
+                }
+            }
+       } 
     }
     
     public function deletePackage($id)
@@ -298,5 +409,138 @@ class DashboardController extends AppController
         
         
      }
+    public function tourCat()
+    {
+        
+        $this->loadModel('TourCategory');
+           
+            $q = $this->TourCategory->find()->all();
+            if($q)
+            $this->set('model', $q);
+            
+            
+    } 
+    
+            
+    
+    public function savetourCat($id)
+    {
+        $ttable = TableRegistry::get('TourCategory');
+        if(!$id)
+        $tc = $ttable->newEntity();
+        else
+        {
+            $tc = $ttable->get($id);
+        }
+        foreach($_POST as $k=>$p)
+        {
+            $tc->$k = $p;
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        
+        if ($ttable->save($tc)) {
+            $this->Flash->success("Tour Category saved successfully");
+           $this->redirect('/dashboard/tourCat');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving Package Category");
+           $this->redirect('/dashboard/edittourCat/'.$id);
+        }
+        
+            
+    } 
+    public function edittourCat($id)
+    {
+        $this->loadModel('TourCategory');
+        if($id)   { 
+        $q = $this->TourCategory->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+            
+    }
+    public function deletetourCat($id)
+    {
+        $this->loadModel('TourCategory');
+        $entity = $this->TourCategory->get($id);
+        $result = $this->TourCategory->delete($entity);
+        $this->Flash->success("Tour deleted successfully");
+        $this->redirect('/dashboard/tourCat');
+    }
+     public function tours()
+    { 
+        $this->loadModel('Tours');
+        $this->loadModel('TourCategory');
+        $this->set('cat',$this->TourCategory);    
+            $q = $this->Tours->find()->order('cat_id')->all();
+            if($q)
+            $this->set('model', $q);
+            
+    }
+     public function editTour($id)
+    {
+        $this->loadModel('Tours');
+        $this->loadModel('TourCategory');
+        $this->set('cat',$this->TourCategory);
+        if($id)   { 
+        $q = $this->Tours->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+            
+    }
+     public function saveTour($id)
+    {
+        $ttable = TableRegistry::get('Tours');
+        if(!$id)
+        $tour = $ttable->newEntity();
+        else
+        {
+            $tour = $ttable->get($id);
+        }
+        //var_dump($_POST); die;
+        foreach($_POST as $k=>$p)
+        {
+            if($k=='x' || $k=='y' || $k=='w' || $k=='h')
+            {
+                $dimension[$k] = $p;
+            }
+            else{
+            $tour->$k = $p;
+            }
+        }
+        //var_dump($dimension);die();
+        if($tour->image){
+        $this->loadComponent('SimpleImage');
+        $this->SimpleImage->loader(APP.'../webroot/img/tour/resized/'.$tour->image);
+        $this->SimpleImage->crop($dimension['x'],$dimension['y'],$dimension['w'],$dimension['h'])->save(APP.'../webroot/img/tour/final/'.$tour->image);
+        unlink(APP.'../webroot/img/tour/tmp/'.$tour->image);
+        //unlink(APP.'../webroot/img/package/resized/'.$package->image);
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        
+        if ($ttable->save($tour)) {
+            $this->Flash->success("Tour saved successfully");
+           $this->redirect('/dashboard/tours');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving Tour");
+           $this->redirect('/dashboard/editTour/'.$id);
+        }
+        
+            
+    }
+    public function deleteTour($id)
+    {
+        $this->loadModel('Tours');
+        $entity = $this->Tours->get($id);
+        $result = $this->Tours->delete($entity);
+        $this->Flash->success("Package deleted successfully");
+        $this->redirect('/dashboard//tours');
+    }
 
 }
