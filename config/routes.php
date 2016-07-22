@@ -49,6 +49,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'index']);
+    $routes->connect('/package/*', ['controller' => 'Package', 'action' => 'index']);
     $routes->connect('/admin', ['controller' => 'Admin', 'action' => 'index']);
 
     /**

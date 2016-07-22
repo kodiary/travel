@@ -41,7 +41,7 @@ a:hover {
 /***
 Misc tools
 ***/
-.common,h1,h2,h3,h4,.sidebar{direction:ltr!important;}
+.common,h1,h2,h3,h4,.sidebar{direction:ltr!important;text-align:left;}
 .no-padding {
 	padding: 0 !important;
 }
@@ -3092,3 +3092,4 @@ Styler Panel
 .header-navigation-col a:hover{color:#FFF!important;}
 .breadcrumb{background:#fefefe;padding:5px 10px;border-radius:5px;text-align:left;font-size: 16px!important;color:#555!important;direction:ltr!important;}
 .breadcrumb a{font-weight:bold;}
+.largeImage img{width:100%;}

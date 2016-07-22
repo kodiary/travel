@@ -193,7 +193,55 @@ License: You must have a valid license purchased only from themeforest (the abov
                 </li>
               </ul>
             </li>
-            <li><a href="shop-item.html" class="uppermenu">Kids</a></li>
+            <li class="dropdown dropdown-megamenu">
+              <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
+                Tours
+                
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="header-navigation-content" style="width: 325px;">
+                    <div class="row common">
+                      
+                      <?php 
+                      $tcats = TableRegistry::get('TourCategory')->find()->order(['id'=>'desc'])->all();
+                      foreach($tcats as $tc)
+                      {
+                        ?>
+                        
+                      <div class="col-md-12 header-navigation-col">
+                        
+                        <?php 
+                        $tour = TableRegistry::get('Tours')->find()->where(['cat_id'=>$tc->id])->order(['id'=>'desc'])->all();
+                        if($tour and count($tour))
+                        {
+                            ?>
+                            <h4><?php echo $tc->title;?></h4>
+                            <ul>
+                                <?php
+                                foreach($tour as $to)
+                                {
+                                    ?>
+                                    <li><a href="<?php echo $this->request->webroot;?>tour/<?php echo $to->slug;?>"><?php echo $to->title;?></a></li>
+                                    <?php
+                                }
+                                ?>
+                            </ul>
+                            <?php
+                        }
+                        ?>
+                        
+                      </div>
+                      <?php
+                      }
+                      
+                      ?>
+                      
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
             <li class="dropdown dropdown100 nav-catalogue">
               <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 New
