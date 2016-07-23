@@ -78,29 +78,13 @@ License: You must have a valid license purchased only from themeforest (the abov
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=222640917866457";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-    <!-- BEGIN STYLE CUSTOMIZER -->
-    <div class="color-panel hidden-sm">
-      <div class="color-mode-icons icon-color"></div>
-      <div class="color-mode-icons icon-color-close"></div>
-      <div class="color-mode">
-        <p>THEME COLOR</p>
-        <ul class="inline">
-          <li class="color-red current color-default" data-style="red"></li>
-          <li class="color-blue" data-style="blue"></li>
-          <li class="color-green" data-style="green"></li>
-          <li class="color-orange" data-style="orange"></li>
-          <li class="color-gray" data-style="gray"></li>
-          <li class="color-turquoise" data-style="turquoise"></li>
-        </ul>
-      </div>
-    </div>
-    <!-- END BEGIN STYLE CUSTOMIZER --> 
+    
 
 
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="shop-index.html"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png"></a>
+        <a class="site-logo" href="<?php echo $this->request->webroot;?>"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
@@ -109,13 +93,13 @@ License: You must have a valid license purchased only from themeforest (the abov
         <!-- BEGIN NAVIGATION -->
         <div class="header-navigation">
           <ul class="common">
-            <li class="dropdown">
-              <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="<?php echo $this->request->webroot;?>">
+            <li>
+              <a class="uppermenu" data-toggle="dropdown" data-target="#" href="<?php echo $this->request->webroot;?>">
                 Home 
                 
               </a>
                 
-              <!-- BEGIN DROPDOWN MENU -->
+              <?php /*<!-- BEGIN DROPDOWN MENU -->
               <ul class="dropdown-menu">
                 
                 <li class="dropdown-submenu">
@@ -140,6 +124,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <li><a href="shop-product-list.html">First  level link</a></li>
               </ul>
               <!-- END DROPDOWN MENU -->
+              */?>
             </li>
             <li>
                 <a href="<?php echo $this->request->webroot;?>pages/view/about-us" class="uppermenu">About</a>
@@ -242,7 +227,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                 </li>
               </ul>
             </li>
-            <li class="dropdown dropdown100 nav-catalogue">
+            <!--<li class="dropdown dropdown100 nav-catalogue">
               <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 New
                 
@@ -295,7 +280,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                   </div>
                 </li>
               </ul>
-            </li>
+            </li>-->
             <li class="dropdown">
               <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 Pages 
@@ -303,28 +288,18 @@ License: You must have a valid license purchased only from themeforest (the abov
               </a>
                 
               <ul class="dropdown-menu">
-                <li class="active"><a href="shop-index.html">Home Default</a></li>
-                <li><a href="shop-index-header-fix.html">Home Header Fixed</a></li>
-                <li><a href="shop-index-light-footer.html">Home Light Footer</a></li>
-                <li><a href="shop-product-list.html">Product List</a></li>
-                <li><a href="shop-search-result.html">Search Result</a></li>
-                <li><a href="shop-item.html">Product Page</a></li>
-                <li><a href="shop-shopping-cart-null.html">Shopping Cart (Null Cart)</a></li>
-                <li><a href="shop-shopping-cart.html">Shopping Cart</a></li>
-                <li><a href="shop-checkout.html">Checkout</a></li>
-                <li><a href="shop-about.html">About</a></li>
-                <li><a href="shop-contacts.html">Contacts</a></li>
-                <li><a href="shop-account.html">My account</a></li>
-                <li><a href="shop-wishlist.html">My Wish List</a></li>
-                <li><a href="shop-goods-compare.html">Product Comparison</a></li>
-                <li><a href="shop-standart-forms.html">Standart Forms</a></li>
-                <li><a href="shop-faq.html">FAQ</a></li>
-                <li><a href="shop-privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="shop-terms-conditions-page.html">Terms &amp; Conditions</a></li>
+                <li class="active"><a href="">Home Default</a></li>
+                <li><a href="">Home Header Fixed</a></li>
+                <li><a href="">Home Light Footer</a></li>
+                <li><a href="">Product List</a></li>
+                <li><a href="">Search Result</a></li>
+                <li><a href="">Product Page</a></li>
+                <li><a href="">Shopping Cart (Null Cart)</a></li>
+                
               </ul>
             </li>
-            <li><a href="index.html" class=" uppermenu" target="_blank">Corporate</a></li>
-            <li><a href="onepage-index.html" class=" uppermenu" target="_blank">One Page</a></li>
+            <li><a href="#" class=" uppermenu" target="_blank">Contact Us</a></li>
+            
             
 
             <!-- BEGIN TOP SEARCH -->
