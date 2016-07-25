@@ -26,7 +26,7 @@
                 ?>
                 <p>&nbsp;</p>
                 <a class="collapsible" data-toggle="collapse" href="#itinerary" aria-expanded="false" aria-controls="itinerary">Itinerary <span class="fa fa-angle-left"></span></a>
-                <div class="common collapse" id="itinerary">
+                <div class="common" id="itinerary">
                 
                 <table class="table table-bordered">
                 <?php 
