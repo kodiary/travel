@@ -20,6 +20,12 @@
                 $cid = $model->cat_id;
                 $title = $model->title;
                 $desc = $model->description;
+                $grade = $model->grade;
+                $start_point = $model->start_point;
+                $end_point = $model->end_point;
+                $cost_detail = $model->cost_detail;
+                $route_map = $model->route_map;
+                $best_time = $model->best_time;
                 echo $img =  $model->image;
                 }
                 else{
@@ -31,7 +37,7 @@
                 
                 $category = $cat->find()->all();
                 ?>
-                <form action="<?php echo $this->request->webroot;?>dashboard/saveTour/<?php if(isset($model->id))echo $model->id;else echo "0";?>" method="post">
+                <form action="<?php echo $this->request->webroot;?>dashboard/saveTour/<?php if(isset($model->id))echo $model->id;else echo "0";?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="col-md-3">Tour Category</label>
                     <div class="col-md-6">
@@ -114,6 +120,48 @@
                     <div class="clearfix"></div>
                 </div>
                 <hr />
+                 <div class="form-group">
+                    <label class="col-md-3">Tour Grade</label>
+                    <div class="col-md-6">
+                        <select name="grade" class="form-control">
+                            <option value="Easy">Easy</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Tough">Tough</option>
+                        </select>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                 <div class="form-group">
+                    <label class="col-md-3">Journey Start/End Point</label>
+                    <div class="col-md-3">
+                        <input type="text" name="start_point" placeholder="Start Point" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="end_point" placeholder="End Point" class="form-control" />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                 <div class="form-group">
+                    <label class="col-md-3">Best Time</label>
+                    <div class="col-md-6">
+                        <input type="text" name="best_time" placeholder="Best Time" class="form-control" />
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                 <div class="form-group">
+                    <label class="col-md-3">Route Map</label>
+                    <div class="col-md-6">
+                        <input type="file" name="route_map" placeholder="Route Map" class="form-control" />
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
                 <div class="form-group">
                     <label class="col-md-3">Description</label>
                     <div class="col-md-6"> 
@@ -121,6 +169,14 @@
                         
                     </div>
                     
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label class="col-md-3">Cost Detail</label>
+                    <div class="col-md-6"> 
+                        <textarea name="cost_detail"></textarea>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
                 <hr />
@@ -139,6 +195,7 @@
 </div>
 <script>
     CKEDITOR.replace( 'description' );
+    CKEDITOR.replace( 'cost_detail' );
     $(function(){
         fileUpload('upload')
     })

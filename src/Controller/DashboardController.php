@@ -195,6 +195,7 @@ class DashboardController extends AppController
             $package = $ptable->get($id);
             $img = $package->image;
         }
+        
         foreach($_POST as $k=>$p)
         {
             if($k=='x' || $k=='y' || $k=='w' || $k=='h')
@@ -251,6 +252,17 @@ class DashboardController extends AppController
             $package->$k = $p;
             
             }
+        }
+        if(isset($_FILES['route_map']['name']) && $_FILES['route_map']['name'])
+        {
+            
+            $route = $_FILES['route_map']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['route_map']['tmp_name'],APP.'../webroot/img/package/final/'.$route_name))
+            $package->route_map = $route_name;
+            
         }
         //var_dump($package);die();
         if((isset($package->image) && $package->image!='') || $_POST['crop_value']=='1' ){
@@ -513,6 +525,7 @@ class DashboardController extends AppController
             $tour = $ttable->get($id);
         }
         //var_dump($_POST); die;
+        
         foreach($_POST as $k=>$p)
         {
             if($k=='x' || $k=='y' || $k=='w' || $k=='h')
@@ -522,6 +535,16 @@ class DashboardController extends AppController
             else{
             $tour->$k = $p;
             }
+        }
+        if(isset($_FILES['route_map']['name']) && $_FILES['route_map']['name'])
+        {
+            $route = $_FILES['route_map']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['route_map']['tmp_name'],APP.'../webroot/img/tour/final/'.$route_name))
+            $tour->route_map = $route_name;
+            
         }
         //var_dump($dimension);die();
         if($tour->image){
