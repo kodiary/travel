@@ -573,5 +573,63 @@ class DashboardController extends AppController
         return $slug;
         
     }
+    public function listVideos()
+    {
+        $this->loadModel('Videos');
+        $q = $this->Videos->find()->all();
+        if($q)
+        $this->set('model', $q);
+    }
+    public function editVideos($id)
+    {
+        $this->loadModel('Videos');
+        $this->loadModel('PackageCategory');
+        $this->loadModel('TourCategory');
+        $packid = $this->PackageCategory->find()->all();
+        $this->set('package', $packid);
+        $tourid = $this->TourCategory->find()->all();
+        $this->set('tour', $tourid);
+        if($id)   { 
+        $q = $this->Videos->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+            
+    }
+    public function savevideos($id)
+    {
+        $vtable = TableRegistry::get('Videos');
+        if(!$id)
+        $tc = $vtable->newEntity();
+        else
+        {
+            $tc = $vtable->get($id);
+        }
+        foreach($_POST as $k=>$p)
+        {
+            $tc->$k = $p;
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        if ($vtable->save($tc)) {
+            $this->Flash->success("Tour Category saved successfully");
+           $this->redirect('/dashboard/listVideos');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving Package Category");
+           $this->redirect('/dashboard/editVideos/'.$id);
+        }
+        
+            
+    }
+     public function deletevideos($id)
+    {
+        $this->loadModel('Videos');
+        $entity = $this->Videos->get($id);
+        $result = $this->Videos->delete($entity);
+        $this->Flash->success("Videos deleted successfully");
+        $this->redirect('/dashboard/listVideos');
+    } 
 
 }

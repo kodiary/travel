@@ -98,18 +98,18 @@
                     </li>
                     <li><a href="<?php echo $this->request->webroot;?>dashboard/edittourCat/0">Add Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>dashboard/edittours/0">Add Tour</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editTour/0">Add Tour</a>
                     </li>
                   </ul>
                 </li>
-                </li>
-                <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                 <li><a class="parentnav"><i class="fa fa-gift"></i> videos Manager <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/tables.html">Tables</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/listVideos">List videos</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>admin_files/tables_dynamic.html">Table Dynamic</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editVideos/0">Add videos</a>
                     </li>
                   </ul>
+                </li>
                 </li>
                 <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">

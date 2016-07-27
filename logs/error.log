@@ -8257,3 +8257,194 @@ Stack Trace:
 #12 {main}
 
 
+2016-07-22 13:34:55 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/package/Annapurna-Base-Camp---Trek
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Statement\SqliteStatement->execute()
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1545): Cake\Database\Query->execute()
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1461): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-07-22 13:56:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 580]
+Request URL: /travel/dashboard/listVideos
+Referer URL: http://localhost/travel/dashboard/packCat
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-22 13:56:43 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /travel/dashboard/listVideos
+Referer URL: http://localhost/travel/dashboard/packCat
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\tra...', 580)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-27 07:05:36 Error: [PDOException] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+Request URL: /travel/
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(317): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Connection->schemaCollection()
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#10 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1243): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#11 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(946): Cake\ORM\Table->query()
+#12 D:\wamp\www\travel\src\Controller\PagesController.php(42): Cake\ORM\Table->find()
+#13 [internal function]: App\Controller\PagesController->index()
+#14 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#15 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#16 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#17 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2016-07-27 07:49:47 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 614]
+Request URL: /travel/dashboard/savevideos/0
+Referer URL: http://localhost/travel/dashboard/editVideos/0
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-27 07:49:47 Error: [Cake\Error\FatalErrorException] Call to a member function save() on a non-object
+Request URL: /travel/dashboard/savevideos/0
+Referer URL: http://localhost/travel/dashboard/editVideos/0
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\tra...', 614)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-27 07:50:25 Warning: Warning (2): Missing argument 1 for App\Controller\DashboardController::editVideos() in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 583]
+Request URL: /travel/dashboard/editVideos
+Referer URL: http://localhost/travel/dashboard/editVideos/0
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::editVideos() - APP/Controller\DashboardController.php, line 583
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-27 07:51:06 Warning: Warning (2): Missing argument 1 for App\Controller\DashboardController::editVideos() in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 583]
+Request URL: /travel/dashboard/editVideos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::editVideos() - APP/Controller\DashboardController.php, line 583
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-27 07:52:03 Warning: Warning (2): Missing argument 1 for App\Controller\DashboardController::editVideos() in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 583]
+Request URL: /travel/dashboard/editVideos
+Referer URL: http://localhost/travel/dashboard/editVideos/0
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\DashboardController::editVideos() - APP/Controller\DashboardController.php, line 583
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-07-27 07:54:49 Error: Fatal Error (1): Call to a member function get() on a non-object in [D:\wamp\www\travel\src\Controller\DashboardController.php, line 606]
+Request URL: /travel/dashboard/savevideos/4
+Referer URL: http://localhost/travel/dashboard/editVideos/4
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-27 07:54:49 Error: [Cake\Error\FatalErrorException] Call to a member function get() on a non-object
+Request URL: /travel/dashboard/savevideos/4
+Referer URL: http://localhost/travel/dashboard/editVideos/4
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\tra...', 606)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-27 08:08:43 Error: [Cake\Controller\Exception\MissingActionException] Action DashboardController::edittours() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'edittours',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/edittours/0
+Referer URL: http://localhost/travel/dashboard/edittourCat/0
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-27 08:09:02 Error: [Cake\Controller\Exception\MissingActionException] Action DashboardController::edittours() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'edittours',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/edittours/0
+Referer URL: http://localhost/travel/dashboard/edittourCat/0
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-07-27 08:11:05 Error: [Cake\Controller\Exception\MissingActionException] Action DashboardController::edittours() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'edittours',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/dashboard/edittours/0
+Referer URL: http://localhost/travel/dashboard/editTour/6
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#2 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
