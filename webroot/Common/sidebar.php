@@ -24,6 +24,40 @@ use Cake\ORM\TableRegistry;
                <?php 
               }
               ?> 
+              <?php
+              if($this->request->params['controller'] == 'Package')
+              {
+               
+              ?>
+              <h2>Enquire Package</h2>
+              <form>
+                  <div class="form-group">
+                    <label class="col-md-12 padding-left-0">Full Name</label>
+                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="name" /></div>
+                    <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="col-md-12 padding-left-0">Email</label>
+                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="email" /></div>
+                    <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="col-md-12 padding-left-0">Phone</label>
+                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="Phone" /></div>
+                    <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="col-md-12 padding-left-0">Message</label>
+                    <div class="col-md-12 padding-left-0"><textarea name="message" class="form-control"></textarea></div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="form-group">
+                  <input type="submit" class="btn btn-primary" value="Submit" />
+                  </div>
+              </form>
               
-              
+              <?php }?>
           </div>
