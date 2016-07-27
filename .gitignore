@@ -7,3 +7,4 @@ tmp/debug_kit.sqlite
 *.sqlite
 *.sqlite
 *.sqlite
+*.log

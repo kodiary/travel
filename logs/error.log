@@ -8638,3 +8638,35 @@ Stack Trace:
 #25 {main}
 
 
+2016-07-27 07:36:53 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/pages/view/about-us
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Statement\SqliteStatement->execute()
+#5 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1545): Cake\Database\Query->execute()
+#7 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1461): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Panel), Array)
+#8 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Panel), Object(ArrayObject))
+#9 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#11 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Association\HasMany.php(175): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Panel), Array)
+#12 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(251): Cake\ORM\Association\HasMany->saveAssociated(Object(Cake\ORM\Entity), Array)
+#13 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(227): Cake\ORM\AssociationCollection->_save(Object(Cake\ORM\Association\HasMany), Object(Cake\ORM\Entity), Array, Array)
+#14 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(192): Cake\ORM\AssociationCollection->_saveAssociations(Object(DebugKit\Model\Table\RequestsTable), Object(Cake\ORM\Entity), Array, Array, true)
+#15 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1472): Cake\ORM\AssociationCollection->saveChildren(Object(DebugKit\Model\Table\RequestsTable), Object(Cake\ORM\Entity), Array, Array)
+#16 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#17 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#18 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#19 F:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#20 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#22 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#23 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#24 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#25 {main}
+
+
