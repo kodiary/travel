@@ -55,7 +55,7 @@ use Cake\ORM\TableRegistry;
                     <div class="clearfix"></div>
                   </div>
                   <div class="form-group">
-                  <input type="submit" class="btn btn-primary" value="Submit" />
+                  <input type="submit" class="btn btn-info" value="Submit" onclick="return false;" />
                   </div>
               </form>
               
