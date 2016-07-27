@@ -349,7 +349,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             scalein: .5; 
             scaleout: .5; 
             showuntil: 4000;
-          ">Primary <strong>Caption text</strong> Goes here</div>
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
 
           <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
@@ -358,9 +358,9 @@ License: You must have a valid license purchased only from themeforest (the abov
           easingin: easeOutQuint; 
           delayin: 300; 
           showuntil: 4000;
-          ">Secondary Caption Text<br /> will appear here.
+          ">Well trained <br /> English speaking guide to assist you.
           </div>
-          <a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
+           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
           fade: true; 
           fadeout: true; 
           durationin: 750; 
@@ -374,7 +374,7 @@ License: You must have a valid license purchased only from themeforest (the abov
           scalein: .5; 
           scaleout: .5; 
           showuntil: 4000;">See More Details
-          </a>
+          </a>-->
         </div>
         
         
@@ -396,7 +396,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             scalein: .5; 
             scaleout: .5; 
             showuntil: 4000;
-          ">Primary <strong>Caption text</strong> Goes here</div>
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
 
           <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
@@ -405,9 +405,9 @@ License: You must have a valid license purchased only from themeforest (the abov
           easingin: easeOutQuint; 
           delayin: 300; 
           showuntil: 4000;
-          ">Secondary Caption Text<br /> will appear here.
+          ">Well trained <br /> English speaking guide to assist you.
           </div>
-          <a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
+           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
           fade: true; 
           fadeout: true; 
           durationin: 750; 
@@ -421,14 +421,14 @@ License: You must have a valid license purchased only from themeforest (the abov
           scalein: .5; 
           scaleout: .5; 
           showuntil: 4000;">See More Details
-          </a>
+          </a>-->
         </div>
         <!-- slide two end -->
 
         <!-- slide three start -->
         <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
 
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide3/bg.jpg" class="ls-bg" alt="Slide background">
+          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide4/bg.jpg" class="ls-bg" alt="Slide background">
 
           <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
             fade: true; 
@@ -441,7 +441,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             scalein: .5; 
             scaleout: .5; 
             showuntil: 4000;
-          ">Primary <strong>Caption text</strong> Goes here</div>
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
 
           <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
@@ -450,9 +450,9 @@ License: You must have a valid license purchased only from themeforest (the abov
           easingin: easeOutQuint; 
           delayin: 300; 
           showuntil: 4000;
-          ">Secondary Caption Text<br /> will appear here.
+          ">Well trained <br /> English speaking guide to assist you.
           </div>
-          <a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
+          <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
           fade: true; 
           fadeout: true; 
           durationin: 750; 
@@ -466,7 +466,7 @@ License: You must have a valid license purchased only from themeforest (the abov
           scalein: .5; 
           scaleout: .5; 
           showuntil: 4000;">See More Details
-          </a>
+          </a>-->
         </div>
         <!-- slide three end -->
         
@@ -488,7 +488,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             scalein: .5; 
             scaleout: .5; 
             showuntil: 4000;
-          ">Primary <strong>Caption text</strong> Goes here</div>
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
 
           <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
@@ -497,9 +497,9 @@ License: You must have a valid license purchased only from themeforest (the abov
           easingin: easeOutQuint; 
           delayin: 300; 
           showuntil: 4000;
-          ">Secondary Caption Text<br /> will appear here.
+          ">Well trained <br /> English speaking guide to assist you.
           </div>
-          <a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
+           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
           fade: true; 
           fadeout: true; 
           durationin: 750; 
@@ -513,7 +513,7 @@ License: You must have a valid license purchased only from themeforest (the abov
           scalein: .5; 
           scaleout: .5; 
           showuntil: 4000;">See More Details
-          </a>
+          </a>-->
         </div>
         <!-- slide four end -->
       </div>
@@ -644,7 +644,7 @@ echo $this->fetch('content');
         <div class="row col-md-12">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-6 col-sm-6 padding-top-10 common">
-            2014 &copy; Metronic Shop UI. ALL Rights Reserved. 
+            2016 &copy; The Apollo Adventure | Powered By <a href="http://kodiary.com/">Kodiary</a> 
           </div>
           <!-- END COPYRIGHT -->
           <!-- BEGIN PAYMENTS -->
@@ -759,7 +759,7 @@ Nostrud duis molestie at dolore.</p>
             LayersliderInit.initLayerSlider();
             Layout.initImageZoom();
             Layout.initTouchspin();
-            Layout.initTwitter(); 
+            Layout.initTwitter();
         });
     </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->
