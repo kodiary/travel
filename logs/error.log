@@ -8513,3 +8513,95 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-07-27 07:14:21 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(93): PDO->prepare('SELECT name FRO...')
+#1 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(218): Cake\Database\Driver\Sqlite->prepare('SELECT name FRO...')
+#2 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(285): Cake\Database\Connection->prepare('SELECT name FRO...')
+#3 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(243): Cake\Database\Connection->query('SELECT name FRO...')
+#4 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(64): Cake\Database\Connection->execute('SELECT name FRO...', Array)
+#5 F:\wamp\www\travel\vendor\cakephp\debug_kit\src\Model\Table\LazyTableTrait.php(41): Cake\Database\Schema\Collection->listTables()
+#6 F:\wamp\www\travel\vendor\cakephp\debug_kit\src\Model\Table\RequestsTable.php(44): DebugKit\Model\Table\RequestsTable->ensureTables(Array)
+#7 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(289): DebugKit\Model\Table\RequestsTable->initialize(Array)
+#8 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(207): Cake\ORM\Table->__construct(Array)
+#9 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(175): Cake\ORM\Locator\TableLocator->_create(Array)
+#10 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(111): Cake\ORM\Locator\TableLocator->get('DebugKit.Reques...', Array)
+#11 F:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(186): Cake\ORM\TableRegistry::get('DebugKit.Reques...')
+#12 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-07-27 07:15:01 Error: [Cake\Database\Exception] Impossible to generate condition with empty list of values for field (request_id)
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Expression\Comparison.php(133): Cake\Database\Expression\Comparison->_stringExpression(Object(Cake\Database\ValueBinder))
+#1 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Expression\QueryExpression.php(481): Cake\Database\Expression\Comparison->sql(Object(Cake\Database\ValueBinder))
+#2 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\QueryCompiler.php(130): Cake\Database\Expression\QueryExpression->sql(Object(Cake\Database\ValueBinder))
+#3 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(254): Cake\Database\QueryCompiler->Cake\Database\{closure}(Object(Cake\Database\Expression\QueryExpression), 'where')
+#4 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\QueryCompiler.php(99): Cake\Database\Query->traverse(Object(Closure), Array)
+#5 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Driver.php(321): Cake\Database\QueryCompiler->compile(Object(Cake\ORM\Query), Object(Cake\Database\ValueBinder))
+#6 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(258): Cake\Database\Driver->compileQuery(Object(Cake\ORM\Query), Object(Cake\Database\ValueBinder))
+#7 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(225): Cake\Database\Connection->compileQuery(Object(Cake\ORM\Query), Object(Cake\Database\ValueBinder))
+#8 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(919): Cake\Database\Query->sql(NULL)
+#9 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(93): Cake\ORM\Query->sql()
+#10 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(218): Cake\Database\Driver\Sqlite->prepare(Object(Cake\ORM\Query))
+#11 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#12 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#13 F:\wamp\www\travel\vendor\cakephp\debug_kit\src\Model\Table\RequestsTable.php(94): Cake\Database\Query->execute()
+#14 F:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(187): DebugKit\Model\Table\RequestsTable->gc()
+#15 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#17 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#18 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#19 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-07-27 07:29:46 Error: Fatal Error (1): Class 'TableRegistry' not found in [F:\wamp\www\travel\src\Template\Pages\index.ctp, line 15]
+Request URL: /travel/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-07-27 07:29:46 Error: [Cake\Error\FatalErrorException] Class 'TableRegistry' not found
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'TableReg...', 'F:\\wamp\\www\\tra...', 15)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-07-27 07:30:11 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'travel.itenery' doesn't exist
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'itenery', Array, Object(Cake\Database\Schema\Table))
+#1 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('itenery', Array)
+#2 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(430): Cake\Database\Schema\CachedCollection->describe('itenery')
+#3 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1243): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 F:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(946): Cake\ORM\Table->query()
+#7 F:\wamp\www\travel\src\Template\Pages\index.ctp(17): Cake\ORM\Table->find()
+#8 F:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(995): include('F:\\wamp\\www\\tra...')
+#9 F:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(955): Cake\View\View->_evaluate('F:\\wamp\\www\\tra...', Array)
+#10 F:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('F:\\wamp\\www\\tra...')
+#11 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#12 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#13 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#14 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
