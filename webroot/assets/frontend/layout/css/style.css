@@ -3093,3 +3093,9 @@ Styler Panel
 .breadcrumb{background:#fefefe;padding:5px 10px;border-radius:5px;text-align:left;font-size: 16px!important;color:#555!important;direction:ltr!important;}
 .breadcrumb a{font-weight:bold;}
 .largeImage img{width:100%;}
+.collapsible{text-align:left;padding:5px 10px;background: #3399FF;direction:ltr!important;display:block;color:#FFF;margin-bottom: 10px;font-size:18px;}
+.collapsible:hover{color:#FFF;text-decoration:none;}
+.collapsible span{float: right;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.25;}

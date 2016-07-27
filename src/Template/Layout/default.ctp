@@ -78,29 +78,13 @@ License: You must have a valid license purchased only from themeforest (the abov
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=222640917866457";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-    <!-- BEGIN STYLE CUSTOMIZER -->
-    <div class="color-panel hidden-sm">
-      <div class="color-mode-icons icon-color"></div>
-      <div class="color-mode-icons icon-color-close"></div>
-      <div class="color-mode">
-        <p>THEME COLOR</p>
-        <ul class="inline">
-          <li class="color-red current color-default" data-style="red"></li>
-          <li class="color-blue" data-style="blue"></li>
-          <li class="color-green" data-style="green"></li>
-          <li class="color-orange" data-style="orange"></li>
-          <li class="color-gray" data-style="gray"></li>
-          <li class="color-turquoise" data-style="turquoise"></li>
-        </ul>
-      </div>
-    </div>
-    <!-- END BEGIN STYLE CUSTOMIZER --> 
+    
 
 
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="shop-index.html"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png"></a>
+        <a class="site-logo" href="<?php echo $this->request->webroot;?>"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
@@ -109,13 +93,13 @@ License: You must have a valid license purchased only from themeforest (the abov
         <!-- BEGIN NAVIGATION -->
         <div class="header-navigation">
           <ul class="common">
-            <li class="dropdown">
-              <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="<?php echo $this->request->webroot;?>">
+            <li>
+              <a class="uppermenu" data-toggle="dropdown" data-target="#" href="<?php echo $this->request->webroot;?>">
                 Home 
                 
               </a>
                 
-              <!-- BEGIN DROPDOWN MENU -->
+              <?php /*<!-- BEGIN DROPDOWN MENU -->
               <ul class="dropdown-menu">
                 
                 <li class="dropdown-submenu">
@@ -140,6 +124,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <li><a href="shop-product-list.html">First  level link</a></li>
               </ul>
               <!-- END DROPDOWN MENU -->
+              */?>
             </li>
             <li>
                 <a href="<?php echo $this->request->webroot;?>pages/view/about-us" class="uppermenu">About</a>
@@ -242,7 +227,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                 </li>
               </ul>
             </li>
-            <li class="dropdown dropdown100 nav-catalogue">
+            <!--<li class="dropdown dropdown100 nav-catalogue">
               <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 New
                 
@@ -295,7 +280,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                   </div>
                 </li>
               </ul>
-            </li>
+            </li>-->
             <li class="dropdown">
               <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
                 Pages 
@@ -303,28 +288,18 @@ License: You must have a valid license purchased only from themeforest (the abov
               </a>
                 
               <ul class="dropdown-menu">
-                <li class="active"><a href="shop-index.html">Home Default</a></li>
-                <li><a href="shop-index-header-fix.html">Home Header Fixed</a></li>
-                <li><a href="shop-index-light-footer.html">Home Light Footer</a></li>
-                <li><a href="shop-product-list.html">Product List</a></li>
-                <li><a href="shop-search-result.html">Search Result</a></li>
-                <li><a href="shop-item.html">Product Page</a></li>
-                <li><a href="shop-shopping-cart-null.html">Shopping Cart (Null Cart)</a></li>
-                <li><a href="shop-shopping-cart.html">Shopping Cart</a></li>
-                <li><a href="shop-checkout.html">Checkout</a></li>
-                <li><a href="shop-about.html">About</a></li>
-                <li><a href="shop-contacts.html">Contacts</a></li>
-                <li><a href="shop-account.html">My account</a></li>
-                <li><a href="shop-wishlist.html">My Wish List</a></li>
-                <li><a href="shop-goods-compare.html">Product Comparison</a></li>
-                <li><a href="shop-standart-forms.html">Standart Forms</a></li>
-                <li><a href="shop-faq.html">FAQ</a></li>
-                <li><a href="shop-privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="shop-terms-conditions-page.html">Terms &amp; Conditions</a></li>
+                <li class="active"><a href="">Home Default</a></li>
+                <li><a href="">Home Header Fixed</a></li>
+                <li><a href="">Home Light Footer</a></li>
+                <li><a href="">Product List</a></li>
+                <li><a href="">Search Result</a></li>
+                <li><a href="">Product Page</a></li>
+                <li><a href="">Shopping Cart (Null Cart)</a></li>
+                
               </ul>
             </li>
-            <li><a href="index.html" class=" uppermenu" target="_blank">Corporate</a></li>
-            <li><a href="onepage-index.html" class=" uppermenu" target="_blank">One Page</a></li>
+            <li><a href="#" class=" uppermenu" target="_blank">Contact Us</a></li>
+            
             
 
             <!-- BEGIN TOP SEARCH -->
@@ -359,11 +334,11 @@ License: You must have a valid license purchased only from themeforest (the abov
       <div id="layerslider" style="width: 100%; height: 494px; margin: 0 auto;">
 
         <!-- slide one start -->
-        <div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;">
+        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
 
           <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide1/bg.jpg" class="ls-bg" alt="Slide background">
 
-          <div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls="
+          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
             fade: true; 
             fadeout: true; 
             durationin: 750; 
@@ -374,55 +349,18 @@ License: You must have a valid license purchased only from themeforest (the abov
             scalein: .5; 
             scaleout: .5; 
             showuntil: 4000;
-          ">Tones of <strong>shop UI features</strong> designed</div>
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
 
-          <div class="ls-l ls-mini-text" style="top: 338px; left: 35%; white-space: nowrap;" data-ls="
+          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
           fadeout: true; 
           durationout: 750; 
           easingin: easeOutQuint; 
           delayin: 300; 
           showuntil: 4000;
-          ">Lorem ipsum dolor sit amet  constectetuer diam<br > adipiscing elit euismod ut laoreet dolore.
+          ">Well trained <br /> English speaking guide to assist you.
           </div>
-        </div>
-        
-        
-        <!-- slide one end -->
-
-        <!-- slide two start -->
-        <div class="ls-slide ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
-
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide2/bg.jpg" class="ls-bg" alt="Slide background">
-          
-          <div class="ls-l ls-title" style="top: 40%; left: 21%; white-space: nowrap;" data-ls="
-          fade: true; 
-          fadeout: true;  
-          durationin: 750; durationout: 109750; 
-          easingin: easeOutQuint; 
-          easingout: easeInOutQuint; 
-          delayin: 0; 
-          delayout: 0; 
-          rotatein: 90; 
-          rotateout: -90; 
-          scalein: .5; 
-          scaleout: .5; 
-          showuntil: 4000;
-          "><strong>Unlimted</strong> Layout Options <em>Fully Responsive</em>
-            </div>
-
-          <div class="ls-l ls-price" style="top: 50%; left: 45%; white-space: nowrap;" data-ls="
-          fade: true; 
-          fadeout: true;  
-          durationout: 109750; 
-          easingin: easeOutQuint; 
-          delayin: 300; 
-          scalein: .8; 
-          scaleout: .8; 
-          showuntil: 4000;"><b>from</b> <strong><span>$</span>25</strong>
-          </div>
-
-          <a href="#" class="ls-l ls-more" style="top: 72%; left: 21%; display: inline-block; white-space: nowrap;" data-ls="
+           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
           fade: true; 
           fadeout: true; 
           durationin: 750; 
@@ -436,54 +374,18 @@ License: You must have a valid license purchased only from themeforest (the abov
           scalein: .5; 
           scaleout: .5; 
           showuntil: 4000;">See More Details
-          </a>
+          </a>-->
         </div>
-        <!-- slide two end -->
-
-        <!-- slide three start -->
-        <div class="ls-slide ls-slide3" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 92,93,105;">
-
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide3/bg.jpg" class="ls-bg" alt="Slide background">
-          
-          <div class="ls-l ls-title" style="top: 83px; left: 33%; white-space: nowrap;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationin: 750; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          rotatein: 90; 
-          rotateout: -90; 
-          scalein: .5; 
-          scaleout: .5; 
-          showuntil: 4000;
-          ">Full Admin &amp; Frontend <strong>eCommerce UI</strong> Is Ready For Your Project
-          </div>
-          <div class="ls-l" style="top: 333px; left: 33%; white-space: nowrap; font-size: 20px; font: 20px 'Open Sans Light', sans-serif;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          delayin: 300; 
-          scalein: .8; 
-          scaleout: .8; 
-          showuntil: 4000;
-          ">
-            <a href="#" class="ls-buy">
-              Buy It Now!
-            </a>
-            <div class="ls-price">
-              <span>All these for only:</span>
-              <strong>25<sup>$</sup></strong>
-            </div>
-          </div>
-        </div>
-        <!-- slide three end -->
         
-        <div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;">
+        
+        <!-- slide one end -->
 
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide4/bg.jpg" class="ls-bg" alt="Slide background">
+        <!-- slide two start -->
+        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
 
-          <div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls="
+          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide2/bg.jpg" class="ls-bg" alt="Slide background">
+
+          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
             fade: true; 
             fadeout: true; 
             durationin: 750; 
@@ -494,52 +396,124 @@ License: You must have a valid license purchased only from themeforest (the abov
             scalein: .5; 
             scaleout: .5; 
             showuntil: 4000;
-          ">Tones of <strong>shop UI features</strong> designed</div>
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
 
-          <div class="ls-l ls-mini-text" style="top: 338px; left: 35%; white-space: nowrap;" data-ls="
+          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
           fadeout: true; 
           durationout: 750; 
           easingin: easeOutQuint; 
           delayin: 300; 
           showuntil: 4000;
-          ">Lorem ipsum dolor sit amet  constectetuer diam<br > adipiscing elit euismod ut laoreet dolore.
+          ">Well trained <br /> English speaking guide to assist you.
           </div>
-        </div>
-        
-        <!-- slide four start -->
-        <div class="ls-slide ls-slide4" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
-
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide5/bg.jpg" class="ls-bg" alt="Slide background">
-          
-          <div class="ls-l ls-title" style="top: 35%; left: 60%; white-space: nowrap;" data-ls="
+           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
           fade: true; 
           fadeout: true; 
           durationin: 750; 
           durationout: 750; 
           easingin: easeOutQuint; 
+          easingout: easeInOutQuint; 
+          delayin: 0; 
+          delayout: 0; 
           rotatein: 90; 
           rotateout: -90; 
           scalein: .5; 
           scaleout: .5; 
-          showuntil: 4000;">
-          The most<br>
-          wanted bijouterie
-          </div>
+          showuntil: 4000;">See More Details
+          </a>-->
+        </div>
+        <!-- slide two end -->
 
-          <div class="ls-l ls-mini-text" style="top: 70%; left: 60%; white-space: nowrap;" data-ls="
+        <!-- slide three start -->
+        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
+
+          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide4/bg.jpg" class="ls-bg" alt="Slide background">
+
+          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
+            fade: true; 
+            fadeout: true; 
+            durationin: 750; 
+            durationout: 750; 
+            easingin: easeOutQuint; 
+            rotatein: 90; 
+            rotateout: -90; 
+            scalein: .5; 
+            scaleout: .5; 
+            showuntil: 4000;
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
+
+          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
-          fadeout: true;  
+          fadeout: true; 
           durationout: 750; 
           easingin: easeOutQuint; 
           delayin: 300; 
-          scalein: .8; 
-          scaleout: .8; 
-          showuntil: 4000;">
-          <span>Lorem ipsum and</span>
-          <a href="#">Buy It Now!</a>
+          showuntil: 4000;
+          ">Well trained <br /> English speaking guide to assist you.
           </div>
+          <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
+          fade: true; 
+          fadeout: true; 
+          durationin: 750; 
+          durationout: 750; 
+          easingin: easeOutQuint; 
+          easingout: easeInOutQuint; 
+          delayin: 0; 
+          delayout: 0; 
+          rotatein: 90; 
+          rotateout: -90; 
+          scalein: .5; 
+          scaleout: .5; 
+          showuntil: 4000;">See More Details
+          </a>-->
+        </div>
+        <!-- slide three end -->
+        
+        
+        
+        <!-- slide four start -->
+        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
 
+          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide5/bg.jpg" class="ls-bg" alt="Slide background">
+
+          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
+            fade: true; 
+            fadeout: true; 
+            durationin: 750; 
+            durationout: 750; 
+            easingin: easeOutQuint; 
+            rotatein: 90; 
+            rotateout: -90; 
+            scalein: .5; 
+            scaleout: .5; 
+            showuntil: 4000;
+          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
+
+          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
+          fade: true; 
+          fadeout: true; 
+          durationout: 750; 
+          easingin: easeOutQuint; 
+          delayin: 300; 
+          showuntil: 4000;
+          ">Well trained <br /> English speaking guide to assist you.
+          </div>
+           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
+          fade: true; 
+          fadeout: true; 
+          durationin: 750; 
+          durationout: 750; 
+          easingin: easeOutQuint; 
+          easingout: easeInOutQuint; 
+          delayin: 0; 
+          delayout: 0; 
+          rotatein: 90; 
+          rotateout: -90; 
+          scalein: .5; 
+          scaleout: .5; 
+          showuntil: 4000;">See More Details
+          </a>-->
         </div>
         <!-- slide four end -->
       </div>
@@ -571,32 +545,9 @@ echo $this->fetch('content');
           <!-- END CONTENT -->
           
           <!-- BEGIN SIDEBAR -->
-          <div class="sidebar col-md-3 col-sm-4">
-            
-              <?php 
-              $pgcats = TableRegistry::get('PageCategory')->find()->order(['id'=>'desc'])->all();
-              foreach($pgcats as $pgc)
-              {
-               ?>
-               <ul class="list-group margin-bottom-25 sidebar-menu">
-                    <li class="list-heading"><?php echo $pgc->title?></li>
-                    <?php 
-                        $pg = TableRegistry::get('Pages')->find()->where(['cat_id'=>$pgc->id])->order(['id'=>'desc'])->all();
-                        foreach($pg as $pages)
-                        {
-                            ?>
-                            <li class="list-group-item clearfix"><a href="<?php echo $this->request->webroot;?>pages/view/<?php echo $pages->slug;?>"><i class="fa fa-angle-left"></i> <?php echo $pages->title;?></a></li>
-                            <?php
-                        }
-                    ?>
-               </ul>
-               <hr />
-               <?php 
-              }
-              ?> 
-              
-              
-          </div>
+          <?php
+          include(APP.'../webroot/Common/sidebar.php');
+          // $this->extend('/Common/sidebar');?>
         </div>
         <!-- END SIDEBAR & CONTENT -->
 
@@ -670,7 +621,7 @@ echo $this->fetch('content');
         <div class="row col-md-12">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-6 col-sm-6 padding-top-10 common">
-            2014 &copy; Metronic Shop UI. ALL Rights Reserved. 
+            2016 &copy; The Apollo Adventure | Powered By <a href="http://kodiary.com/">Kodiary</a> 
           </div>
           <!-- END COPYRIGHT -->
           <!-- BEGIN PAYMENTS -->
@@ -789,6 +740,9 @@ Nostrud duis molestie at dolore.</p>
         });
     </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5795efb22a99bae2"></script>
+
 </body>
 <!-- END BODY -->
 </html>
