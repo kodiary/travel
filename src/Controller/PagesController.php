@@ -51,8 +51,29 @@ class PagesController extends AppController
     public function view($slug)
     {
         $model = TableRegistry::get('Pages');
+        $tags = TableRegistry::get('Tags');
+        
         $q = $model->find()->where(['slug' =>$slug])->first();
+        $ta = $tags->find()->where(['page_id'=>$q->id])->all();
+        $pcat = array();
+        $tcat = array();
+        foreach($ta as $t)
+        {
+            if($t->package_id)
+            {
+                $pcat[] = $t->package_id;
+            }
+            if($t->tour_id)
+            {
+                
+                $tcat[] = $t->tour_id;
+            }
+        }
+        $this->set('tcat',$tcat);
+        $this->set('pcat',$pcat);
+        
         if($q)
         $this->set('page',$q);
+        
     }
 }

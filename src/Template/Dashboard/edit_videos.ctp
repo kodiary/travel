@@ -4,7 +4,7 @@
             <div class="row x_title">
                 <div class="col-md-10">
                     <h3>
-                        Videos Manager <span class="small">Add/Edit Videos</span>                
+                        Video Manager <span class="small">Add/Edit Video</span>                
                     </h3>
                        <?php
                 //var_dump($model);die();
@@ -41,6 +41,31 @@
                     <label class="col-md-3">Youtube</label>
                     <div class="col-md-6">
                         <input type="url" class="form-control" name="youtube" value="<?php echo $youtube;?>" required />
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                
+                <div class="form-group">
+                    <label class="col-md-3">Tags</label>
+                    <div class="col-md-6">
+                        <?php
+                        foreach($package as $p)
+                        {
+                            ?>
+                            <div class="col-md-4 padding-left-0"><input type="checkbox" name="tags[]" value="<?php echo 'p'.$p->id;?>" /> <?php echo substr($p->title,0,16);if(strlen($p->title)>16)echo "..";?> &nbsp; &nbsp;</div>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        foreach($tour as $p)
+                        {
+                            ?>
+                            <div class="col-md-4 padding-left-0"><input type="checkbox" name="tags[]" value="<?php echo 't'.$p->id;?>" /> <?php echo substr($p->title,0,16);if(strlen($p->title)>16)echo "..";?> &nbsp; &nbsp;</div>
+                            <?php
+                        }
+                        ?>
                     </div>
                     
                     <div class="clearfix"></div>

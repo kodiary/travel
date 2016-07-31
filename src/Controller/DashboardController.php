@@ -38,6 +38,14 @@ class DashboardController extends AppController
     {
         $this->loadModel('Pages');
         $this->loadModel('PageCategory');
+        
+        $this->loadModel('PackageCategory');
+        $this->loadModel('TourCategory');
+        $packid = $this->PackageCategory->find()->all();
+        $this->set('package', $packid);
+        $tourid = $this->TourCategory->find()->all();
+        $this->set('tour', $tourid);
+        
         $this->set('cat',$this->PageCategory);
         if($id)   { 
         $q = $this->Pages->find()->where(['id'=>$id])->first();
@@ -56,6 +64,21 @@ class DashboardController extends AppController
         {
             $page = $ptable->get($id);
         }
+        if(isset($_POST['tags']) && $_POST['tags'])
+        {
+            foreach($_POST['tags'] as $post)
+            {
+                if($post[0] == 'p')
+                {
+                    $package[] = str_replace('p','',$post);
+                }
+                else
+                {
+                    $tour[] = str_replace('t','',$post);
+                }
+            }
+            unset($_POST['tags']);
+        }
         foreach($_POST as $k=>$p)
         {
             $page->$k = $p;
@@ -67,6 +90,36 @@ class DashboardController extends AppController
             $page->slug = $this->generateSlug($page->title,'Pages');
         }
         if ($ptable->save($page)) {
+            
+            $this->loadModel('Tags');
+            $this->Tags->deleteAll(['page_id'=>$page->id]);
+            
+            if(isset($package) && count($package))
+            {
+            foreach($package as $p){    
+                $ttable = TableRegistry::get('Tags');
+                $ent =  $ttable->newEntity();
+                $ent->package_id = $p;
+                $ent->page_id = $page->id;
+                $ttable->save($ent);
+                unset($ttable);
+                unset($ent);
+            }
+            
+            }
+            if(isset($tour) && count($tour))
+            {
+            foreach($tour as $p){    
+                $ttable = TableRegistry::get('Tags');
+                $ent =  $ttable->newEntity();
+                $ent->tour_id = $p;
+                $ent->page_id = $page->id;
+                $ttable->save($ent);
+                unset($ttable);
+                unset($ent);
+            }
+            }
+            
             $this->Flash->success("Page saved successfully");
            $this->redirect('/dashboard/pages');
         }
@@ -628,6 +681,22 @@ class DashboardController extends AppController
         {
             $tc = $vtable->get($id);
         }
+        
+        if(isset($_POST['tags']) && $_POST['tags'])
+        {
+            foreach($_POST['tags'] as $post)
+            {
+                if($post[0] == 'p')
+                {
+                    $package[] = str_replace('p','',$post);
+                }
+                else
+                {
+                    $tour[] = str_replace('t','',$post);
+                }
+            }
+            unset($_POST['tags']);
+        }
         foreach($_POST as $k=>$p)
         {
             $tc->$k = $p;
@@ -635,12 +704,40 @@ class DashboardController extends AppController
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
         if ($vtable->save($tc)) {
-            $this->Flash->success("Tour Category saved successfully");
+            $this->loadModel('Tags');
+            $this->Tags->deleteAll(['video_id'=>$tc->id]);
+            
+            if(isset($package) && count($package))
+            {
+            foreach($package as $p){    
+                $ttable = TableRegistry::get('Tags');
+                $ent =  $ttable->newEntity();
+                $ent->package_id = $p;
+                $ent->video_id = $tc->id;
+                $ttable->save($ent);
+                unset($ttable);
+                unset($ent);
+            }
+            
+            }
+            if(isset($tour) && count($tour))
+            {
+            foreach($tour as $p){    
+                $ttable = TableRegistry::get('Tags');
+                $ent =  $ttable->newEntity();
+                $ent->tour_id = $p;
+                $ent->video_id = $tc->id;
+                $ttable->save($ent);
+                unset($ttable);
+                unset($ent);
+            }
+            }
+            $this->Flash->success("Video saved successfully");
            $this->redirect('/dashboard/listVideos');
         }
         else
         {
-            $this->Flash->error("There was problem saving Package Category");
+            $this->Flash->error("There was problem saving Video");
            $this->redirect('/dashboard/editVideos/'.$id);
         }
         
@@ -651,6 +748,9 @@ class DashboardController extends AppController
         $this->loadModel('Videos');
         $entity = $this->Videos->get($id);
         $result = $this->Videos->delete($entity);
+        
+        $this->loadModel('Tags');
+        $this->Tags->deleteAll(['video_id'=>$id]);
         $this->Flash->success("Videos deleted successfully");
         $this->redirect('/dashboard/listVideos');
     } 

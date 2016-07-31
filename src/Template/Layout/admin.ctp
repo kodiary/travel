@@ -102,7 +102,7 @@
                     </li>
                   </ul>
                 </li>
-                 <li><a class="parentnav"><i class="fa fa-gift"></i> videos Manager <span class="fa fa-chevron-down"></span></a>
+                 <li><a class="parentnav"><i class="fa fa-gift"></i> Video Manager <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     <li><a href="<?php echo $this->request->webroot;?>dashboard/listVideos">List videos</a>
                     </li>

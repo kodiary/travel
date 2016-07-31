@@ -24,6 +24,12 @@
                 $title = '';
                 $desc = '';
                 $img ='';
+                $grade = '';
+                $start_point = '';
+                $end_point = '';
+                $cost_detail = '';
+                $route_map = '';
+                $best_time = '';
                 }
                 $category = $cat->find()->all();
                 ?>
@@ -84,7 +90,7 @@
                         <div class="cropbody img-container" style="display: none;float: left;width:785px">
                         </div>
                         <div class="clearfix"></div>
-                        <div class="docs-data" >
+                        <div class="docs-data" style="display: none;" >
                       <div class="input-group">
                         <label class="input-group-addon" for="dataX">X</label>
                         <input class="form-control" id="dataX" type="text" placeholder="x" name="x">

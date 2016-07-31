@@ -559,19 +559,49 @@ echo $this->fetch('content');
           <!-- BEGIN PROMO -->
           <h2>Videos</h2>
           <div class="videos">
-          
-          <div class="col-md-3">
-          <iframe style="width:100%;" src="https://www.youtube.com/embed/bY37uNGHOE0" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-3">
-          <iframe style="width:100%;" src="https://www.youtube.com/embed/yEJkUuZjqb4" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-3">
-          <iframe style="width:100%;" src="https://www.youtube.com/embed/XYZg6J5VXZg" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-3">
-          <iframe style="width:100%;" src="https://www.youtube.com/embed/weFGqo0Mo14" frameborder="0" allowfullscreen></iframe>
-          </div>
+          <?php
+          $cond = '';
+          if((isset($pcat) && count($pcat)) || (isset($tcat) && count($tcat)))
+          {
+            if(isset($pcat) && count($pcat))
+            {
+                foreach($pcat as $pc)
+                {
+                    if($cond == '')
+                    $cond = 'package_id = '.$pc;
+                    else
+                    $cond = $cond.' OR '. 'package_id = '.$pc;
+                }
+            }
+            if(isset($tcat) && count($tcat))
+            {
+                foreach($tcat as $tc)
+                {
+                    if($cond == '')
+                    $cond = 'tour_id = '.$tc;
+                    else
+                    $cond = $cond.' OR '. 'tour_id = '.$tc;
+                }
+            }
+          }
+          if($cond)
+          {
+            $sql = "SELECT video_id FROM tags WHERE ".$cond;
+            $videos = TableRegistry::get('Videos')->find()->where(['id IN ('.$sql.')'])->order('rand()')->limit(4)->all();
+          }
+          else
+          $videos = TableRegistry::get('Videos')->find()->order('rand()')->limit(4)->all();
+          foreach($videos as $v)
+          {
+            $embed_arr = explode('=',$v->youtube);
+            $code = end($embed_arr);
+            ?>
+            <div class="col-md-3">
+              <iframe style="width:100%;" src="https://www.youtube.com/embed/<?php echo $code;?>" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <?php
+          }
+          ?>
           <div class="clearfix"></div>
           </div>
 

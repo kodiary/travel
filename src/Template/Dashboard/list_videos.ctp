@@ -4,7 +4,7 @@
             <div class="row x_title">
                 <div class="col-md-10">
                     <h3>
-                        videos Manager <span class="small">List videos</span>                
+                        Video Manager <span class="small">List Videos</span>                
                     </h3>
                 </div>
                 <div class="col-md-2">

@@ -52,6 +52,25 @@ class PackageController extends AppController
         $imodel = $iteniery->find()->where(['pid' =>$q->id])->all();
         if($imodel)
         $this->set('ite',$imodel);
+        
+        $tags = TableRegistry::get('Tags');
+        $ta = $tags->find()->where(['package_id'=>$q->cat_id])->all();
+        $pcat = array();
+        $tcat = array();
+        foreach($ta as $t)
+        {
+            if($t->package_id)
+            {
+                $pcat[] = $t->package_id;
+            }
+            if($t->tour_id)
+            {
+                
+                $tcat[] = $t->tour_id;
+            }
+        }
+        $this->set('tcat',$tcat);
+        $this->set('pcat',$pcat);
     }
     
 }

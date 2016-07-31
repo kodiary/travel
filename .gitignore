@@ -3,8 +3,8 @@ config/app.php
 tmp/*
 logs/*
 */sqlite
-tmp/debug_kit.sqlite
 *.sqlite
 *.sqlite
 *.sqlite
 *.log
+logs/debug.log
