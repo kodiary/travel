@@ -11,9 +11,9 @@ use Cake\ORM\TableRegistry;
                 foreach($pcat as $pc)
                 {
                     if($cond_p == '')
-                    $cond_p = 'id = '.$pc;
+                    $cond_p = 'cat_id = '.$pc;
                     else
-                    $cond_p = $cond_p.' OR '. 'id = '.$pc;
+                    $cond_p = $cond_p.' OR '. 'cat_id = '.$pc;
                 }
             }
             
@@ -22,9 +22,9 @@ use Cake\ORM\TableRegistry;
                 foreach($tcat as $tc)
                 {
                     if($cond_t == '')
-                    $cond_t = 'id = '.$tc;
+                    $cond_t = 'cat_id = '.$tc;
                     else
-                    $cond_t = $cond_t.' OR '. 'id = '.$tc;
+                    $cond_t = $cond_t.' OR '. 'cat_id = '.$tc;
                 }
             }
           }
@@ -82,7 +82,7 @@ use Cake\ORM\TableRegistry;
                         " />
                         
                         </div>
-                        <a href="<?php echo $this->request->webroot?>package/<?php $ps->slug;?>"><?php echo $ps->title;?></a>
+                        <a href="<?php echo $this->request->webroot?>package/<?php echo $ps->slug;?>"><?php echo $ps->title;?></a>
                         </div>
                         <?php
                     }
@@ -92,7 +92,7 @@ use Cake\ORM\TableRegistry;
                 if(isset($tour_side))
                 {
                     ?>
-                    <h2 class="related">Related Tours</h2>
+                    <h2 class="related margin-top-15">Related Tours</h2>
                     <?php
                     foreach($tour_side as $ps)
                     {
@@ -101,11 +101,11 @@ use Cake\ORM\TableRegistry;
                         <div class="image_side" style="height: 130px;position:relative;overflow:hidden;">
                          <img style="max-width: 100%;position: absolute;top:-44px;" src="
                         <?php 
-                        echo $this->request->webroot.'img/package/tour/'.$ps->image;
+                        echo $this->request->webroot.'img/tour/final/'.$ps->image;
                         ?>
                         " />
                         </div>
-                       <a href="<?php echo $this->request->webroot?>package/<?php $ps->slug;?>"><?php echo $ps->title;?></a>
+                       <a href="<?php echo $this->request->webroot?>package/<?php echo $ps->slug;?>"><?php echo $ps->title;?></a>
                         </div>
                         <hr />
                         <?php
@@ -120,8 +120,8 @@ use Cake\ORM\TableRegistry;
               {
                
               ?>
-              <h2>Enquire Package</h2>
-              <form>
+              <h2 class="related margin-top-15">Enquire Package</h2>
+              <form method="post" class="enquire_form">
                   <div class="form-group">
                     <label class="col-md-12 padding-left-0">Full Name</label>
                     <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="name" /></div>

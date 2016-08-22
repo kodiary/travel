@@ -202,7 +202,7 @@
     function fileUpload(ID) {
         
         var upload = new AjaxUpload("#" + ID, {
-            action: "<?php echo $this->request->webroot;?>dashboard/fileUpload",
+            action: "<?php echo $this->request->webroot;?>dashboard/fileUpload?type=tour",
             enctype: 'multipart/form-data',
             name: 'myfile',
             onSubmit: function (file, ext) {
