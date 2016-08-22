@@ -3099,3 +3099,6 @@ Styler Panel
     font-size: 18px;
     font-weight: bold;
     line-height: 1.25;}
+.side_group{background:#FFF;padding-bottom:10px;}
+.sidebar .related{background:#3399FF;color:#FFF;padding:5px 8px;margin-bottom:0;}
+.side_group a{font-size:16px;display:block;margin-top:5px;}

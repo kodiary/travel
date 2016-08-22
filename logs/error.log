@@ -8448,3 +8448,79 @@ Stack Trace:
 #3 {main}
 
 
+2016-07-31 12:55:08 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/admin
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Statement\SqliteStatement->execute()
+#5 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1545): Cake\Database\Query->execute()
+#7 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1461): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#11 E:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-07-31 17:27:31 Error: [PDOException] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(317): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Connection->schemaCollection()
+#8 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#10 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1243): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#11 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(946): Cake\ORM\Table->query()
+#12 E:\wamp\www\travel\src\Controller\PagesController.php(42): Cake\ORM\Table->find()
+#13 [internal function]: App\Controller\PagesController->index()
+#14 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#15 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#16 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#17 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2016-08-22 04:17:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tour_id' in 'where clause'
+Request URL: /travel/pages/view/trekking-and-hiking
+Referer URL: http://localhost/travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Log\LoggingStatement->execute()
+#4 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(938): Cake\Database\Query->execute()
+#6 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 E:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Query.php(888): Cake\ORM\Query->_all()
+#8 E:\wamp\www\travel\webroot\Common\sidebar.php(36): Cake\ORM\Query->all()
+#9 E:\wamp\www\travel\src\Template\Layout\default.ctp(549): include('E:\\wamp\\www\\tra...')
+#10 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(995): include('E:\\wamp\\www\\tra...')
+#11 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(955): Cake\View\View->_evaluate('E:\\wamp\\www\\tra...', Array)
+#12 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(633): Cake\View\View->_render('E:\\wamp\\www\\tra...')
+#13 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(592): Cake\View\View->renderLayout('', 'default')
+#14 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#15 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#16 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#17 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
