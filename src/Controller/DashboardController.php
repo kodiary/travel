@@ -38,14 +38,15 @@ class DashboardController extends AppController
     {
         $this->loadModel('Pages');
         $this->loadModel('PageCategory');
-        
+        $this->loadModel('Tags');
         $this->loadModel('PackageCategory');
         $this->loadModel('TourCategory');
         $packid = $this->PackageCategory->find()->all();
         $this->set('package', $packid);
         $tourid = $this->TourCategory->find()->all();
         $this->set('tour', $tourid);
-        
+        $tagid = $this->Tags->find()->where(['page_id'=>$id])->all();
+        $this->set('tag', $tagid);
         $this->set('cat',$this->PageCategory);
         if($id)   { 
         $q = $this->Pages->find()->where(['id'=>$id])->first();

@@ -8448,3 +8448,26 @@ Stack Trace:
 #3 {main}
 
 
+2016-08-01 06:53:04 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /travel/
+Stack Trace:
+#0 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Statement\SqliteStatement->execute()
+#5 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1545): Cake\Database\Query->execute()
+#7 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1461): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Database\Connection.php(559): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\travel\vendor\cakephp\cakephp\src\ORM\Table.php(1393): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\travel\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(411): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventManager.php(373): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 D:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
