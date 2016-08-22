@@ -72,18 +72,43 @@
                     <label class="col-md-3">Tags</label>
                     <div class="col-md-6">
                         <?php
+                        foreach($tag as $t)
+                                {
+                                    $package_array[] = $t->package_id;
+                                    $tour_array[] = $t->tour_id;
+                                   
+                                }
                         foreach($package as $p)
                         {
                             ?>
-                            <div class="col-md-4 padding-left-0"><input type="checkbox" name="tags[]" value="<?php echo 'p'.$p->id;?>" /> <?php echo substr($p->title,0,16);if(strlen($p->title)>16)echo "..";?> &nbsp; &nbsp;</div>
+                            <div class="col-md-4 padding-left-0"><input type="checkbox" name="tags[]" value="<?php echo 'p'.$p->id;?>" 
+                             <?php 
+                             
+                                   if(in_array($p->id,$package_array)) 
+                                    {
+                                        ?>checked="checked"<?php 
+                                    }
+                                
+                             ?>
+                               /> <?php echo substr($p->title,0,16);if(strlen($p->title)>16)echo "..";?> &nbsp; &nbsp;</div>
                             <?php
+                            
                         }
                         ?>
                         <?php
                         foreach($tour as $p)
                         {
                             ?>
-                            <div class="col-md-4 padding-left-0"><input type="checkbox" name="tags[]" value="<?php echo 't'.$p->id;?>" /> <?php echo substr($p->title,0,16);if(strlen($p->title)>16)echo "..";?> &nbsp; &nbsp;</div>
+                            <div class="col-md-4 padding-left-0"><input type="checkbox" name="tags[]" value="<?php echo 't'.$p->id;?>" 
+                            <?php 
+                             
+                                   if(in_array($p->id,$tour_array)) 
+                                    {
+                                        ?>checked="checked"<?php 
+                                    }
+                                
+                             ?>
+                            /> <?php echo substr($p->title,0,16);if(strlen($p->title)>16)echo "..";?> &nbsp; &nbsp;</div>
                             <?php
                         }
                         ?>
