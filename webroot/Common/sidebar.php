@@ -31,6 +31,14 @@ use Cake\ORM\TableRegistry;
           if($cond_p || $cond_t)
           {
             //$sql = "SELECT video_id FROM tags WHERE ".$cond;
+            if(isset($pslug) && $cond_p)
+            {
+                $cond_p = '('.$cond_p.') AND slug <> "'.$pslug.'"';
+            }
+            if(isset($tslug) && $cond_t)
+            {
+                $cond_t = '('.$cond_t.') AND slug <> "'.$tslug.'"';
+            }
             if($cond_p)
             $pack_side = TableRegistry::get('Packages')->find()->where([$cond_p])->order('rand()')->limit(4)->all();
             if($cond_t)

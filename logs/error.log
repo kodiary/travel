@@ -1,0 +1,22 @@
+2016-08-23 05:40:22 Error: [Cake\View\Exception\MissingHelperException] Helper class hereHelper could not be found.
+Exception Attributes: array (
+  'class' => 'hereHelper',
+  'plugin' => NULL,
+)
+Request URL: /travel/package/Annapurna-Base-Camp---Trek
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('here', NULL)
+#1 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('here')
+#2 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(891): Cake\View\HelperRegistry->__isset('here')
+#3 E:\wamp\www\travel\src\Template\Package\index.ctp(1): Cake\View\View->__get('here')
+#4 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(995): include('E:\\wamp\\www\\tra...')
+#5 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(955): Cake\View\View->_evaluate('E:\\wamp\\www\\tra...', Array)
+#6 E:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('E:\\wamp\\www\\tra...')
+#7 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#8 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#9 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PackageController))
+#10 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+

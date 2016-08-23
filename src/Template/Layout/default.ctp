@@ -140,7 +140,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                     <div class="row common">
                       
                       <?php 
-                      $pcats = TableRegistry::get('PackageCategory')->find()->order(['id'=>'desc'])->all();
+                      $pcats = TableRegistry::get('PackageCategory')->find()->order(['id'=>'asc'])->all();
                       foreach($pcats as $pc)
                       {
                         ?>
@@ -148,7 +148,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                       <div class="col-md-12 header-navigation-col">
                         
                         <?php 
-                        $package = TableRegistry::get('Packages')->find()->where(['cat_id'=>$pc->id])->order(['id'=>'desc'])->all();
+                        $package = TableRegistry::get('Packages')->find()->where(['cat_id'=>$pc->id])->order(['id'=>'asc'])->all();
                         if($package and count($package))
                         {
                             ?>
@@ -189,7 +189,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                     <div class="row common">
                       
                       <?php 
-                      $tcats = TableRegistry::get('TourCategory')->find()->order(['id'=>'desc'])->all();
+                      $tcats = TableRegistry::get('TourCategory')->find()->order(['id'=>'asc'])->all();
                       foreach($tcats as $tc)
                       {
                         ?>
@@ -197,7 +197,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                       <div class="col-md-12 header-navigation-col">
                         
                         <?php 
-                        $tour = TableRegistry::get('Tours')->find()->where(['cat_id'=>$tc->id])->order(['id'=>'desc'])->all();
+                        $tour = TableRegistry::get('Tours')->find()->where(['cat_id'=>$tc->id])->order(['id'=>'asc'])->all();
                         if($tour and count($tour))
                         {
                             ?>
@@ -281,21 +281,53 @@ License: You must have a valid license purchased only from themeforest (the abov
                 </li>
               </ul>
             </li>-->
-            <li class="dropdown">
+            <li class="dropdown dropdown-megamenu">
               <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
-                Pages 
+                Pages
                 
               </a>
-                
               <ul class="dropdown-menu">
-                <li class="active"><a href="">Home Default</a></li>
-                <li><a href="">Home Header Fixed</a></li>
-                <li><a href="">Home Light Footer</a></li>
-                <li><a href="">Product List</a></li>
-                <li><a href="">Search Result</a></li>
-                <li><a href="">Product Page</a></li>
-                <li><a href="">Shopping Cart (Null Cart)</a></li>
-                
+                <li>
+                  <div class="header-navigation-content" style="width: 325px;">
+                    <div class="row common">
+                      
+                      <?php 
+                      $pcats = TableRegistry::get('PageCategory')->find()->order(['id'=>'asc'])->all();
+                      foreach($pcats as $pc)
+                      {
+                        ?>
+                        
+                      <div class="col-md-12 header-navigation-col">
+                        
+                        <?php 
+                        $package = TableRegistry::get('Pages')->find()->where(['cat_id'=>$pc->id])->order(['id'=>'asc'])->all();
+                        if($package and count($package))
+                        {
+                            ?>
+                            <h4><?php echo $pc->title;?></h4>
+                            <ul>
+                                <?php
+                                foreach($package as $pack)
+                                {
+                                    ?>
+                                    <li><a href="<?php echo $this->request->webroot;?>pages/view/<?php echo $pack->slug;?>"><?php echo $pack->title;?></a></li>
+                                    <?php
+                                }
+                                ?>
+                            </ul>
+                            <?php
+                        }
+                        ?>
+                        
+                      </div>
+                      <?php
+                      }
+                      
+                      ?>
+                      
+                    </div>
+                  </div>
+                </li>
               </ul>
             </li>
             <li><a href="#" class=" uppermenu" target="_blank">Contact Us</a></li>
