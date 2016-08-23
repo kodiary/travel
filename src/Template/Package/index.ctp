@@ -1,3 +1,4 @@
+<?php $url =  "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>
 <ul class="breadcrumb">
 <li>
 <a href="<?php echo $this->request->webroot;?>">Home</a>
@@ -86,6 +87,9 @@
                 <?php
             }
             ?>
+            <hr />
+            <h1>Place your comment below</h1>
+            <div class="fb-comments common" data-href="<?php echo $url;?>" data-numposts="5" style="width:100%;"></div>
            
             
             

@@ -72,6 +72,7 @@ class PackageController extends AppController
         }
         $this->set('tcat',$tcat);
         $this->set('pcat',$pcat);
+        $this->set('pslug',$slug);
     }
     public function enquire()
     {
