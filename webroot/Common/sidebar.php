@@ -121,34 +121,60 @@ use Cake\ORM\TableRegistry;
                
               ?>
               <h2 class="related margin-top-15">Enquire Package</h2>
-              <form method="post" class="enquire_form">
+              <div class="enquire">
+              <form method="post" class="enuire_package" >
+                <input type="hidden" name="p_id" value="<?php if(isset($pack))echo $pack->title;?>"/>
+                <input type="hidden" name="cap" value=""/>
                   <div class="form-group">
                     <label class="col-md-12 padding-left-0">Full Name</label>
-                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="name" /></div>
+                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="name" required="required" /></div>
                     <div class="clearfix"></div>
                   </div>
                   
                   <div class="form-group">
                     <label class="col-md-12 padding-left-0">Email</label>
-                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="email" /></div>
+                    <div class="col-md-12 padding-left-0"><input type="email" class="form-control" name="email" required="required" /></div>
                     <div class="clearfix"></div>
                   </div>
                   
                   <div class="form-group">
                     <label class="col-md-12 padding-left-0">Phone</label>
-                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="Phone" /></div>
+                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="Phone" required="required" /></div>
                     <div class="clearfix"></div>
                   </div>
                   
                   <div class="form-group">
                     <label class="col-md-12 padding-left-0">Message</label>
-                    <div class="col-md-12 padding-left-0"><textarea name="message" class="form-control"></textarea></div>
+                    <div class="col-md-12 padding-left-0"><textarea name="message" class="form-control" required="required"></textarea></div>
                     <div class="clearfix"></div>
                   </div>
                   <div class="form-group">
-                  <input type="submit" class="btn btn-info" value="Submit" onclick="return false;" />
+                  <input type="submit" class="btn btn-info" value="Submit"/>
                   </div>
               </form>
-              
+              </div>
               <?php }?>
           </div>
+          
+<script>
+$(function(){
+    $('.enuire_package').submit(function(event){
+        event.preventDefault();
+        
+        $.ajax({
+            type    :'post',
+            url     :'<?php echo $this->request->webroot;?>package/enquire',
+            data    : $(this).serialize(),
+            success : function(msg){
+                if(msg == 'OK')
+                {
+                    $('.enquire').html('Thankyou!');
+                    
+                }
+                    
+            }
+        })
+    })
+})
+
+</script>

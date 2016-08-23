@@ -18,6 +18,7 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\ORM\TableRegistry;
+use Cake\Mailer\Email;
 
 /**
  * Static content controller
@@ -71,6 +72,32 @@ class PackageController extends AppController
         }
         $this->set('tcat',$tcat);
         $this->set('pcat',$pcat);
+    }
+    public function enquire()
+    {
+        
+        if(isset($_POST['cap'])&& $_POST['cap']=='')
+        {
+            $admin = TableRegistry::get('Admin')->find()->first();
+            $admin_email = $admin->email;
+            $msg = "Hello Admin,<br/>";
+            $msg .= "New Enquiry for Package(".$_POST['p_id'].")<br/>";
+            $msg .= "Name:".$_POST['name']."<br/>";
+            $msg .= "Email:".$_POST['email']."<br/>";
+            $msg .= "Message:".$_POST['message']."<br/>";
+            $email = new Email('default');
+            $email->from([$_POST['email'] => $this->request->webroot])
+                ->emailFormat('both')
+                ->to($admin_email)
+                ->subject('Enquiry');
+            if($email->send($msg))
+            {
+                echo "OK";
+            }
+                
+            
+        }
+        die();
     }
     
 }
