@@ -65,6 +65,7 @@ License: You must have a valid license purchased only from themeforest (the abov
   <link href="<?php echo $this->request->webroot;?>assets/frontend/layout/css/themes/red.css" rel="stylesheet" id="style-color">
   <link href="<?php echo $this->request->webroot;?>assets/frontend/layout/css/custom.css" rel="stylesheet">
   <!-- Theme styles END -->
+  <script src="<?php echo $this->request->webroot;?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 </head>
 <!-- Head END -->
 
@@ -638,7 +639,7 @@ Nostrud duis molestie at dolore.</p>
     <!--[if lt IE 9]>
     <script src="<?php echo $this->request->webroot;?>assets/global/plugins/respond.min.js"></script>  
     <![endif]-->
-    <script src="<?php echo $this->request->webroot;?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    
     <script src="<?php echo $this->request->webroot;?>assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
     <script src="<?php echo $this->request->webroot;?>assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      
     <script src="<?php echo $this->request->webroot;?>assets/frontend/layout/scripts/back-to-top.js" type="text/javascript"></script>

@@ -55,7 +55,7 @@
         <div class="left_col scroll-view">
 
           <div class="navbar nav_title" style="border: 0;">
-            <a href="<?php echo $this->request->webroot;?>admin_files/index.html" class="site_title"><i class="fa fa-paw"></i> <span>Go Nepal!</span></a>
+            <a href="<?php echo $this->request->webroot;?>admin_files/index.html" class="site_title"><i class="fa fa-paw"></i> <span>Golden Cloud!</span></a>
           </div>
           <div class="clearfix"></div>
 
@@ -120,7 +120,7 @@
                   </ul>
                 </li>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                <!--li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     <li><a href="<?php echo $this->request->webroot;?>admin_files/chartjs.html">Chart JS</a>
                     </li>
@@ -134,9 +134,9 @@
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ul-->
             </div>
-            <div class="menu_section">
+            <!--div class="menu_section">
               <h3>Live On</h3>
               <ul class="nav side-menu">
                 <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
@@ -171,13 +171,13 @@
                 <li><a><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a>
                 </li>
               </ul>
-            </div>
+            </div-->
 
           </div>
           <!-- /sidebar menu -->
 
           <!-- /menu footer buttons -->
-          <div class="sidebar-footer hidden-small">
+          <!--div class="sidebar-footer hidden-small">
             <a data-toggle="tooltip" data-placement="top" title="Settings">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
             </a>
@@ -190,7 +190,7 @@
             <a data-toggle="tooltip" data-placement="top" title="Logout">
               <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             </a>
-          </div>
+          </div-->
           <!-- /menu footer buttons -->
         </div>
       </div>
@@ -203,31 +203,32 @@
             <div class="nav toggle">
               <a id="menu_toggle"><i class="fa fa-bars"></i></a>
             </div>
+            
 
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="<?php echo $this->request->webroot;?>admin_files/javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img src="<?php echo $this->request->webroot;?>admin_files/images/img.jpg" alt="">John Doe
+                  <img src="<?php echo $this->request->webroot;?>admin_files/images/img.jpg" alt="">Admin
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-                  <li><a href="<?php echo $this->request->webroot;?>admin_files/javascript:;">  Profile</a>
-                  </li>
+                  <!--li><a href="<?php echo $this->request->webroot;?>admin_files/javascript:;">  Profile</a>
+                  </li-->
                   <li>
                     <a href="<?php echo $this->request->webroot;?>dashboard/settings">
-                      <span class="badge bg-red pull-right">50%</span>
+                      <!--span class="badge bg-red pull-right">50%</span-->
                       <span>Settings</span>
                     </a>
                   </li>
-                  <li>
+                  <!--li>
                     <a href="<?php echo $this->request->webroot;?>admin_files/javascript:;">Help</a>
-                  </li>
+                  </li-->
                   <li><a href="<?php echo $this->request->webroot;?>admin/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </li>
                 </ul>
               </li>
 
-              <li role="presentation" class="dropdown">
+              <!--li role="presentation" class="dropdown">
                 <a href="<?php echo $this->request->webroot;?>admin_files/javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                   <i class="fa fa-envelope-o"></i>
                   <span class="badge bg-green">6</span>
@@ -298,7 +299,7 @@
                     </div>
                   </li>
                 </ul>
-              </li>
+              </li-->
 
             </ul>
           </nav>
@@ -320,9 +321,9 @@ echo $this->fetch('content');
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right">
+          <!--div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="<?php echo $this->request->webroot;?>admin_files/https://colorlib.com">Colorlib</a>
-          </div>
+          </div-->
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
