@@ -364,11 +364,15 @@ License: You must have a valid license purchased only from themeforest (the abov
     <div class="page-slider margin-bottom-35">
       <!-- LayerSlider start -->
       <div id="layerslider" style="width: 100%; height: 494px; margin: 0 auto;">
+        
+        <?php
+        $sliders = TableRegistry::get('Sliders')->find()->order(['id'=>'asc'])->all();
+        foreach($sliders as $s)
+        {
+            ?>
+            <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
 
-        <!-- slide one start -->
-        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
-
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide1/bg.jpg" class="ls-bg" alt="Slide background">
+          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/<?php echo $s->image?>" class="ls-bg" alt="Slide background">
 
           <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
             fade: true; 
@@ -381,7 +385,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             scalein: .5; 
             scaleout: .5; 
             showuntil: 4000;
-          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
+          "><?php echo str_replace(array('<p>','</p>'),array('',''),$s->title);?></div>
 
           <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
           fade: true; 
@@ -390,7 +394,7 @@ License: You must have a valid license purchased only from themeforest (the abov
           easingin: easeOutQuint; 
           delayin: 300; 
           showuntil: 4000;
-          ">Well trained <br /> English speaking guide to assist you.
+          "><?php echo $s->caption;?>
           </div>
            <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
           fade: true; 
@@ -408,146 +412,10 @@ License: You must have a valid license purchased only from themeforest (the abov
           showuntil: 4000;">See More Details
           </a>-->
         </div>
+            <?php
+        }
+        ?>
         
-        
-        <!-- slide one end -->
-
-        <!-- slide two start -->
-        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
-
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide2/bg.jpg" class="ls-bg" alt="Slide background">
-
-          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
-            fade: true; 
-            fadeout: true; 
-            durationin: 750; 
-            durationout: 750; 
-            easingin: easeOutQuint; 
-            rotatein: 90; 
-            rotateout: -90; 
-            scalein: .5; 
-            scaleout: .5; 
-            showuntil: 4000;
-          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
-
-          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          delayin: 300; 
-          showuntil: 4000;
-          ">Well trained <br /> English speaking guide to assist you.
-          </div>
-           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationin: 750; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          easingout: easeInOutQuint; 
-          delayin: 0; 
-          delayout: 0; 
-          rotatein: 90; 
-          rotateout: -90; 
-          scalein: .5; 
-          scaleout: .5; 
-          showuntil: 4000;">See More Details
-          </a>-->
-        </div>
-        <!-- slide two end -->
-
-        <!-- slide three start -->
-        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
-
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide4/bg.jpg" class="ls-bg" alt="Slide background">
-
-          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
-            fade: true; 
-            fadeout: true; 
-            durationin: 750; 
-            durationout: 750; 
-            easingin: easeOutQuint; 
-            rotatein: 90; 
-            rotateout: -90; 
-            scalein: .5; 
-            scaleout: .5; 
-            showuntil: 4000;
-          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
-
-          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          delayin: 300; 
-          showuntil: 4000;
-          ">Well trained <br /> English speaking guide to assist you.
-          </div>
-          <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationin: 750; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          easingout: easeInOutQuint; 
-          delayin: 0; 
-          delayout: 0; 
-          rotatein: 90; 
-          rotateout: -90; 
-          scalein: .5; 
-          scaleout: .5; 
-          showuntil: 4000;">See More Details
-          </a>-->
-        </div>
-        <!-- slide three end -->
-        
-        
-        
-        <!-- slide four start -->
-        <div class="ls-slide ls-slide1 ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;" style="direction: ltr!important;">
-
-          <img src="<?php echo $this->request->webroot;?>assets/frontend/pages/img/layerslider/slide5/bg.jpg" class="ls-bg" alt="Slide background">
-
-          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
-            fade: true; 
-            fadeout: true; 
-            durationin: 750; 
-            durationout: 750; 
-            easingin: easeOutQuint; 
-            rotatein: 90; 
-            rotateout: -90; 
-            scalein: .5; 
-            scaleout: .5; 
-            showuntil: 4000;
-          ">Feel the <strong>Chill Of</strong> Giant Himmalayas</div>
-
-          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          delayin: 300; 
-          showuntil: 4000;
-          ">Well trained <br /> English speaking guide to assist you.
-          </div>
-           <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
-          fade: true; 
-          fadeout: true; 
-          durationin: 750; 
-          durationout: 750; 
-          easingin: easeOutQuint; 
-          easingout: easeInOutQuint; 
-          delayin: 0; 
-          delayout: 0; 
-          rotatein: 90; 
-          rotateout: -90; 
-          scalein: .5; 
-          scaleout: .5; 
-          showuntil: 4000;">See More Details
-          </a>-->
-        </div>
-        <!-- slide four end -->
       </div>
       <!-- LayerSlider end -->
     </div>

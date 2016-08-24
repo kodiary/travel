@@ -36,7 +36,7 @@
                  <div class="form-group">
                     <label class="col-md-3">Title</label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" name="title" value="<?php echo $title;?>" />
+                        <textarea class="form-control" name="title"><?php echo $title;?></textarea> <strong>USE BOLD TO HIGHLLIGHT</strong>
                     </div>
                     
                     <div class="clearfix"></div>
@@ -83,3 +83,6 @@
         </div>
     </div>
 </div>
+<script>
+CKEDITOR.replace( 'title' );
+</script>

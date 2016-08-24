@@ -801,7 +801,7 @@ class DashboardController extends AppController
         {
             
             
-            $package->$k = $p;
+            $package->$k = nl2br($p);
             
             
         }
