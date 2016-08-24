@@ -755,5 +755,92 @@ class DashboardController extends AppController
         $this->Flash->success("Videos deleted successfully");
         $this->redirect('/dashboard/listVideos');
     } 
+    
+    /* sllider manager */
+    
+    public function sliders()
+    { 
+        $this->loadModel('Sliders');
+        //$this->loadModel('PackageCategory');
+        //$this->set('cat',$this->PackageCategory);    
+            $q = $this->Sliders->find()->order('id')->all();
+            if($q)
+            $this->set('model', $q);
+            
+    }
+    public function editSlider($id)
+    {
+        $this->loadModel('Sliders');
+        
+        if($id)   { 
+        $q = $this->Sliders->find()->where(['id'=>$id])->first();
+        
+            if($q)
+            $this->set('model', $q);
+            
+            }
+            
+    }
+    
+    public function saveSlider($id)
+    {   $day=1;
+        $i=0;        
+        $ptable = TableRegistry::get('Sliders');
+        //$ptable->find()->where(['id'=>$id])->first();
+        //$a=$_POST['field_name'];
+        //var_dump($_POST);die();
+        if(!$id)
+        $package = $ptable->newEntity();
+        else
+        {
+            $package = $ptable->get($id);
+            $img = $package->image;
+        }
+        
+        foreach($_POST as $k=>$p)
+        {
+            
+            
+            $package->$k = $p;
+            
+            
+        }
+        if(isset($_FILES['myfile']['name']) && $_FILES['myfile']['name'])
+        {
+            $route = $_FILES['myfile']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/assets/frontend/pages/img/layerslider/'.$route_name))
+            $package->image = $route_name;
+            $this->loadComponent('SimpleImage');
+            $this->SimpleImage->loader(APP.'../webroot/assets/frontend/pages/img/layerslider/'.$route_name);
+            $status = $this->SimpleImage->resize(1500,495)->save(APP.'../webroot/assets/frontend/pages/img/layerslider/'.$route_name);
+            
+        }
+        if ($ptable->save($package)) {
+            
+            $this->Flash->success("Slider saved successfully");
+           $this->redirect('/dashboard/sliders');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving slider");
+           $this->redirect('/dashboard/editSlider/'.$id);
+        }
+        
+            
+    }
+    
+    
+    
+    public function deleteSlider($id)
+    {
+        $this->loadModel('Sliders');
+        $entity = $this->Sliders->get($id);
+        $result = $this->Sliders->delete($entity);
+        $this->Flash->success("Slider deleted successfully");
+        $this->redirect('/dashboard/sliders');
+    }
 
 }
