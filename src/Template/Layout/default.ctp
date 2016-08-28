@@ -331,7 +331,8 @@ License: You must have a valid license purchased only from themeforest (the abov
                 </li>
               </ul>
             </li>
-            <li><a href="#" class=" uppermenu" target="_blank">Contact Us</a></li>
+            <li><a href="<?php echo $this->request->webroot;?>blog" class=" uppermenu">Blog</a></li>
+            <li><a href="#" class=" uppermenu">Contact Us</a></li>
             
             
 
