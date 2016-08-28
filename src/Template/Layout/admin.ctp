@@ -119,6 +119,13 @@
                     </li>
                   </ul>
                 </li>
+                <li><a class="parentnav"><i class="fa fa-gift"></i> Blog Manager <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/blogs">List Blog</a>
+                    </li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editBlog/0">Add Blog</a>
+                    </li>
+                  </ul>
                 </li>
                 <!--li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
@@ -133,8 +140,8 @@
                     <li><a href="<?php echo $this->request->webroot;?>admin_files/other_charts.html">Other Charts </a>
                     </li>
                   </ul>
-                </li>
-              </ul-->
+                </li>-->
+              </ul>
             </div>
             <!--div class="menu_section">
               <h3>Live On</h3>
