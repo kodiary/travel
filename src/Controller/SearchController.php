@@ -42,14 +42,14 @@ class SearchController extends AppController
             
             
         }
-        if(isset($_GET['Packages'])){
+        if(isset($_GET['Packages']) || (!isset($_GET['Packages']) AND !isset($_GET['Tours']))){
             //echo '(title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_pcat.$q_days;die();
         $packages = $pmodel->find()->where(['(title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_pcat.$q_days])->all();
         $this->set('pmodel',$packages);
         }
         else
         $this->set('pmodel',false);
-        if(isset($_GET['Tours'])){
+        if(isset($_GET['Tours']) || (!isset($_GET['Packages']) AND !isset($_GET['Tours']))){
         $tours = $tmodel->find()->where(['(title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_tcat.$q_days])->all();        
         $this->set('tmodel',$tours);
         }
