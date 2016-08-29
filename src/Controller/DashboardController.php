@@ -755,5 +755,234 @@ class DashboardController extends AppController
         $this->Flash->success("Videos deleted successfully");
         $this->redirect('/dashboard/listVideos');
     } 
+    
+    /* sllider manager */
+    
+    public function sliders()
+    { 
+        $this->loadModel('Sliders');
+        //$this->loadModel('PackageCategory');
+        //$this->set('cat',$this->PackageCategory);    
+            $q = $this->Sliders->find()->order('id')->all();
+            if($q)
+            $this->set('model', $q);
+            
+    }
+    public function editSlider($id)
+    {
+        $this->loadModel('Sliders');
+        
+        if($id)   { 
+        $q = $this->Sliders->find()->where(['id'=>$id])->first();
+        
+            if($q)
+            $this->set('model', $q);
+            
+            }
+            
+    }
+    
+    public function saveSlider($id)
+    {   $day=1;
+        $i=0;        
+        $ptable = TableRegistry::get('Sliders');
+        //$ptable->find()->where(['id'=>$id])->first();
+        //$a=$_POST['field_name'];
+        //var_dump($_POST);die();
+        if(!$id)
+        $package = $ptable->newEntity();
+        else
+        {
+            $package = $ptable->get($id);
+            $img = $package->image;
+        }
+        
+        foreach($_POST as $k=>$p)
+        {
+            
+            
+            $package->$k = nl2br($p);
+            
+            
+        }
+        if(isset($_FILES['myfile']['name']) && $_FILES['myfile']['name'])
+        {
+            $route = $_FILES['myfile']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/assets/frontend/pages/img/layerslider/'.$route_name))
+            $package->image = $route_name;
+            $this->loadComponent('SimpleImage');
+            $this->SimpleImage->loader(APP.'../webroot/assets/frontend/pages/img/layerslider/'.$route_name);
+            $status = $this->SimpleImage->resize(1500,495)->save(APP.'../webroot/assets/frontend/pages/img/layerslider/'.$route_name);
+            
+        }
+        if ($ptable->save($package)) {
+            
+            $this->Flash->success("Slider saved successfully");
+           $this->redirect('/dashboard/sliders');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving slider");
+           $this->redirect('/dashboard/editSlider/'.$id);
+        }
+        
+            
+    }
+    
+    
+    
+    public function deleteSlider($id)
+    {
+        $this->loadModel('Sliders');
+        $entity = $this->Sliders->get($id);
+        $result = $this->Sliders->delete($entity);
+        $this->Flash->success("Slider deleted successfully");
+        $this->redirect('/dashboard/sliders');
+    }
+    
+    /* blogs*/
+    public function blogs()
+    { 
+        $this->loadModel('Blogs');
+        //$this->loadModel('PackageCategory');
+        //$this->set('cat',$this->PackageCategory);    
+            $q = $this->Blogs->find()->order('id')->all();
+            if($q)
+            $this->set('model', $q);
+            
+    }
+    public function editBlog($id)
+    {
+        $this->loadModel('Blogs');
+        $this->loadModel('PackageCategory');
+        $this->loadModel('TourCategory');
+        $this->loadModel('Tags');
+        $packid = $this->PackageCategory->find()->all();
+        $this->set('package', $packid);
+        $tourid = $this->TourCategory->find()->all();
+        $this->set('tour', $tourid);
+        $tagid = $this->Tags->find()->where(['blog_id'=>$id])->all();
+        $this->set('tag', $tagid);
+        
+        if($id)   { 
+        $q = $this->Blogs->find()->where(['id'=>$id])->first();
+        
+            if($q)
+            $this->set('model', $q);
+            
+            }
+            
+    }
+    
+    public function saveBlog($id)
+    {   $day=1;
+        $i=0;        
+        $ptable = TableRegistry::get('Blogs');
+        //$ptable->find()->where(['id'=>$id])->first();
+        //$a=$_POST['field_name'];
+        //var_dump($_POST);die();
+        if(!$id)
+        $blog = $ptable->newEntity();
+        else
+        {
+            $blog = $ptable->get($id);
+            $img = $blog->image;
+        }
+        if(isset($_POST['tags']) && $_POST['tags'])
+        {
+            foreach($_POST['tags'] as $post)
+            {
+                if($post[0] == 'p')
+                {
+                    $package[] = str_replace('p','',$post);
+                }
+                else
+                {
+                    $tour[] = str_replace('t','',$post);
+                }
+            }
+            unset($_POST['tags']);
+        }
+        
+        foreach($_POST as $k=>$p)
+        {
+            
+            
+            $blog->$k = $p;
+            
+            
+        }
+        if($id==0)
+        {
+            $blog->slug = $this->generateSlug($blog->title,'Blogs');
+        }
+        if(isset($_FILES['myfile']['name']) && $_FILES['myfile']['name'])
+        {
+            $route = $_FILES['myfile']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['myfile']['tmp_name'],APP.'../webroot/img/blogs/'.$route_name))
+            $blog->image = $route_name;
+            $this->loadComponent('SimpleImage');
+            $this->SimpleImage->loader(APP.'../webroot/img/blogs/'.$route_name);
+            $status = $this->SimpleImage->fit_to_width(785)->save(APP.'../webroot/img/blogs/'.$route_name);
+            
+        }
+        if ($ptable->save($blog)) {
+            $this->loadModel('Tags');
+            $this->Tags->deleteAll(['blog_id'=>$blog->id]);
+            
+            if(isset($package) && count($package))
+            {
+            foreach($package as $p){    
+                $ttable = TableRegistry::get('Tags');
+                $ent =  $ttable->newEntity();
+                $ent->package_id = $p;
+                $ent->blog_id = $blog->id;
+                $ttable->save($ent);
+                unset($ttable);
+                unset($ent);
+            }
+            
+            }
+            if(isset($tour) && count($tour))
+            {
+            foreach($tour as $p){    
+                $ttable = TableRegistry::get('Tags');
+                $ent =  $ttable->newEntity();
+                $ent->tour_id = $p;
+                $ent->blog_id = $blog->id;
+                $ttable->save($ent);
+                unset($ttable);
+                unset($ent);
+            }
+            }
+            
+            $this->Flash->success("Blog saved successfully");
+           $this->redirect('/dashboard/blogs');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving blog");
+           $this->redirect('/dashboard/editBlog/'.$id);
+        }
+        
+            
+    }
+    
+    
+    
+    public function deleteBlog($id)
+    {
+        $this->loadModel('Blogs');
+        $entity = $this->Blogs->get($id);
+        $result = $this->Blogs->delete($entity);
+        $this->Flash->success("Blog deleted successfully");
+        $this->redirect('/dashboard/blogs');
+    }
 
 }

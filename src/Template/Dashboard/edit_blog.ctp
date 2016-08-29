@@ -4,11 +4,11 @@
             <div class="row x_title">
                 <div class="col-md-10">
                     <h3>
-                        Page Manager <span class="small">Add/Edit Page</span>                
+                        Blog Manager <span class="small">Add/Edit Blog</span>                
                     </h3>
                 </div>
                 <div class="col-md-2">
-                    <a href="<?php echo $this->request->webroot;?>dashboard/editPage/0" class="btn btn-success btn-lg">Add New</a>
+                    <a href="<?php echo $this->request->webroot;?>dashboard/editBlog/0" class="btn btn-success btn-lg">Add New</a>
                 </div>
                 
                 <div class="clearfix"></div>
@@ -17,37 +17,24 @@
                 
                 <?php
                 if(isset($model)){
-                $cid = $model->cat_id;
+                //$cid = $model->cat_id;
                 $title = $model->title;
                 $desc = $model->description;
+                $img = $model->image;
+                $created_date = $model->created_date;
                 }
                 else{
-                $cid = 0;
+                //$cid = 0;
                 $title = '';
                 $desc = '';
+                $img = '';
+                $created_date = '';
                 }
                 
-                $category = $cat->find()->all();
+                //$category = $cat->find()->all();
                 ?>
-                <form action="<?php echo $this->request->webroot;?>dashboard/savePage/<?php if(isset($model->id))echo $model->id;else echo "0";?>" method="post">
-                <div class="form-group">
-                    <label class="col-md-3">Page Category</label>
-                    <div class="col-md-6">
-                        <select name="cat_id" class="form-control">
-                            <option value="">Choose Category</option>
-                            <?php
-                            foreach($category as $c)
-                            {
-                                ?>
-                                <option value="<?php echo $c->id?>" <?php if($c->id == $cid){?>selected="selected"<?php }?>><?php echo $c->title;?></option>
-                                <?php
-                            }
-                            ?>
-                        </select>
-                    </div>                    
-                    <div class="clearfix"></div>
-                </div>
-                <hr />
+                <form action="<?php echo $this->request->webroot;?>dashboard/saveBlog/<?php if(isset($model->id))echo $model->id;else echo "0";?>" method="post" enctype="multipart/form-data">
+                
                  <div class="form-group">
                     <label class="col-md-3">Title</label>
                     <div class="col-md-6">
@@ -67,7 +54,24 @@
                     <div class="clearfix"></div>
                 </div>
                 <hr />
-                
+                <div class="form-group">
+                    <label class="col-md-3">Image</label>
+                    <div class="col-md-9"> 
+                        <input type="file" name="myfile" id="image" /> 
+                        <?php if($img!=''){?>
+                        <div class="imagebody img-preview preview-lg" id="preview" style="width: 500px;">
+                        
+                          <img src="<?php echo $this->request->webroot?>img/blogs/<?php echo $img?>" style="max-width: 100%;" />
+                          
+                        </div>
+                        <?php  
+                         }?> 
+                        
+                        
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
                 <div class="form-group">
                     <label class="col-md-3">Tags</label>
                     <div class="col-md-9">
@@ -122,6 +126,7 @@
                 <div class="form-group">
                     <label class="col-md-3"> </label>
                     <div class="col-md-6">
+                        <input type="hidden" name="created_date" value="<?php if(!$created_date)echo date('Y-m-d'); else echo $created_date;?>" />
                         <input type="submit" value="Submit" class="btn btn-primary btn-lg" />                    
                     </div>
                     <div class="clearfix"></div>
