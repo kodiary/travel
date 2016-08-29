@@ -38,7 +38,12 @@
                         <?php
                     }
                     ?>
-                    <tr><td><?php echo $i;?></td><td><?php echo $m->title;?></td><td><a href="<?php echo $this->request->webroot;?>dashboard/editPage/<?php echo $m->id;?>" class="btn btn-primary">Edit</a> <a href="<?php echo $this->request->webroot;?>dashboard/deletePage/<?php echo $m->id;?>" class="btn btn-danger">Delete</a></td></tr>
+                    <tr>
+                        <td><?php echo $i;?></td>
+                        <td><?php echo $m->title;?></td>
+                        <td>
+                            <a href="<?php echo $this->request->webroot;?>dashboard/editPage/<?php echo $m->id;?>" class="btn btn-primary">Edit</a> 
+                            <?php if($m->id!=6 && $m->id!=5){?><a href="<?php echo $this->request->webroot;?>dashboard/deletePage/<?php echo $m->id;?>" class="btn btn-danger">Delete</a><?php }?></td></tr>
                     
                     <?php
                 }

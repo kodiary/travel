@@ -361,6 +361,11 @@ class DashboardController extends AppController
                 unset($iteniery);
                 
             }
+            $pid = $package->id;
+            unset($package);
+            $package = $ptable->get($pid);
+            $package->days = $k+1;
+            $ptable->save($package);
             
             $this->Flash->success("Package saved successfully");
            $this->redirect('/dashboard/packages');
@@ -477,7 +482,8 @@ class DashboardController extends AppController
                 ->set(['email' => $_POST['email']])
                 ->where(['id' => $id])
                 ->execute();
-                $this->Flash->success('email Change successfull.');
+                $this->Flash->success('Email change successfull.');
+                $this->redirect('/dashboard');
         }  
         }
         

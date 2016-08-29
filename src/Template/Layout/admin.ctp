@@ -77,7 +77,11 @@
 
             <div class="menu_section">
               <ul class="nav side-menu">
-                <li><a href="<?php echo $this->request->webroot;?>dashboard"><i class="fa fa-edit"></i> Page Manager</a></li>
+                <li><a class="parentnav"><i class="fa fa-gift"></i> Page Manager <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu"  style="display: none">
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/pages"><i class="fa fa-edit"></i> List Pages</a></li></li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editPage/0">Add Page</a></li>
+                    </ul>
                 <li><a class="parentnav"><i class="fa fa-gift"></i> Package Manager <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     <li><a href="<?php echo $this->request->webroot;?>dashboard/packCat">List Category</a>
@@ -157,6 +161,12 @@
                   </li-->
                   <li>
                     <a href="<?php echo $this->request->webroot;?>dashboard/settings">
+                      <!--span class="badge bg-red pull-right">50%</span-->
+                      <span>Change Password</span>
+                    </a>
+                  </li>
+                    <li>
+                    <a href="<?php echo $this->request->webroot;?>dashboard/changeemail">
                       <!--span class="badge bg-red pull-right">50%</span-->
                       <span>Settings</span>
                     </a>

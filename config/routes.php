@@ -49,10 +49,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'index']);
+    $routes->connect('/contactus', ['controller' => 'Pages', 'action' => 'contactus']);
+    
     $routes->connect('/package/enquire', ['controller' => 'Package', 'action' => 'enquire']);
     $routes->connect('/package/*', ['controller' => 'Package', 'action' => 'index']);
     $routes->connect('/admin', ['controller' => 'Admin', 'action' => 'index']);
-
+    $routes->connect('/:catslug',['controller'=>'Package','action'=>'packagebycat'],['id' => '[0-9a-z-]+', 'pass' => ['catslug']]);
     /**
      * Connect catchall routes for all controllers.
      *

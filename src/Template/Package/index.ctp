@@ -4,7 +4,7 @@
 <a href="<?php echo $this->request->webroot;?>">Home</a>
 </li>
 <li>
-<a href="<?php echo $this->request->webroot;?>packageCategory/<?php echo $cat->slug;?>"><?php echo $cat->title;?></a>
+<a href="<?php echo $this->request->webroot;?><?php echo $cat->slug;?>"><?php echo $cat->title;?></a>
 </li>
 <li class="active"><?php echo $pack->title;?></li>
 </ul>

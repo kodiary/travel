@@ -310,9 +310,11 @@ License: You must have a valid license purchased only from themeforest (the abov
                                 <?php
                                 foreach($package as $pack)
                                 {
+                                    if($pack->id!=6){
                                     ?>
                                     <li><a href="<?php echo $this->request->webroot;?>pages/view/<?php echo $pack->slug;?>"><?php echo $pack->title;?></a></li>
                                     <?php
+                                    }
                                 }
                                 ?>
                             </ul>
@@ -332,7 +334,7 @@ License: You must have a valid license purchased only from themeforest (the abov
               </ul>
             </li>
             <li><a href="<?php echo $this->request->webroot;?>blog" class=" uppermenu">Blog</a></li>
-            <li><a href="#" class=" uppermenu">Contact Us</a></li>
+            <li><a href="<?php echo $this->request->webroot;?>contactus" class=" uppermenu">Contact Us</a></li>
             
             
 
