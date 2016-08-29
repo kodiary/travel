@@ -147,7 +147,7 @@ use Cake\ORM\TableRegistry;
                   
                   <div class="form-group">
                     <label class="col-md-12 padding-left-0">Phone</label>
-                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="Phone" required="required" /></div>
+                    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="phone" required="required" /></div>
                     <div class="clearfix"></div>
                   </div>
                   
@@ -168,10 +168,16 @@ use Cake\ORM\TableRegistry;
 $(function(){
     $('.enuire_package').submit(function(event){
         event.preventDefault();
-        
+        var type = '';
+        <?php
+        if($this->request->action=='contactus')
+        {?>
+            type = 'contactus';
+        <?php
+        }?>
         $.ajax({
             type    :'post',
-            url     :'<?php echo $this->request->webroot;?>package/enquire',
+            url     :'<?php echo $this->request->webroot;?>package/enquire?type='+type,
             data    : $(this).serialize(),
             success : function(msg){
                 if(msg == 'OK')

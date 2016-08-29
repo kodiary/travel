@@ -18,6 +18,7 @@
                 $best_time = $model->best_time;
                 $desc = $model->description;
                 $img =  $model->image;
+                $is_new =  $model->is_new;
                 }
                 else{
                 $cid = 0;
@@ -30,6 +31,7 @@
                 $cost_detail = '';
                 $route_map = '';
                 $best_time = '';
+                $is_new ='';
                 }
                 $category = $cat->find()->all();
                 ?>
@@ -191,6 +193,7 @@
                 </div>
                 <hr />
                 
+                
                  <div class="form-group">
                     <label class="col-md-3">Itenerary</label>
                     <div class="col-md-6"> 
@@ -232,7 +235,14 @@
                     <div class="clearfix"></div>
                 </div>
                 <hr />
-                
+                <div class="form-group">
+                    <label class="col-md-3">Set As New Package</label>
+                    <div class="col-md-6"> 
+                        <input type="checkbox" name="is_new" value="1" <?php if($is_new==1)echo "checked='checked'";?> />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
                 <div class="form-group">
                     <label class="col-md-3"> </label>
                     <div class="col-md-6">

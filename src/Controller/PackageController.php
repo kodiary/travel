@@ -37,6 +37,21 @@ class PackageController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
+    public $paginate = [
+        'limit' => 2,
+        'order' => [
+            'Packages.title' => 'asc'
+        ]
+    ];
+    
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('Paginator');
+        //$this->loadHelper('Paginator', ['templates' => 'paginator-templates']);
+
+    }
+    
     public function index($slug)
     {
         $model = TableRegistry::get('Packages');
@@ -79,10 +94,34 @@ class PackageController extends AppController
         
         if(isset($_POST['cap'])&& $_POST['cap']=='')
         {
+            if(isset($_GET['type']))
+            {
+                if($_GET['type']=='contactus')
+                {
+                    $sub = 'Contact Enquiry';
+                    $heading = "New Contact Enquiry<br/>";
+                    
+                }
+                else
+                {
+                    $sub = 'Package Enquiry';
+                    $heading = "New Enquiry for Package(".$_POST['p_id'].")<br/>";
+                }  
+            }
             $admin = TableRegistry::get('Admin')->find()->first();
+            $enq = TableRegistry::get('Enquiry');
+            $en = $enq->newEntity();
+            foreach($_POST as $k=>$p)
+            {
+                if($p!='')
+                    $en->$k = $p;
+            }
+            $en->type = $sub;
+            $en->created_at = Date('Y-m-d H:i:s');
+            
             $admin_email = $admin->email;
             $msg = "Hello Admin,<br/>";
-            $msg .= "New Enquiry for Package(".$_POST['p_id'].")<br/>";
+            $msg .= $heading;
             $msg .= "Name:".$_POST['name']."<br/>";
             $msg .= "Email:".$_POST['email']."<br/>";
             $msg .= "Message:".$_POST['message']."<br/>";
@@ -90,15 +129,31 @@ class PackageController extends AppController
             $email->from([$_POST['email'] => $this->request->webroot])
                 ->emailFormat('both')
                 ->to($admin_email)
-                ->subject('Enquiry');
+                ->subject($sub);
             if($email->send($msg))
             {
+                $en->status =1;
                 echo "OK";
             }
+            else
+                $en->status =0;
+            $enq->save($en);
                 
             
         }
+        else
+            echo "OK";
         die();
+    }
+    
+    function packagebycat($catslug)
+    {
+        $cat = TableRegistry::get('Package_category')->find()->where(['slug' =>$catslug])->first();
+        
+        $package = TableRegistry::get('Packages')->find()->where(['cat_id'=>$cat->id]);
+        $this->set('packages',$this->paginate($package));
+        $this->set('cat',$cat);
+        
     }
     
 }

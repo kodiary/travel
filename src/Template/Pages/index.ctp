@@ -25,7 +25,7 @@
                           <h3><a href="<?php echo $this->request->webroot;?>package/<?php echo $p->slug;?>"><?php echo substr($p->title,0,50);if(strlen($p->title > 50))echo '...';?></a></h3>
                           <div class="pi-price common"><?php echo $days;?> day<?php echo ($days>1)?"s":'';?></div>
                           <a href="<?php echo $this->request->webroot;?>package/<?php echo $p->slug;?>" class="btn btn-default add2cart">View Detail</a>
-                          <div class="sticker sticker-new"></div>
+                          <?php if($p->is_new=='1'){?><div class="sticker sticker-new"></div><?php }?>
                         </div>
                     </div>
                     <?php

@@ -1,7 +1,7 @@
   <style>
  #map {
         width: 100%;
-        height: 400px;
+        height: 300px;
      }
     </style>
 
@@ -12,12 +12,18 @@
 <li class="active"><?php echo $page->title;?></li>
 </ul>
 <h2 class="common"><?php echo $page->title;?></h2>
+
+<div class="col-md-12">
+<div id="map"></div>
+</div>
+<div class="clearfix"></div>
 <div class="common">
   <?php echo $page->description; ?>
   
 </div>
-<div class="col-md-12">
+<div class="common">
 <form method="post" class="enuire_package" >
+<input type="hidden" name="cap" value=""/>
   <div class="form-group col-md-6">
     <label class="col-md-16 padding-left-0">Full Name</label>
     <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="name" required="required" /></div>
@@ -32,7 +38,7 @@
   <div class="clearfix"></div>
   <div class="form-group col-md-6">
     <label class="col-md-12 padding-left-0">Phone</label>
-    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="Phone" required="required" /></div>
+    <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="phone" required="required" /></div>
     <div class="clearfix"></div>
   </div>
   
@@ -48,9 +54,7 @@
 </form>
 </div>
 
-<div class="col-md-12">
-<div id="map"></div>
-</div>
+
     <script>
       function initMap() {
         var myLatLng = {lat: 27.715, lng: 85.312};
