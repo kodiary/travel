@@ -8,3 +8,8 @@ logs/*
 *.sqlite
 *.log
 logs/debug.log
+*.log
+logs/debug.log
+logs/debug.log
+logs/error.log
+tmp/debug_kit.sqlite
