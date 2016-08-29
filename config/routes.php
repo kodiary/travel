@@ -50,11 +50,14 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'index']);
     $routes->connect('/contactus', ['controller' => 'Pages', 'action' => 'contactus']);
+    $routes->connect('/dashboard', ['controller' => 'Dashboard']);
     
     $routes->connect('/package/enquire', ['controller' => 'Package', 'action' => 'enquire']);
     $routes->connect('/package/*', ['controller' => 'Package', 'action' => 'index']);
     $routes->connect('/admin', ['controller' => 'Admin', 'action' => 'index']);
-    $routes->connect('/:catslug',['controller'=>'Package','action'=>'packagebycat'],['id' => '[0-9a-z-]+', 'pass' => ['catslug']]);
+    $routes->connect('/admin/login', ['controller' => 'Admin', 'action' => 'login']);
+    $routes->connect('/admin/logout', ['controller' => 'Admin', 'action' => 'logout']);
+    $routes->connect('/:catslug',['controller'=>'Package','action'=>'packagebycat'],['catslug' => '[0-9a-z-]+', 'pass' => ['catslug']]);
     /**
      * Connect catchall routes for all controllers.
      *
