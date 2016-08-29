@@ -47,7 +47,7 @@ use Cake\ORM\TableRegistry;
           
           ?>
 <div class="sidebar col-md-3 col-sm-4">
-            
+ <?php include(APP.'../webroot/Common/advance_search.php');?>       
               <?php 
               if(!isset($pack_side) && !isset($tour_side))
               {

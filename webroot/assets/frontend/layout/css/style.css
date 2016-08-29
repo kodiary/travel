@@ -481,11 +481,11 @@ body.page-header-fixed {
 
 /* Navigation */
 .header-navigation {
-	font: 15px "Open Sans", sans-serif;
-	margin: 0 0 0 10px;
-	padding: 0;
-	float: right;
-	text-transform: uppercase;
+	float: left;
+    font: 15px "Open Sans",sans-serif;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 152px;
+    text-transform: uppercase;
 }
 .header-navigation ul {
 	margin: 0;
@@ -590,7 +590,8 @@ body.page-header-fixed {
   margin: 0;
   border-bottom: solid 1px #efefef;
   position: relative;
-  float: none;
+  border-right:1px solid #FFF!important;
+  
 }
 .header-navigation .dropdown-menu li:last-child {
   border: none;
@@ -3104,3 +3105,4 @@ Styler Panel
 .side_group a{font-size:16px;display:block;margin-top:5px;padding: 0 5px;}
 .enquire_form{background:#FFF;padding:10px 5px 10px 10px;}
 .blog_listing{background:#FFF;padding:10px 5px;margin-bottom:15px;}
+.pack_menu{background:#f5f5f5;}

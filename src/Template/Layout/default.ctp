@@ -137,7 +137,7 @@ License: You must have a valid license purchased only from themeforest (the abov
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <div class="header-navigation-content" style="width: 325px;">
+                  <div class="header-navigation-content" style="width: 450px;">
                     <div class="row common">
                       
                       <?php 
@@ -159,7 +159,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                                 foreach($package as $pack)
                                 {
                                     ?>
-                                    <li><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack->slug;?>"><?php echo $pack->title;?></a></li>
+                                    <li class="col-md-4 pack_menu"><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack->slug;?>"><?php if(strlen($pack->title)>25)echo substr($pack->title,0,25).'...';else echo $pack->title;?></a></li>
                                     <?php
                                 }
                                 ?>
@@ -341,9 +341,9 @@ License: You must have a valid license purchased only from themeforest (the abov
               <span class="sep"></span>
               <i class="fa fa-search search-btn"></i>
               <div class="search-box">
-                <form action="#">
+                <form action="<?php echo $this->request->webroot;?>search" method="get">
                   <div class="input-group">
-                    <input type="text" placeholder="Search" class="form-control">
+                    <input type="text" placeholder="Search" name="keyword" class="form-control">
                     <span class="input-group-btn">
                       <button class="btn btn-primary" type="submit">Search</button>
                     </span>
