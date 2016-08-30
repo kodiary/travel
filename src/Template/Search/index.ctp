@@ -9,7 +9,7 @@
 </ul>
             <hr />
             <?php
-            if($pmodel){?>
+            if($pmodel && count($pmodel)){?>
             
             <h2>Packages</h2>
             <div class="">
@@ -40,7 +40,7 @@
             <hr />
             <?php } 
             
-            if($tmodel){?>
+            if($tmodel && count($tmodel)){?>
             
             <h2>Tours</h2>
             <div class="">
