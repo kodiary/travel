@@ -8,7 +8,11 @@ class SearchController extends AppController
 {
     public function index()
     {
+        if(isset($_GET['keyword']) && $_GET['keyword'])
         $key = $_GET['keyword'];
+        else
+        $key = ' ';
+        $this->set('key',$key);
         $q_country = '';
         $q_pcat = '';
         $q_tcat = '';

@@ -1,4 +1,5 @@
-<?php use Cake\ORM\TableRegistry;?>
+<?php use Cake\ORM\TableRegistry;
+?>
 <ul class="breadcrumb">
 <li>
 <a href="<?php echo $this->request->webroot;?>">Home</a>

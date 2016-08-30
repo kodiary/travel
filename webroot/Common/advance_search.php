@@ -1,6 +1,11 @@
-<?php use Cake\ORM\TableRegistry;?>
+<?php use Cake\ORM\TableRegistry;
+if(isset($key))
+$_GET['keyword'] = $key;
+else
+$_GET['keyword'] = ' ';
+?>
      <h2 class="related">Advance Search</h2>
-     <form method="get" style="background: #FFF;padding:10px;">
+     <form method="get" action="<?php echo $this->request->webroot;?>search" style="background: #FFF;padding:10px;">
          <div class="form-group">
          <label class="col-md-3 padding-left-0"><strong>Keyword</strong></label><div class="col-md-9"><input type="text" class="form-control" name="keyword" value="<?php echo $_GET['keyword'];?>" style="height: 23px;padding: 0 5px" /></div>
          <div class="clearfix"></div>
