@@ -133,6 +133,7 @@ use Cake\ORM\TableRegistry;
               <form method="post" class="enuire_package" >
                 <input type="hidden" name="p_id" value="<?php if(isset($pack))echo $pack->title;?>"/>
                 <input type="hidden" name="cap" value=""/>
+                <input type="hidden" name="url" value="<?php if (isset($pack))echo $this->request->webroot."package/".$pack->slug;?>"/>
                   <div class="form-group">
                     <label class="col-md-12 padding-left-0">Full Name</label>
                     <div class="col-md-12 padding-left-0"><input type="text" class="form-control" name="name" required="required" /></div>

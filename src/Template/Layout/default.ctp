@@ -156,10 +156,10 @@ License: You must have a valid license purchased only from themeforest (the abov
                             <h4><?php echo $pc->title;?></h4>
                             <ul>
                                 <?php
-                                foreach($package as $pack)
+                                foreach($package as $pack1)
                                 {
                                     ?>
-                                    <li class="col-md-4 pack_menu"><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack->slug;?>"><?php if(strlen($pack->title)>25)echo substr($pack->title,0,25).'...';else echo $pack->title;?></a></li>
+                                    <li class="col-md-4 pack_menu"><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack1->slug;?>"><?php if(strlen($pack1->title)>25)echo substr($pack1->title,0,25).'...';else echo $pack1->title;?></a></li>
                                     <?php
                                 }
                                 ?>
@@ -308,11 +308,11 @@ License: You must have a valid license purchased only from themeforest (the abov
                             <h4><?php echo $pc->title;?></h4>
                             <ul>
                                 <?php
-                                foreach($package as $pack)
+                                foreach($package as $pack1)
                                 {
-                                    if($pack->id!=6){
+                                    if($pack1->id!=6){
                                     ?>
-                                    <li><a href="<?php echo $this->request->webroot;?>pages/view/<?php echo $pack->slug;?>"><?php echo $pack->title;?></a></li>
+                                    <li><a href="<?php echo $this->request->webroot;?>pages/view/<?php echo $pack1->slug;?>"><?php echo $pack1->title;?></a></li>
                                     <?php
                                     }
                                 }

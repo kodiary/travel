@@ -56,18 +56,25 @@
 
 
     <script>
+    
       function initMap() {
-        var myLatLng = {lat: 27.715, lng: 85.312};
+        var infowindow = new google.maps.InfoWindow();
+        var myLatLng = {lat: 27.710435, lng: 85.311016};
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
             center: myLatLng,
             zoom: 18
         });
+        
          var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Golden Clouds Adventures'
+          title: 'Golden Clouds Adventures',
+          
         });
+        infowindow.setContent('<div><strong>Golden Clouds Adventures</strong><br>');
+        //document.getElementById('city').value = place.address_components[3].long_name;
+        infowindow.open(map, marker);
 
       }
     </script>
