@@ -105,7 +105,7 @@ class PackageController extends AppController
                 else
                 {
                     $sub = 'Package Enquiry';
-                    $heading = "New Enquiry for Package(".$_POST['p_id'].")<br/>";
+                    $heading = "New Enquiry for Package<a href='".$_POST['url']."' target='_blank'>(".$_POST['p_id'].")</a><br/>";
                 }  
             }
             $admin = TableRegistry::get('Admin')->find()->first();
@@ -124,6 +124,7 @@ class PackageController extends AppController
             $msg .= $heading;
             $msg .= "Name:".$_POST['name']."<br/>";
             $msg .= "Email:".$_POST['email']."<br/>";
+            $msg .= "Phone:".$_POST['phone']."<br/>";
             $msg .= "Message:".$_POST['message']."<br/>";
             $email = new Email('default');
             $email->from([$_POST['email'] => $this->request->webroot])
