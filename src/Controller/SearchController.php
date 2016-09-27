@@ -23,15 +23,12 @@ class SearchController extends AppController
             $q_country = ' AND country_id = '.$country;
         }
         $pmodel = TableRegistry::get('Packages');
-        $tmodel = TableRegistry::get('Tours');
+        //$tmodel = TableRegistry::get('Tours');
         if(isset($_GET['pcat']) && $_GET['pcat'])
         {
             $q_pcat = ' AND cat_id = '.$_GET['pcat'];
         }
-        if(isset($_GET['tcat']) && $_GET['tcat'])
-        {
-            $q_tcat = ' AND cat_id = '.$_GET['tcat'];
-        }
+        
         if(isset($_GET['days']) && $_GET['days'])
         {
             if($_GET['days'] != '100'){
@@ -48,17 +45,19 @@ class SearchController extends AppController
         }
         if(isset($_GET['Packages']) || (!isset($_GET['Packages']) AND !isset($_GET['Tours']))){
             //echo '(title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_pcat.$q_days;die();
-        $packages = $pmodel->find()->where(['(title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_pcat.$q_days])->all();
+        $packages = $pmodel->find()->where(['is_tour = 0 AND (title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_pcat.$q_days])->all();
         $this->set('pmodel',$packages);
         }
         else
         $this->set('pmodel',false);
         if(isset($_GET['Tours']) || (!isset($_GET['Packages']) AND !isset($_GET['Tours']))){
-        $tours = $tmodel->find()->where(['(title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_tcat.$q_days])->all();        
+            //echo '(title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_pcat.$q_days;die();
+        $tours = $pmodel->find()->where(['is_tour = 1 AND (title LIKE "%'.$key.'%" OR description LIKE "%'.$key.'%")'.$q_country.$q_pcat.$q_days])->all();
         $this->set('tmodel',$tours);
         }
         else
         $this->set('tmodel',false);
+        
     }
     
 }

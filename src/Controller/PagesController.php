@@ -44,7 +44,7 @@ class PagesController extends AppController
         $this->set('about',$q);
         
         $packages = TableRegistry::get('Packages');
-        $pmodel = $packages->find()->order(['id' =>'desc'])->all();
+        $pmodel = $packages->find()->where(['is_tour'=>0])->order(['id' =>'desc'])->all();
         if($pmodel)
         $this->set('packages',$pmodel);
     }

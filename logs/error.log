@@ -356,3 +356,24 @@ Stack Trace:
 #17 {main}
 
 
+2016-08-30 07:12:34 Error: Fatal Error (1): Class 'TableRegistry' not found in [E:\wamp\www\travel\src\Template\Dashboard\edit_package.ctp, line 83]
+Request URL: /travel/dashboard/editPackage/0
+Referer URL: http://localhost/travel/dashboard/pages
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-08-30 07:12:34 Error: [Cake\Error\FatalErrorException] Class 'TableRegistry' not found
+Request URL: /travel/dashboard/editPackage/0
+Referer URL: http://localhost/travel/dashboard/pages
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'TableReg...', 'E:\\wamp\\www\\tra...', 83)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

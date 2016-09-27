@@ -58,14 +58,7 @@
                             <?php
                         }
                         ?>
-                        <?php
-                        foreach($tour as $p)
-                        {
-                            ?>
-                            <div class="col-md-4 padding-left-0"><input type="checkbox" name="tags[]" value="<?php echo 't'.$p->id;?>" /> <?php echo substr($p->title,0,16);if(strlen($p->title)>16)echo "..";?> &nbsp; &nbsp;</div>
-                            <?php
-                        }
-                        ?>
+                        
                     </div>
                     
                     <div class="clearfix"></div>

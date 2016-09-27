@@ -1,3 +1,4 @@
+<?php use Cake\ORM\TableRegistry;?>
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="dashboard_graph x_panel">
@@ -19,6 +20,8 @@
                 $desc = $model->description;
                 $img =  $model->image;
                 $is_new =  $model->is_new;
+                $coun = $model->country_id;
+                $is_tour = $model->is_tour;
                 }
                 else{
                 $cid = 0;
@@ -32,6 +35,8 @@
                 $route_map = '';
                 $best_time = '';
                 $is_new ='';
+                $coun = '';
+                $is_tour = 0;
                 }
                 $category = $cat->find()->all();
                 ?>
@@ -66,6 +71,27 @@
                     <label class="col-md-3">Title</label>
                     <div class="col-md-6">
                         <input type="text" class="form-control" name="title" value="<?php echo $title;?>" />
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                 
+                 <div class="form-group">
+                    <label class="col-md-3">Country</label>
+                    <div class="col-md-6">
+                    <select name="country_id" class="form-control">
+                    <option value="">Choose Country</option>
+                    <?php 
+                 $country = TableRegistry::get('TblCountries')->find()->all();
+                 foreach($country as $co)
+                 {
+                    ?>
+                    <option value="<?php echo $co->id;?>" <?php if($coun == $co->id){?>selected="selected"<?php }?>><?php echo $co->countryName;?></option>
+                    <?php
+                 }
+                 ?>
+                     </select>   
                     </div>
                     
                     <div class="clearfix"></div>
@@ -239,6 +265,14 @@
                     <label class="col-md-3">Set As New Package</label>
                     <div class="col-md-6"> 
                         <input type="checkbox" name="is_new" value="1" <?php if($is_new==1)echo "checked='checked'";?> />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label class="col-md-3">Set as Tour</label>
+                    <div class="col-md-6"> 
+                        <input type="checkbox" name="is_tour" value="1" <?php if($is_tour==1)echo "checked='checked'";?> />
                     </div>
                     <div class="clearfix"></div>
                 </div>

@@ -40,11 +40,11 @@ class DashboardController extends AppController
         $this->loadModel('PageCategory');
         $this->loadModel('Tags');
         $this->loadModel('PackageCategory');
-        $this->loadModel('TourCategory');
+        //$this->loadModel('TourCategory');
         $packid = $this->PackageCategory->find()->all();
         $this->set('package', $packid);
-        $tourid = $this->TourCategory->find()->all();
-        $this->set('tour', $tourid);
+        //$tourid = $this->TourCategory->find()->all();
+        //$this->set('tour', $tourid);
         $tagid = $this->Tags->find()->where(['page_id'=>$id])->all();
         $this->set('tag', $tagid);
         $this->set('cat',$this->PageCategory);
@@ -670,8 +670,8 @@ class DashboardController extends AppController
         $this->loadModel('TourCategory');
         $packid = $this->PackageCategory->find()->all();
         $this->set('package', $packid);
-        $tourid = $this->TourCategory->find()->all();
-        $this->set('tour', $tourid);
+        //$tourid = $this->TourCategory->find()->all();
+        //$this->set('tour', $tourid);
         if($id)   { 
         $q = $this->Videos->find()->where(['id'=>$id])->first();
             if($q)
@@ -869,8 +869,8 @@ class DashboardController extends AppController
         $packid = $this->PackageCategory->find()->all();
         $this->set('package', $packid);
         $tourid = $this->TourCategory->find()->all();
-        $this->set('tour', $tourid);
-        $tagid = $this->Tags->find()->where(['blog_id'=>$id])->all();
+        //$this->set('tour', $tourid);
+        //$tagid = $this->Tags->find()->where(['blog_id'=>$id])->all();
         $this->set('tag', $tagid);
         
         if($id)   { 

@@ -40,9 +40,9 @@ use Cake\ORM\TableRegistry;
                 $cond_t = '('.$cond_t.') AND slug <> "'.$tslug.'"';
             }
             if($cond_p)
-            $pack_side = TableRegistry::get('Packages')->find()->where([$cond_p])->order('rand()')->limit(4)->all();
+            $pack_side = TableRegistry::get('Packages')->find()->where(['is_tour = 0 AND ('.$cond_p.')'])->order('rand()')->limit(4)->all();
             if($cond_t)
-            $tour_side = TableRegistry::get('Tours')->find()->where([$cond_t])->order('rand()')->limit(4)->all();
+            $tour_side = TableRegistry::get('Tours')->find()->where(['is_tour = 1 AND ('.$cond_p.')'])->order('rand()')->limit(4)->all();
           }
           
           ?>
