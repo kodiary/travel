@@ -212,10 +212,17 @@ class DashboardController extends AppController
     { 
         $this->loadModel('Packages');
         $this->loadModel('PackageCategory');
-        $this->set('cat',$this->PackageCategory);    
-            $q = $this->Packages->find()->order('cat_id')->all();
-            if($q)
-            $this->set('model', $q);
+        $this->set('cat',$this->PackageCategory);   
+        if(isset($_GET['is_tour']))
+        {
+          $q = $this->Packages->find()->where(['is_tour'=>1])->order('cat_id')->all();  
+          
+                           
+        } 
+        else 
+        $q = $this->Packages->find()->order('cat_id')->all();
+        if($q)
+        $this->set('model', $q);
             
     }
     public function editPackage($id)
@@ -365,16 +372,29 @@ class DashboardController extends AppController
             unset($package);
             $package = $ptable->get($pid);
             $package->days = $k+1;
-            $ptable->save($package);
-            
+            if(isset($_POST['is_tour']))
+            {
+               $this->Flash->success("Tour saved successfully");
+               $this->redirect('/dashboard/packages?is_tour=1'); 
+             }
+            else{
             $this->Flash->success("Package saved successfully");
            $this->redirect('/dashboard/packages');
-        }
-        else
-        {
+           }
+            $this->Flash->success("Package saved successfully");
+           $this->redirect('/dashboard/packages');
+        }else{
+            if(isset($_POST['is_tour']))
+            {
+               $this->Flash->success("There was problem saving Tour");
+               $this->redirect('/dashboard/editPackage/'.$id.'?is_tour=1'); 
+            }
+            else{
             $this->Flash->error("There was problem saving Package");
            $this->redirect('/dashboard/editPackage/'.$id);
-        }
+           }  
+           }  
+        
         
             
     }
@@ -864,13 +884,13 @@ class DashboardController extends AppController
     {
         $this->loadModel('Blogs');
         $this->loadModel('PackageCategory');
-        $this->loadModel('TourCategory');
+        //$this->loadModel('TourCategory');
         $this->loadModel('Tags');
         $packid = $this->PackageCategory->find()->all();
         $this->set('package', $packid);
-        $tourid = $this->TourCategory->find()->all();
+        //$tourid = $this->TourCategory->find()->all();
         //$this->set('tour', $tourid);
-        //$tagid = $this->Tags->find()->where(['blog_id'=>$id])->all();
+        $tagid = $this->Tags->find()->where(['blog_id'=>$id])->all();
         $this->set('tag', $tagid);
         
         if($id)   { 
@@ -905,10 +925,7 @@ class DashboardController extends AppController
                 {
                     $package[] = str_replace('p','',$post);
                 }
-                else
-                {
-                    $tour[] = str_replace('t','',$post);
-                }
+                
             }
             unset($_POST['tags']);
         }
@@ -955,18 +972,7 @@ class DashboardController extends AppController
             }
             
             }
-            if(isset($tour) && count($tour))
-            {
-            foreach($tour as $p){    
-                $ttable = TableRegistry::get('Tags');
-                $ent =  $ttable->newEntity();
-                $ent->tour_id = $p;
-                $ent->blog_id = $blog->id;
-                $ttable->save($ent);
-                unset($ttable);
-                unset($ent);
-            }
-            }
+            
             
             $this->Flash->success("Blog saved successfully");
            $this->redirect('/dashboard/blogs');

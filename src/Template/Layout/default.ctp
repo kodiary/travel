@@ -149,7 +149,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                       <div class="col-md-12 header-navigation-col">
                         
                         <?php 
-                        $package = TableRegistry::get('Packages')->find()->where(['cat_id'=>$pc->id])->order(['id'=>'asc'])->all();
+                        $package = TableRegistry::get('Packages')->find()->where(['cat_id'=>$pc->id,'is_tour'=>0])->order(['id'=>'asc'])->all();
                         if($package and count($package))
                         {
                             ?>
@@ -159,7 +159,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                                 foreach($package as $pack1)
                                 {
                                     ?>
-                                    <li class="col-md-4 pack_menu"><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack1->slug;?>"><?php if(strlen($pack1->title)>25)echo substr($pack1->title,0,25).'...';else echo $pack1->title;?></a></li>
+                                    <li class="col-md-6 pack_menu"><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack1->slug;?>"><?php if(strlen($pack1->title)>25)echo substr($pack1->title,0,25).'...';else echo $pack1->title;?></a></li>
                                     <?php
                                 }
                                 ?>
@@ -190,25 +190,25 @@ License: You must have a valid license purchased only from themeforest (the abov
                     <div class="row common">
                       
                       <?php 
-                      $tcats = TableRegistry::get('TourCategory')->find()->order(['id'=>'asc'])->all();
-                      foreach($tcats as $tc)
+                      $pcats = TableRegistry::get('PackageCategory')->find()->order(['id'=>'asc'])->all();
+                      foreach($pcats as $pc)
                       {
                         ?>
                         
                       <div class="col-md-12 header-navigation-col">
                         
                         <?php 
-                        $tour = TableRegistry::get('Tours')->find()->where(['cat_id'=>$tc->id])->order(['id'=>'asc'])->all();
-                        if($tour and count($tour))
+                        $package = TableRegistry::get('Packages')->find()->where(['cat_id'=>$pc->id,'is_tour'=>1])->order(['id'=>'asc'])->all();
+                        if($package and count($package))
                         {
                             ?>
-                            <h4><?php echo $tc->title;?></h4>
+                            <h4><?php echo $pc->title;?></h4>
                             <ul>
                                 <?php
-                                foreach($tour as $to)
+                                foreach($package as $pack1)
                                 {
                                     ?>
-                                    <li><a href="<?php echo $this->request->webroot;?>tour/<?php echo $to->slug;?>"><?php echo $to->title;?></a></li>
+                                    <li class="col-md-6 pack_menu"><a href="<?php echo $this->request->webroot;?>package/<?php echo $pack1->slug;?>"><?php if(strlen($pack1->title)>25)echo substr($pack1->title,0,25).'...';else echo $pack1->title;?></a></li>
                                     <?php
                                 }
                                 ?>
@@ -465,7 +465,7 @@ echo $this->fetch('content');
           <div class="videos">
           <?php
           $cond = '';
-          if((isset($pcat) && count($pcat)) || (isset($tcat) && count($tcat)))
+          if(isset($pcat) && count($pcat))
           {
             if(isset($pcat) && count($pcat))
             {
@@ -477,16 +477,7 @@ echo $this->fetch('content');
                     $cond = $cond.' OR '. 'package_id = '.$pc;
                 }
             }
-            if(isset($tcat) && count($tcat))
-            {
-                foreach($tcat as $tc)
-                {
-                    if($cond == '')
-                    $cond = 'tour_id = '.$tc;
-                    else
-                    $cond = $cond.' OR '. 'tour_id = '.$tc;
-                }
-            }
+            
           }
           if($cond)
           {

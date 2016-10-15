@@ -96,13 +96,13 @@
                 </li>
                 <li><a class="parentnav"><i class="fa fa-gift"></i> Tour Manager <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="<?php echo $this->request->webroot;?>dashboard/tourCat">List Category</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/packCat">List Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>dashboard/tours">List Tour</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/packages?is_tour=1">List Tour</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>dashboard/edittourCat/0">Add Category</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editpackCat/0">Add Category</a>
                     </li>
-                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editTour/0">Add Tour</a>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editPackage/0?is_tour=1">Add Tour</a>
                     </li>
                   </ul>
                 </li>

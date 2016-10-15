@@ -4,7 +4,7 @@ use Cake\ORM\TableRegistry;
 <?php
           $cond_p = '';
           $cond_t = '';
-          if((isset($pcat) && count($pcat)) || (isset($tcat) && count($tcat)))
+          if(isset($pcat) && count($pcat))
           {
             if(isset($pcat) && count($pcat))
             {
@@ -17,32 +17,20 @@ use Cake\ORM\TableRegistry;
                 }
             }
             
-            if(isset($tcat) && count($tcat))
-            {
-                foreach($tcat as $tc)
-                {
-                    if($cond_t == '')
-                    $cond_t = 'cat_id = '.$tc;
-                    else
-                    $cond_t = $cond_t.' OR '. 'cat_id = '.$tc;
-                }
-            }
+            
           }
-          if($cond_p || $cond_t)
+          if($cond_p)
           {
             //$sql = "SELECT video_id FROM tags WHERE ".$cond;
             if(isset($pslug) && $cond_p)
             {
                 $cond_p = '('.$cond_p.') AND slug <> "'.$pslug.'"';
             }
-            if(isset($tslug) && $cond_t)
-            {
-                $cond_t = '('.$cond_t.') AND slug <> "'.$tslug.'"';
-            }
-            if($cond_p)
+            
+            if($cond_p){
             $pack_side = TableRegistry::get('Packages')->find()->where(['is_tour = 0 AND ('.$cond_p.')'])->order('rand()')->limit(4)->all();
-            if($cond_t)
-            $tour_side = TableRegistry::get('Tours')->find()->where(['is_tour = 1 AND ('.$cond_p.')'])->order('rand()')->limit(4)->all();
+            
+            $tour_side = TableRegistry::get('Packages')->find()->where(['is_tour = 1 AND ('.$cond_p.')'])->order('rand()')->limit(4)->all();}
           }
           
           ?>
@@ -73,7 +61,7 @@ use Cake\ORM\TableRegistry;
               }
               else
               {
-                if(isset($pack_side))
+                if(isset($pack_side) && count($pack_side))
                 {
                     ?>
                     <h2 class="related">Related Packages</h2>
@@ -97,7 +85,7 @@ use Cake\ORM\TableRegistry;
                     ?>
                     <?php
                 }
-                if(isset($tour_side))
+                if(isset($tour_side) && count($tour_side))
                 {
                     ?>
                     <h2 class="related margin-top-15">Related Tours</h2>
@@ -109,7 +97,7 @@ use Cake\ORM\TableRegistry;
                         <div class="image_side" style="height: 130px;position:relative;overflow:hidden;">
                          <img style="max-width: 100%;position: absolute;top:-44px;" src="
                         <?php 
-                        echo $this->request->webroot.'img/tour/final/'.$ps->image;
+                        echo $this->request->webroot.'img/package/final/'.$ps->image;
                         ?>
                         " />
                         </div>
@@ -128,7 +116,7 @@ use Cake\ORM\TableRegistry;
               {
                
               ?>
-              <h2 class="related margin-top-15">Enquire Package</h2>
+              <h2 class="related margin-top-15">Enquire Package/Tour</h2>
               <div class="enquire">
               <form method="post" class="enuire_package" >
                 <input type="hidden" name="p_id" value="<?php if(isset($pack))echo $pack->title;?>"/>

@@ -2,7 +2,7 @@
 if(isset($key))
 $_GET['keyword'] = $key;
 else
-$_GET['keyword'] = ' ';
+$_GET['keyword'] = '';
 
 if(isset($_GET['country']) && $_GET['country'])
 {
@@ -26,7 +26,7 @@ if(isset($_GET['days']))
              <select name="country" class="form-control">
                  <option value="">SELECT COUNTRY</option>
                  <?php 
-                 $country = TableRegistry::get('TblCountries')->find()->where(['(id IN (SELECT country_id FROM packages WHERE country_id>0) OR id IN (SELECT country_id FROM tours WHERE country_id>0))'])->all();
+                 $country = TableRegistry::get('TblCountries')->find()->where(['(id IN (SELECT country_id FROM packages WHERE country_id>0))'])->all();
                  foreach($country as $co)
                  {
                     ?>
@@ -45,24 +45,10 @@ if(isset($_GET['days']))
          </div>
          <div class="form-group p_hide" style="<?php if(isset($_GET['Packages']) && $_GET['Packages']){?><?php }else{?>display: none;<?php }?>">
             <select name="pcat" class="form-control">
-                 <option value="">PACKAGE CATEGORY</option>
+                 <option value="">CATEGORY</option>
                  <?php 
                  $pcats = TableRegistry::get('PackageCategory')->find()->all();
                  foreach($pcats as $co)
-                 {
-                    ?>
-                    <option value="<?php echo $co->id;?>" <?php if(isset($_GET['pcat']) && $_GET['pcat']==$co->id){?>selected="selected"<?php }?>><?php echo $co->title;?></option>
-                    <?php
-                 }
-                 ?>
-             </select>
-         </div>
-         <div class="form-group t_hide" style="<?php if(isset($_GET['Tours']) && $_GET['Tours']){?><?php }else{?>display: none;<?php }?>">
-            <select name="tcat" class="form-control">
-                 <option value="">TOUR CATEGORY</option>
-                 <?php 
-                 $tcats = TableRegistry::get('TourCategory')->find()->all();
-                 foreach($tcats as $co)
                  {
                     ?>
                     <option value="<?php echo $co->id;?>" <?php if(isset($_GET['pcat']) && $_GET['pcat']==$co->id){?>selected="selected"<?php }?>><?php echo $co->title;?></option>

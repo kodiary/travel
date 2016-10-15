@@ -49,6 +49,15 @@
             </div>
             <div class="x_content">
                 <form action="<?php echo $this->request->webroot;?>dashboard/savePackage/<?php if(isset($model->id))echo $model->id;else echo "0";?>" method="post" enctype="multipart/form-data">
+                <?php
+                if(isset($_GET['is_tour']))
+                {
+                    ?>
+                    <input type="hidden" name="is_tour" value="1" />                    
+                    <?php                    
+                                    
+                }                                
+                ?>                                
                 <div class="form-group">
                     <label class="col-md-3">Package Category</label>
                     <div class="col-md-6">
@@ -269,14 +278,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <hr />
-                <div class="form-group">
-                    <label class="col-md-3">Set as Tour</label>
-                    <div class="col-md-6"> 
-                        <input type="checkbox" name="is_tour" value="1" <?php if($is_tour==1)echo "checked='checked'";?> />
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <hr />
+                
                 <div class="form-group">
                     <label class="col-md-3"> </label>
                     <div class="col-md-6">
