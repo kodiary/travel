@@ -55,7 +55,7 @@
         <div class="left_col scroll-view">
 
           <div class="navbar nav_title" style="border: 0;">
-            <a href="<?php echo $this->request->webroot;?>admin_files/index.html" class="site_title"><i class="fa fa-paw"></i> <span>Golden Cloud!</span></a>
+            <a href="<?php echo $this->request->webroot;?>admin" class="site_title"><i class="fa fa-paw"></i> <span>Golden Cloud!</span></a>
           </div>
           <div class="clearfix"></div>
 
@@ -120,6 +120,30 @@
                     <li><a href="<?php echo $this->request->webroot;?>dashboard/listVideos">List videos</a>
                     </li>
                     <li><a href="<?php echo $this->request->webroot;?>dashboard/editVideos/0">Add videos</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="parentnav"><i class="fa fa-gift"></i> Associate Members <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/listMembers">List Associate Members</a>
+                    </li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editMembers/0">Add Associate Members</a>
+                    </li>
+                  </ul>
+                </li>
+               <li><a class="parentnav"><i class="fa fa-gift"></i>My Team Manager <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/listTeam">List My Team</a>
+                    </li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editTeam/0">Add a Team</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="parentnav"><i class="fa fa-gift"></i>Testimonial Manager <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/listTestimonial">List testimonials</a>
+                    </li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/editTestimonial/0">Add a Testimonial</a>
                     </li>
                   </ul>
                 </li>
