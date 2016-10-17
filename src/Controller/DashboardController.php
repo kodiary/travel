@@ -857,7 +857,137 @@ class DashboardController extends AppController
       
         $this->Flash->success("Members deleted successfully");
         $this->redirect('/dashboard/listMembers');
-    } 
+    }
+    /*My Team */
+    public function listTeam()
+    {
+        $this->loadModel('Teams');
+        $q = $this->Teams->find()->where(['is_testimonial'=>0])->all();
+        if($q)
+        $this->set('model', $q);
+    }
+    public function editTeam($id)
+    {
+        $this->loadModel('Teams');
+       
+        if(isset($_FILES['image']['name']) && $_FILES['image']['name'])
+        {
+            $route = $_FILES['image']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['image']['tmp_name'],APP.'../webroot/img/team/'.$route_name))
+            $tc->image = $route_name;
+            
+        }
+        //$tourid = $this->TourCategory->find()->all();
+        //$this->set('tour', $tourid);
+        if($id)   { 
+        $q = $this->Teams->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+            
+    }
+    public function saveTeam($id)
+    {
+        $vtable = TableRegistry::get('Teams');
+        if(!$id)
+            $tc = $vtable->newEntity();
+        else
+        {
+            $tc = $vtable->get($id);
+        }
+        if(isset($_FILES['image']['name']) && $_FILES['image']['name'])
+        {
+            $route = $_FILES['image']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['image']['tmp_name'],APP.'../webroot/img/team/'.$route_name))
+            $tc->image = $route_name;
+            
+        }
+        foreach($_POST as $k=>$p)
+        {
+            $tc->$k = $p;
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        if ($vtable->save($tc)) {
+            if($_POST['is_testimonial']==0)
+            {
+                $this->Flash->success("Team saved successfully");
+                $this->redirect('/dashboard/listTeam'); 
+            }
+            else
+            {
+                $this->Flash->success("Tesimonial saved successfully");
+                $this->redirect('/dashboard/listTestimonial'); 
+            }
+           
+        }
+        else
+        {
+            if($_POST['is_testimonial']==0)
+            {
+                $this->Flash->error("There was problem saving Team");
+                $this->redirect('/dashboard/editTeam/'.$id);
+            }
+            else
+            {
+                $this->Flash->error("There was problem saving Tesimonial");
+                $this->redirect('/dashboard/editTestimonial/'.$id); 
+            }
+        }
+        
+            
+    }
+     public function deleteteam($id)
+    {
+        $this->loadModel('Teams');
+        $entity = $this->Teams->get($id);
+        $result = $this->Teams->delete($entity);
+      
+        $this->Flash->success("Team deleted successfully");
+        $this->redirect('/dashboard/listTeam');
+    }
+    /* testimonials */
+    public function listTestimonial()
+    {
+        $this->loadModel('Teams');
+        $q = $this->Teams->find()->where(['is_testimonial'=>1])->all();
+        
+        if($q)
+        $this->set('model', $q);
+        $this->render('list_team');
+    }
+    public function editTestimonial($id)
+    {
+        $this->loadModel('Teams');
+       
+        if(isset($_FILES['image']['name']) && $_FILES['image']['name'])
+        {
+            $route = $_FILES['image']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['image']['tmp_name'],APP.'../webroot/img/team/'.$route_name))
+            $tc->image = $route_name;
+            
+        }
+        //$tourid = $this->TourCategory->find()->all();
+        //$this->set('tour', $tourid);
+       
+        if($id)   { 
+        $q = $this->Teams->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+         $this->render('edit_team');
+            
+    }
+    
     /* sllider manager */
     
     public function sliders()
