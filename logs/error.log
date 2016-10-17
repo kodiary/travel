@@ -382,3 +382,174 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-10-17 08:33:32 Error: [Cake\View\Exception\MissingTemplateException] Template file "Dashboard\edit_members.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Dashboard\\edit_members.ctp',
+)
+Request URL: /travel/dashboard/editMembers/0
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\DashboardController))
+#4 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-10-17 08:51:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/Koala.jpg
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:51:06 Error: Fatal Error (1): Call to a member function find() on a non-object in [F:\wamp\www\travel\src\Controller\DashboardController.php, line 812]
+Request URL: /travel/dashboard/editMembers/1
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-17 08:51:06 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /travel/dashboard/editMembers/1
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'F:\\wamp\\www\\tra...', 812)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-17 08:51:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/Koala.jpg
+Referer URL: http://localhost/travel/dashboard/editMembers/1
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:51:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:53:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:54:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/Koala.jpg
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:54:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:55:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/Koala.jpg
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:56:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/Koala.jpg
+Referer URL: http://localhost/travel/dashboard/editMembers/1
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-17 08:56:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/
+Referer URL: http://localhost/travel/dashboard/listMembers
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

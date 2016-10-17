@@ -781,7 +781,83 @@ class DashboardController extends AppController
         $this->Flash->success("Videos deleted successfully");
         $this->redirect('/dashboard/listVideos');
     } 
-    
+    /*Associate Members */
+    public function listMembers()
+    {
+        $this->loadModel('Members');
+        $q = $this->Members->find()->all();
+        if($q)
+        $this->set('model', $q);
+    }
+    public function editMembers($id)
+    {
+        $this->loadModel('Members');
+       
+        if(isset($_FILES['image']['name']) && $_FILES['image']['name'])
+        {
+            $route = $_FILES['image']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['image']['tmp_name'],APP.'../webroot/img/members/'.$route_name))
+            $tc->image = $route_name;
+            
+        }
+        //$tourid = $this->TourCategory->find()->all();
+        //$this->set('tour', $tourid);
+        if($id)   { 
+        $q = $this->Members->find()->where(['id'=>$id])->first();
+            if($q)
+            $this->set('model', $q);
+            }
+            
+    }
+    public function saveMembers($id)
+    {
+        $vtable = TableRegistry::get('Members');
+        if(!$id)
+            $tc = $vtable->newEntity();
+        else
+        {
+            $tc = $vtable->get($id);
+        }
+        if(isset($_FILES['image']['name']) && $_FILES['image']['name'])
+        {
+            $route = $_FILES['image']['name'];
+            $route_arr = explode('.',$route);
+            $ext = end($route_arr);
+            $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            if(move_uploaded_file($_FILES['image']['tmp_name'],APP.'../webroot/img/members/'.$route_name))
+            $tc->image = $route_name;
+            
+        }
+        foreach($_POST as $k=>$p)
+        {
+            $tc->$k = $p;
+        }
+        //$page = $_POST;
+        //$page->body = 'This is the body of the article';
+        if ($vtable->save($tc)) {
+           $this->Flash->success("Memebrs saved successfully");
+           $this->redirect('/dashboard/listMembers');
+        }
+        else
+        {
+            $this->Flash->error("There was problem saving Member");
+           $this->redirect('/dashboard/editMembers/'.$id);
+        }
+        
+            
+    }
+     public function deleteMembers($id)
+    {
+        $this->loadModel('Members');
+        $entity = $this->Members->get($id);
+        $result = $this->Members->delete($entity);
+      
+        $this->Flash->success("Members deleted successfully");
+        $this->redirect('/dashboard/listMembers');
+    } 
     /* sllider manager */
     
     public function sliders()
