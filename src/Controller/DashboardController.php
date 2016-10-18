@@ -854,6 +854,7 @@ class DashboardController extends AppController
     {
         $this->loadModel('Members');
         $entity = $this->Members->get($id);
+        @unlink(APP.'../webroot/img/members/'.$entity->image);
         $result = $this->Members->delete($entity);
       
         $this->Flash->success("Members deleted successfully");
@@ -905,6 +906,7 @@ class DashboardController extends AppController
             $route_arr = explode('.',$route);
             $ext = end($route_arr);
             $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            @unlink(APP.'../webroot/img/team/'.$tc->image);
             if(move_uploaded_file($_FILES['image']['tmp_name'],APP.'../webroot/img/team/'.$route_name))
             $tc->image = $route_name;
             
@@ -948,6 +950,7 @@ class DashboardController extends AppController
     {
         $this->loadModel('Teams');
         $entity = $this->Teams->get($id);
+        @unlink(APP.'../webroot/img/team/'.$entity->image);
         $result = $this->Teams->delete($entity);
       
         $this->Flash->success("Team deleted successfully");
