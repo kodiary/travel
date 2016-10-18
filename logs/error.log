@@ -662,3 +662,167 @@ Stack Trace:
 #1 {main}
 
 
+2016-10-18 08:11:44 Error: Fatal Error (4): syntax error, unexpected '<' in [F:\wamp\www\travel\src\Template\Layout\default.ctp, line 545]
+Request URL: /travel/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-18 08:11:45 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '<'
+Request URL: /travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'F:\\wamp\\www\\tra...', 545)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-18 11:35:53 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::favicon.ico() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'favicon.ico',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /travel/pages/favicon.ico
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-10-18 11:59:30 Error: Fatal Error (1): Call to a member function alias() on a non-object in [F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php, line 156]
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-18 11:59:31 Error: [Cake\Error\FatalErrorException] Call to a member function alias() on a non-object
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'F:\\wamp\\www\\tra...', 156)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-18 12:00:18 Error: Fatal Error (1): Call to a member function alias() on a non-object in [F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php, line 156]
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-18 12:00:19 Error: [Cake\Error\FatalErrorException] Call to a member function alias() on a non-object
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'F:\\wamp\\www\\tra...', 156)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-18 12:02:23 Error: Fatal Error (1): Call to a member function alias() on a non-object in [F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php, line 156]
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-18 12:02:23 Error: [Cake\Error\FatalErrorException] Call to a member function alias() on a non-object
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'F:\\wamp\\www\\tra...', 156)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-18 12:05:25 Error: Fatal Error (1): Call to a member function alias() on a non-object in [F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php, line 156]
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-18 12:05:26 Error: [Cake\Error\FatalErrorException] Call to a member function alias() on a non-object
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'F:\\wamp\\www\\tra...', 156)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-18 12:05:55 Error: Fatal Error (1): Call to a member function alias() on a non-object in [F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php, line 156]
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-18 12:05:55 Error: [Cake\Error\FatalErrorException] Call to a member function alias() on a non-object
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'F:\\wamp\\www\\tra...', 156)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-18 12:07:28 Error: Fatal Error (1): Call to a member function alias() on a non-object in [F:\wamp\www\travel\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php, line 156]
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-10-18 12:07:28 Error: [Cake\Error\FatalErrorException] Call to a member function alias() on a non-object
+Request URL: /travel/pages/videos
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'F:\\wamp\\www\\tra...', 156)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-18 13:12:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Page could not be found.
+Exception Attributes: array (
+  'class' => 'Page',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/page/videos
+Referer URL: http://localhost/travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 F:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

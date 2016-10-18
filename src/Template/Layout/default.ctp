@@ -27,9 +27,9 @@ License: You must have a valid license purchased only from themeforest (the abov
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta content="Metronic Shop UI description" name="description">
-  <meta content="Metronic Shop UI keywords" name="keywords">
-  <meta content="keenthemes" name="author">
+  <meta content="Travel" name="description">
+  <meta content="Hiking" name="keywords">
+  <meta content="Kodiary" name="author">
 
   <meta property="og:site_name" content="-CUSTOMER VALUE-">
   <meta property="og:title" content="-CUSTOMER VALUE-">
@@ -127,8 +127,12 @@ License: You must have a valid license purchased only from themeforest (the abov
               <!-- END DROPDOWN MENU -->
               */?>
             </li>
-            <li>
-                <a href="<?php echo $this->request->webroot;?>pages/view/about-us" class="uppermenu">About</a>
+            <li class="dropdown dropdown-megamenu">
+                <a class="dropdown-toggle uppermenu">About</a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo $this->request->webroot;?>pages/view/about-us" class="uppermenu">About Us</a></li>
+                    <li><a href="<?php echo $this->request->webroot;?>pages/team" class="uppermenu">Our Team</a></li>
+                </ul>
             </li>
             <li class="dropdown dropdown-megamenu">
               <a class="dropdown-toggle uppermenu" data-toggle="dropdown" data-target="#" href="#">
@@ -442,9 +446,9 @@ License: You must have a valid license purchased only from themeforest (the abov
             
             
             <?php
-echo $this->Flash->render();
-echo $this->fetch('content');
-?>
+            echo $this->Flash->render();
+            echo $this->fetch('content');
+            ?>
           </div>
           <!-- END CONTENT -->
           
@@ -461,7 +465,8 @@ echo $this->fetch('content');
           
           <!-- END TWO PRODUCTS -->
           <!-- BEGIN PROMO -->
-          <h2>Videos</h2>
+          <?php if($this->request->params['action']!='videos'){?>
+          <h2><a href="<?= $this->request->webroot;?>pages/videos">Videos</a></h2>
           <div class="videos">
           <?php
           $cond = '';
@@ -485,7 +490,7 @@ echo $this->fetch('content');
             $videos = TableRegistry::get('Videos')->find()->where(['id IN ('.$sql.')'])->order('rand()')->limit(4)->all();
           }
           else
-          $videos = TableRegistry::get('Videos')->find()->order('rand()')->limit(4)->all();
+            $videos = TableRegistry::get('Videos')->find()->order('rand()')->limit(4)->all();
           foreach($videos as $v)
           {
             $embed_arr = explode('=',$v->youtube);
@@ -499,6 +504,7 @@ echo $this->fetch('content');
           ?>
           <div class="clearfix"></div>
           </div>
+          <?php }?>
 
     <!-- BEGIN STEPS -->
     <div class="steps-block steps-block-red">
@@ -534,8 +540,15 @@ echo $this->fetch('content');
 
     <!-- BEGIN PRE-FOOTER -->
     <div class="pre-footer">
-      <div class="container">
-        
+      <div class="common col-md-12">
+       <span>&nbsp;&nbsp;&nbsp;&nbsp;Associate & Members Of &nbsp;&nbsp;&nbsp;&nbsp;</span>
+       <?php
+            $members =  TableRegistry::get('members')->find()->all();
+            foreach($members as $member)
+            {
+                echo "<a href='".$member->link."' target='_blank'><img src='".$this->request->webroot."img/members/".$member->image."' width='50px' height='50px'/> </a>";
+            }
+       ?>
       </div>
     </div>
     <!-- END PRE-FOOTER -->
@@ -546,7 +559,7 @@ echo $this->fetch('content');
         <div class="row col-md-12">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-6 col-sm-6 padding-top-10 common">
-            2016 &copy; The Apollo Adventure | Powered By <a href="http://kodiary.com/">Kodiary</a> 
+            2016 &copy; Golden Cloud Adventure | Powered By <a href="http://kodiary.com/">Kodiary</a> 
           </div>
           <!-- END COPYRIGHT -->
           <!-- BEGIN PAYMENTS -->

@@ -43,7 +43,7 @@ else{
                     ?>
                     <tr><td><?php echo $i;?></td>
                         <td><?php echo $m->title;?></td>
-                        <td><img src="<?php echo $this->request->webroot."img/team/".$m->image;?>" width="100px" height="100px"/></td>
+                        <td><img src="<?php echo $this->request->webroot."img/team/".$m->image;?>"  height="100px"/></td>
                         <?php if($is_testimonail==0){?><td><?php echo $m->designation;?></td><?php }?>
                         <td><a href="<?php echo $edit_url.$m->id;?>" class="btn btn-primary">Edit</a> <a href="<?php echo $this->request->webroot;?>dashboard/deleteteam/<?php echo $m->id;?>" class="btn btn-danger">Delete</a></td></tr>
                     

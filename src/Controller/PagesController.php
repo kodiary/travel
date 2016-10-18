@@ -36,6 +36,16 @@ class PagesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
+  public $paginate = array(
+    'limit' => 12,
+    );
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('Paginator');
+    }
+
+  
     public function index()
     {
         $model = TableRegistry::get('Pages');
@@ -75,6 +85,15 @@ class PagesController extends AppController
         if($q)
         $this->set('page',$q);
         
+    }
+    function team(){
+        $model = TableRegistry::get('teams')->find()->where(['is_testimonial'=>'0'])->all();
+        $this->set('model',$model);
+    }
+    function videos()
+    {
+        $model = $this->paginate('videos');
+        $this->set('model',$model);
     }
     function contactus()
     {

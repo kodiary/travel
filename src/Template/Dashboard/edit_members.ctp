@@ -41,7 +41,7 @@
                     <label class="col-md-3">Image</label>
                     <div class="col-md-6">
                         <?php
-                        if($image!="")echo "<img src='".$this->request->webroot."img/members/".$model->image."' width='100px' height='100px'/>";?>
+                        if($image!="")echo "<img src='".$this->request->webroot."img/members/".$model->image."' width='50px' height='50px'/>";?>
                         <input type="file" class="form-control" name="image"  <?php echo ($image!='')?"":"required";?> />
                     </div>
                     

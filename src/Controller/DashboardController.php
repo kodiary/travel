@@ -827,6 +827,7 @@ class DashboardController extends AppController
             $route_arr = explode('.',$route);
             $ext = end($route_arr);
             $route_name = rand(0,999999).'_'.rand(0,999999).'.'.$ext;
+            @unlink(APP.'../webroot/img/members/'.$tc->image);
             if(move_uploaded_file($_FILES['image']['tmp_name'],APP.'../webroot/img/members/'.$route_name))
             $tc->image = $route_name;
             

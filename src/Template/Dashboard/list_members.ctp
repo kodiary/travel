@@ -23,7 +23,7 @@
                     $i++;
                     
                     ?>
-                    <tr><td><?php echo $i;?></td><td><img src="<?php echo $this->request->webroot."img/members/".$m->image;?>" width="100px" height="100px"/></td><td><a href="<?php echo $this->request->webroot;?>dashboard/editMembers/<?php echo $m->id;?>" class="btn btn-primary">Edit</a> <a href="<?php echo $this->request->webroot;?>dashboard/deletemembers/<?php echo $m->id;?>" class="btn btn-danger">Delete</a></td></tr>
+                    <tr><td><?php echo $i;?></td><td><img src="<?php echo $this->request->webroot."img/members/".$m->image;?>" width="50px" height="50px"/></td><td><a href="<?php echo $this->request->webroot;?>dashboard/editMembers/<?php echo $m->id;?>" class="btn btn-primary">Edit</a> <a href="<?php echo $this->request->webroot;?>dashboard/deletemembers/<?php echo $m->id;?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a></td></tr>
                     
                     <?php
                 }
