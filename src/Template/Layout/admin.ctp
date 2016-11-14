@@ -79,7 +79,7 @@
               <ul class="nav side-menu">
                 <li><a class="parentnav"><i class="fa fa-gift"></i> Page Manager <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu"  style="display: none">
-                    <li><a href="<?php echo $this->request->webroot;?>dashboard/pages"><i class="fa fa-edit"></i> List Pages</a></li></li>
+                    <li><a href="<?php echo $this->request->webroot;?>dashboard/pages"> List Pages</a></li></li>
                     <li><a href="<?php echo $this->request->webroot;?>dashboard/editPage/0">Add Page</a></li>
                     </ul>
                 <li><a class="parentnav"><i class="fa fa-gift"></i> Package Manager <span class="fa fa-chevron-down"></span></a>

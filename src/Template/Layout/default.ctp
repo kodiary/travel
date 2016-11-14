@@ -132,6 +132,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo $this->request->webroot;?>pages/view/about-us" class="uppermenu">About Us</a></li>
                     <li><a href="<?php echo $this->request->webroot;?>pages/team" class="uppermenu">Our Team</a></li>
+                    <li><a href="<?php echo $this->request->webroot;?>pages/testimonial" class="uppermenu">Testimonial</a></li>
                 </ul>
             </li>
             <li class="dropdown dropdown-megamenu">
