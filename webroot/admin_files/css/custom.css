@@ -5205,7 +5205,7 @@ body {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.img-preview > img {
+.imagebody > img {
   max-width: 100%;
 }
 .preview-lg {

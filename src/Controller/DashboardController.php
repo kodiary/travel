@@ -230,6 +230,11 @@ class DashboardController extends AppController
         $this->loadModel('Packages');
         $this->loadModel('PackageCategory');
         $this->loadModel('Iteniery');
+        $this->loadModel('PackageImg');
+        $img = $this->PackageImg->find()->where(['package_id'=>$id]);
+        $img_count = $this->PackageImg->find()->where(['package_id'=>$id])->count();
+        $this->set('imgs',$img);
+        $this->set('img_count',$img_count);
         $this->set('cat',$this->PackageCategory);
         if($id)   { 
         $q = $this->Packages->find()->where(['id'=>$id])->first();
@@ -254,14 +259,17 @@ class DashboardController extends AppController
         else
         {
             $package = $ptable->get($id);
-            $img = $package->image;
+            
         }
-        
+        //var_dump($_POST);die();
         foreach($_POST as $k=>$p)
         {
-            if($k=='x' || $k=='y' || $k=='w' || $k=='h')
+            
+            if($k=='x' || $k=='y' || $k=='w' || $k=='h' || $k=='crop_value' || $k=='image')
             {
-                $dimension[$k] = $p;
+                foreach($_POST[$k] as $k1=>$p1){
+                $dimension[$k][$k1] = $p1;
+                }
             }
             elseif ($k=='iteniery')
             {
@@ -313,7 +321,9 @@ class DashboardController extends AppController
             $package->$k = $p;
             
             }
+            
         }
+        
         if(isset($_FILES['route_map']['name']) && $_FILES['route_map']['name'])
         {
             
@@ -326,24 +336,8 @@ class DashboardController extends AppController
             
         }
         //var_dump($package);die();
-        if((isset($package->image) && $package->image!='') || $_POST['crop_value']=='1' ){
-        $this->loadComponent('SimpleImage');
-        if($id!='0' && $_POST['crop_value']=='1' )
-        {
-            $this->SimpleImage->loader(APP.'../webroot/img/package/resized/'.$img);
-            $this->SimpleImage->crop($dimension['x'],$dimension['y'],$dimension['w'],$dimension['h'])->save(APP.'../webroot/img/package/final/'.$img);
-        }
-        else
-        {
-            $this->SimpleImage->loader(APP.'../webroot/img/package/resized/'.$package->image);
-            $this->SimpleImage->crop($dimension['x'],$dimension['y'],$dimension['w'],$dimension['h'])->save(APP.'../webroot/img/package/final/'.$package->image);
-        }
-        @unlink(APP.'../webroot/img/package/tmp/'.$package->image);
-        //unlink(APP.'../webroot/img/package/resized/'.$package->image);
-        }
-        else{
-            unset($package->image);
-        }
+        
+        
         //var_dump($package);die('2222');
         //$page = $_POST;
         //$page->body = 'This is the body of the article';
@@ -352,6 +346,34 @@ class DashboardController extends AppController
             $package->slug = $this->generateSlug($package->title,'Packages');
         }
         if ($ptable->save($package)) {
+            
+            if(isset($dimension) && count($dimension))
+            {
+                //var_dump($dimension);die();
+                $this->loadModel('PackageImg');
+                $this->PackageImg->deleteAll(['package_id'=>$package->id]);
+                $count = count($dimension['image']);
+                for($i=0;$i<$count;$i++)
+                {
+                    if($dimension['x'][$i]!='' ||$dimension['y'][$i]!='' ||$dimension['w'][$i]!='' ||$dimension['h'][$i]!=''){
+                $this->loadComponent('SimpleImage');
+                
+                $this->SimpleImage->loader(APP.'../webroot/img/package/resized/'.$dimension['image'][$i]);
+                $this->SimpleImage->crop($dimension['x'][$i],$dimension['y'][$i],$dimension['w'][$i],$dimension['h'][$i])->save(APP.'../webroot/img/package/final/'.$dimension['image'][$i]);
+                unset($this->SimpleImage);
+                }
+                if($dimension['image'][$i]){
+                $pimage = TableRegistry::get('PackageImg');
+                    $pack_img = $pimage->newEntity();
+                    $pack_img->package_id = $package->id;
+                    $pack_img->image =$dimension['image'][$i];            
+                    $pimage->save($pack_img);
+                    unset($pimage);
+                    unset($pack_img);
+                    }
+                }
+            }
+            
             $this->loadModel('Iteniery');
             $this->Iteniery->deleteAll(['pid'=>$package->id]);
             //var_dump($ite_final);die();
@@ -1205,6 +1227,12 @@ class DashboardController extends AppController
         $result = $this->Blogs->delete($entity);
         $this->Flash->success("Blog deleted successfully");
         $this->redirect('/dashboard/blogs');
+    }
+    
+    public function loadPackSlider()
+    {
+        $this->set('rand',$_POST['rand']);
+        $this->viewBuilder()->layout('blank');
     }
 
 }
