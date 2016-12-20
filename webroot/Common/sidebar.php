@@ -116,7 +116,7 @@ use Cake\ORM\TableRegistry;
               {
                
               ?>
-              <h2 class="related margin-top-15">Enquire Package/Tour</h2>
+              <h2 class="related margin-top-15">Enquire This Package</h2>
               <div class="enquire">
               <form method="post" class="enuire_package" >
                 <input type="hidden" name="p_id" value="<?php if(isset($pack))echo $pack->title;?>"/>
@@ -145,10 +145,22 @@ use Cake\ORM\TableRegistry;
                     <div class="col-md-12 padding-left-0"><textarea name="message" class="form-control" required="required"></textarea></div>
                     <div class="clearfix"></div>
                   </div>
+                 
+                    
                   <div class="form-group">
                   <input type="submit" class="btn btn-info" value="Submit"/>
                   </div>
               </form>
+              <hr />
+                  <div class="forn-group">
+                    <div class="col-md-1 padding-left-0">
+                        <span style="color: red;">NOTE</span>:
+                    </div>
+                    <div class="col-md-11">
+                        <span>you can use this form to customize your package!</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div> 
               </div>
               <?php }?>
           </div>
