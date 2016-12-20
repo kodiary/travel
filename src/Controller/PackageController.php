@@ -55,7 +55,10 @@ class PackageController extends AppController
     public function index($slug)
     {
         $model = TableRegistry::get('Packages');
+        
         $q = $model->find()->where(['slug' =>$slug])->first();
+        $model_img = TableRegistry::get('PackageImg')->find()->where(['package_id' =>$q->id]);
+        $this->set('model_img',$model_img);
         if($q)
         $this->set('pack',$q);
         
