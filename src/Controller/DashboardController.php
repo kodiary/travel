@@ -345,6 +345,10 @@ class DashboardController extends AppController
         {
             $package->slug = $this->generateSlug($package->title,'Packages');
         }
+        if(isset($dimension['image'][0]))
+        {
+            $package->image = $dimension['image'][0];
+        }
         if ($ptable->save($package)) {
             
             if(isset($dimension) && count($dimension))
