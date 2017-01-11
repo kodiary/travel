@@ -3106,3 +3106,19 @@ Styler Panel
 .enquire_form{background:#FFF;padding:10px 5px 10px 10px;}
 .blog_listing{background:#FFF;padding:10px 5px;margin-bottom:15px;}
 .pack_menu{background:#f5f5f5;}
+.bottom-caption{ background: #000 none repeat scroll 0 0;
+    color: #fff;
+    direction: ltr !important;
+    opacity: 0.75;
+    position: absolute;
+    width: 100%!important;    
+    left:0!important;
+    border-radius:0!important;
+    z-index: 100;
+    padding: 7px 0!important;
+    height:20px!important;
+    text-align: center;
+    font-size: 20px!important;
+    top:455px!important;
+    line-height:15px!important;
+    }

@@ -5,6 +5,7 @@ if(isset($img_count) && $img_count)
     foreach($imgs as $im)
     {
         $img = $im->image;
+        $cap = $im->caption;
         
         if(!isset($rand))$rand=rand(1000000,9999999);?>
 <div class="form-group <?php echo $rand;?>">
@@ -56,6 +57,10 @@ if(isset($img_count) && $img_count)
                         <span class="input-group-addon">deg</span>
                       </div>
                     </div>
+                    <div class="col-md-5 row" style="padding-right: 17px;margin-top:10px">
+                    <textarea class="form-control" placeholder="Caption" name="cap[]"><?php echo $cap;?></textarea>
+                    </div>
+                    <div class="clearfix"></div>
                     </div>    
                     </div>
                     
@@ -291,6 +296,10 @@ else
                         <span class="input-group-addon">deg</span>
                       </div>
                     </div>
+                    <div class="col-md-5 row" style="padding-right: 17px;margin-top:10px">
+                    <textarea class="form-control" placeholder="Caption" name="cap[]"></textarea>
+                    </div>
+                    <div class="clearfix"></div>
                     </div>    
                     </div>
                     

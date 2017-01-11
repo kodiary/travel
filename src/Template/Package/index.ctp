@@ -25,27 +25,16 @@
                 
                           <img src="<?php echo $this->request->webroot;?>img/package/resized/<?php echo $s->image;?>" class="ls-bg" alt="Slide background">
                 
-                          <div class="ls-l ls-title" style="top: 50px; left: 35%; white-space: nowrap;" data-ls="
-                            fade: true; 
-                            fadeout: true; 
-                            durationin: 750; 
-                            durationout: 750; 
-                            easingin: easeOutQuint; 
-                            rotatein: 90; 
-                            rotateout: -90; 
-                            scalein: .5; 
-                            scaleout: .5; 
-                            showuntil: 4000;
-                          "><?php //echo str_replace(array('<p>','</p>'),array('',''),$s->title);?></div>
+                          
                 
-                          <div class="ls-l ls-mini-text" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
+                          <div class="ls-l ls-mini-text bottom-caption" style="top: 300px; left: 35%; white-space: nowrap;" data-ls="
                           fade: true; 
                           fadeout: true; 
                           durationout: 750; 
                           easingin: easeOutQuint; 
                           delayin: 300; 
                           showuntil: 4000;
-                          "><?php //echo $s->caption;?>
+                          "><?php echo str_replace(array('<p>','</p>'),array('',''),$s->caption);?>
                           </div>
                            <!--<a href="#" class="ls-l ls-more" style="top: 400px;height:25px; left: 35%; display: inline-block; white-space: nowrap;background:#000;opacity:0.6;" data-ls="
                           fade: true; 

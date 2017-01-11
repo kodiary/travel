@@ -265,7 +265,7 @@ class DashboardController extends AppController
         foreach($_POST as $k=>$p)
         {
             
-            if($k=='x' || $k=='y' || $k=='w' || $k=='h' || $k=='crop_value' || $k=='image')
+            if($k=='x' || $k=='y' || $k=='w' || $k=='h' || $k=='crop_value' || $k=='image' || $k=='cap')
             {
                 foreach($_POST[$k] as $k1=>$p1){
                 $dimension[$k][$k1] = $p1;
@@ -370,7 +370,8 @@ class DashboardController extends AppController
                 $pimage = TableRegistry::get('PackageImg');
                     $pack_img = $pimage->newEntity();
                     $pack_img->package_id = $package->id;
-                    $pack_img->image =$dimension['image'][$i];            
+                    $pack_img->image =$dimension['image'][$i];   
+                    $pack_img->caption =$dimension['cap'][$i];           
                     $pimage->save($pack_img);
                     unset($pimage);
                     unset($pack_img);
