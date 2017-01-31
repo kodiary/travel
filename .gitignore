@@ -13,3 +13,4 @@ logs/debug.log
 logs/debug.log
 logs/error.log
 tmp/debug_kit.sqlite
+webroot/assets/global/plugins/font-awesome

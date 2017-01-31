@@ -2962,3 +2962,63 @@ Stack Trace:
 #1 {main}
 
 
+2017-01-31 12:32:22 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/138366_364959.jpg
+Referer URL: http://localhost/travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2017-01-31 12:32:22 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/619140_863067.jpg
+Referer URL: http://localhost/travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2017-01-31 12:35:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/138366_364959.jpg
+Referer URL: http://localhost/travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2017-01-31 12:35:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /travel/img/members/619140_863067.jpg
+Referer URL: http://localhost/travel/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 E:\wamp\www\travel\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
