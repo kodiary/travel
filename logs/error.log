@@ -2962,3 +2962,86 @@ Stack Trace:
 #1 {main}
 
 
+2017-01-31 12:30:33 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'golden_dbase.members' doesn't exist
+Request URL: /
+Client IP: 110.44.127.204
+Stack Trace:
+#0 /home/golden/public_html/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'members', Array, Object(Cake\Database\Schema\Table))
+#1 /home/golden/public_html/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(64): Cake\Database\Schema\Collection->describe('members', Array)
+#2 /home/golden/public_html/vendor/cakephp/cakephp/src/ORM/Table.php(430): Cake\Database\Schema\CachedCollection->describe('members')
+#3 /home/golden/public_html/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->schema()
+#4 /home/golden/public_html/vendor/cakephp/cakephp/src/ORM/Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 /home/golden/public_html/vendor/cakephp/cakephp/src/ORM/Table.php(1243): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 /home/golden/public_html/vendor/cakephp/cakephp/src/ORM/Table.php(946): Cake\ORM\Table->query()
+#7 /home/golden/public_html/src/Template/Layout/default.ctp(547): Cake\ORM\Table->find()
+#8 /home/golden/public_html/vendor/cakephp/cakephp/src/View/View.php(995): include('/home/golden/pu...')
+#9 /home/golden/public_html/vendor/cakephp/cakephp/src/View/View.php(955): Cake\View\View->_evaluate('/home/golden/pu...', Array)
+#10 /home/golden/public_html/vendor/cakephp/cakephp/src/View/View.php(633): Cake\View\View->_render('/home/golden/pu...')
+#11 /home/golden/public_html/vendor/cakephp/cakephp/src/View/View.php(592): Cake\View\View->renderLayout('', 'default')
+#12 /home/golden/public_html/vendor/cakephp/cakephp/src/Controller/Controller.php(611): Cake\View\View->render(NULL, NULL)
+#13 /home/golden/public_html/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#14 /home/golden/public_html/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#15 /home/golden/public_html/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2017-01-31 12:31:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /img/members/619140_863067.jpg
+Referer URL: http://goldencloudadventure.com/
+Client IP: 110.44.127.204
+Stack Trace:
+#0 /home/golden/public_html/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2017-01-31 12:32:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /img/members/138366_364959.jpg
+Referer URL: http://goldencloudadventure.com/
+Client IP: 110.44.127.204
+Stack Trace:
+#0 /home/golden/public_html/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2017-01-31 12:35:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /img/members/619140_863067.jpg
+Referer URL: http://goldencloudadventure.com/
+Client IP: 110.44.127.204
+Stack Trace:
+#0 /home/golden/public_html/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2017-01-31 12:35:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /img/members/138366_364959.jpg
+Referer URL: http://goldencloudadventure.com/
+Client IP: 110.44.127.204
+Stack Trace:
+#0 /home/golden/public_html/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
