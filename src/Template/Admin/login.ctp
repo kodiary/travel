@@ -80,9 +80,9 @@
 
               
               <div>
-                <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Go Nepal</h1>
+                <h1><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png" /></h1>
 
-                <p>©2016 All Rights Reserved. Kodiary</p>
+                <p>&copy; 2016 All Rights Reserved. Kodiary</p>
               </div>
             </div>
         </div>
