@@ -54,8 +54,8 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
 
-          <div class="navbar nav_title" style="border: 0;">
-            <a href="<?php echo $this->request->webroot;?>admin" class="site_title"><i class="fa fa-paw"></i> <span>Golden Cloud!</span></a>
+          <div class="navbar nav_title" style="border: 0; background-color: #FFF;">
+            <a href="<?php echo $this->request->webroot;?>admin" class="site_title"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png" width="100%"></a>
           </div>
           <div class="clearfix"></div>
 
@@ -177,7 +177,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="<?php echo $this->request->webroot;?>admin_files/javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img src="<?php echo $this->request->webroot;?>admin_files/images/img.jpg" alt="">Admin
+                  Admin
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -192,7 +192,7 @@
                     <li>
                     <a href="<?php echo $this->request->webroot;?>dashboard/changeemail">
                       <!--span class="badge bg-red pull-right">50%</span-->
-                      <span>Settings</span>
+                      <span>Change Email</span>
                     </a>
                   </li>
                   <!--li>

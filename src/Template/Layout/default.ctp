@@ -508,7 +508,7 @@ License: You must have a valid license purchased only from themeforest (the abov
           <?php }?>
 
     <!-- BEGIN STEPS -->
-    <div class="steps-block steps-block-red">
+    <!--div class="steps-block steps-block-red">
       <div class="container">
         <div class="row">
           <div class="col-md-4 steps-block-col flright">
@@ -536,12 +536,12 @@ License: You must have a valid license purchased only from themeforest (the abov
           </div>
         </div>
       </div>
-    </div>
+    </div-->
     <!-- END STEPS -->
 
     <!-- BEGIN PRE-FOOTER -->
     <div class="pre-footer">
-      <div class="common col-md-12">
+      <div class="common col-md-6">
        <span>&nbsp;&nbsp;&nbsp;&nbsp;Associate & Members Of &nbsp;&nbsp;&nbsp;&nbsp;</span>
        <?php
             $members =  TableRegistry::get('members')->find()->all();
@@ -551,7 +551,20 @@ License: You must have a valid license purchased only from themeforest (the abov
             }
        ?>
       </div>
+    <div class="col-md-6 col-sm-6 common">
+        
+        <ul class="list-unstyled list-inline pull-right flright">
+          <li><span>We Accept:</span></li>
+          <li><img title="We accept Western Union" alt="We accept Western Union" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/western-union.jpg"></li>
+          <li><img title="We accept American Express" alt="We accept American Express" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/american-express.jpg"></li>
+          <li><img title="We accept MasterCard" alt="We accept MasterCard" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/MasterCard.jpg"></li>
+          
+          <li><img title="We accept Visa" alt="We accept Visa" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/visa.jpg"></li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
     </div>
+    
     <!-- END PRE-FOOTER -->
 
     <!-- BEGIN FOOTER -->
@@ -564,15 +577,7 @@ License: You must have a valid license purchased only from themeforest (the abov
           </div>
           <!-- END COPYRIGHT -->
           <!-- BEGIN PAYMENTS -->
-          <div class="col-md-6 col-sm-6 common">
-            <ul class="list-unstyled list-inline pull-right flright">
-              <li><img title="We accept Western Union" alt="We accept Western Union" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/western-union.jpg"></li>
-              <li><img title="We accept American Express" alt="We accept American Express" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/american-express.jpg"></li>
-              <li><img title="We accept MasterCard" alt="We accept MasterCard" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/MasterCard.jpg"></li>
-              <li><img title="We accept PayPal" alt="We accept PayPal" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/PayPal.jpg"></li>
-              <li><img title="We accept Visa" alt="We accept Visa" src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/payments/visa.jpg"></li>
-            </ul>
-          </div>
+        
           <!-- END PAYMENTS -->
         </div>
       </div>
