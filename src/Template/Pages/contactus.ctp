@@ -13,14 +13,18 @@
 </ul>
 <h2 class="common"><?php echo $page->title;?></h2>
 
-<div class="col-md-12">
-<div id="map"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="map" ></div>
+    </div>
+    <div class="clearfix"></div>
 </div>
-<div class="clearfix"></div>
+<p>&nbsp;</p>
 <div class="common">
   <?php echo $page->description; ?>
   
 </div>
+<hr />
 <div class="common">
 <form method="post" class="enuire_package" >
 <input type="hidden" name="cap" value=""/>
