@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  
   <!-- Meta, title, CSS, favicons, etc. -->
-  <meta charset="utf-8">
+  
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -80,7 +80,7 @@
 
               
               <div>
-                <h1><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png" /></h1>
+                <h1><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/golden-cloud.png" width="300px" /></h1>
 
                 <p>&copy; 2016 All Rights Reserved. Kodiary</p>
               </div>

@@ -55,7 +55,7 @@
         <div class="left_col scroll-view">
 
           <div class="navbar nav_title" style="border: 0; background-color: #FFF;">
-            <a href="<?php echo $this->request->webroot;?>admin" class="site_title"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/logo-shop-red.png" width="100%"></a>
+            <a href="<?php echo $this->request->webroot;?>admin" class="site_title"><img src="<?php echo $this->request->webroot;?>assets/frontend/layout/img/logos/golden-cloud.png" width="100%"></a>
           </div>
           <div class="clearfix"></div>
 
